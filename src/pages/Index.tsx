@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -11,7 +10,8 @@ import { doctors } from "@/data/doctors";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SchemaOrg } from "@/lib/schema";
-import { Play, Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
+import { HeroButton } from "@/components/HeroButton";
 
 export default function Index() {
   return (
@@ -56,9 +56,7 @@ export default function Index() {
                 <br />
                 <span className="text-custom-gold">Sempre.</span>
               </h1>
-              <button className="rounded-full bg-custom-gold/90 px-6 py-3 text-custom-black backdrop-blur-sm hover:bg-custom-gold font-semibold transition-all">
-                Conheça Nossa Clínica
-              </button>
+              <HeroButton />
             </div>
 
             {/* Right Product Card - Responsivo */}
