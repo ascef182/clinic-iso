@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { SpecialtyCard } from "@/components/SpecialtyCard";
 import { DoctorCard } from "@/components/DoctorCard";
 import { AboutSection } from "@/components/AboutSection";
+import { WhyChooseUsSection } from "@/components/WhyChooseUsSection";
 import { specialties } from "@/data/specialties";
 import { doctors } from "@/data/doctors";
 import { Header } from "@/components/Header";
@@ -114,6 +115,9 @@ export default function Index() {
 
       {/* About Section */}
       <AboutSection />
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUsSection />
 
       {/* Specialties Section */}
       <section className="py-20 bg-background">
