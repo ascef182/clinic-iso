@@ -57,8 +57,7 @@ export function AboutSection() {
 
             {/* Título principal */}
             <h2 className="text-4xl md:text-5xl font-bold text-custom-dark-gray leading-tight">
-              Compromisso com a Excelência<br />
-              e o Cuidado Individualizado
+              Excelência e Cuidado 
             </h2>
 
             {/* Parágrafo introdutório */}
