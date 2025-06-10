@@ -9,7 +9,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-black/20 backdrop-blur-md shadow-lg border-b border-white/10">
+    <header className="fixed top-0 z-50 w-full bg-custom-black/20 backdrop-blur-md shadow-lg border-b border-custom-medium-gray/20">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
@@ -24,7 +24,7 @@ export function Header() {
               to="/" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-white",
-                isActive ? "text-white" : "text-white/80"
+                isActive ? "text-white" : "text-custom-light-gray"
               )}
             >
               Home
@@ -33,7 +33,7 @@ export function Header() {
               to="/sobre" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-white",
-                isActive ? "text-white" : "text-white/80"
+                isActive ? "text-white" : "text-custom-light-gray"
               )}
             >
               Sobre
@@ -42,7 +42,7 @@ export function Header() {
               to="/especialidades" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-white",
-                isActive ? "text-white" : "text-white/80"
+                isActive ? "text-white" : "text-custom-light-gray"
               )}
             >
               Especialidades
@@ -51,7 +51,7 @@ export function Header() {
               to="/equipe" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-white",
-                isActive ? "text-white" : "text-white/80"
+                isActive ? "text-white" : "text-custom-light-gray"
               )}
             >
               Equipe
@@ -60,7 +60,7 @@ export function Header() {
               to="/contato" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-white",
-                isActive ? "text-white" : "text-white/80"
+                isActive ? "text-white" : "text-custom-light-gray"
               )}
             >
               Contato
@@ -68,7 +68,7 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button asChild className="bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-sm">
+            <Button asChild className="bg-custom-gold hover:bg-custom-gold/90 text-black border-0">
               <Link to="/agendamento">Agende sua Consulta</Link>
             </Button>
           </div>
@@ -88,14 +88,14 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black/30 backdrop-blur-md border-b border-white/10">
+        <div className="md:hidden bg-custom-black/30 backdrop-blur-md border-b border-custom-medium-gray/20">
           <div className="container mx-auto px-4 py-4 space-y-4">
             <nav className="flex flex-col space-y-4">
               <NavLink 
                 to="/" 
                 className={({ isActive }) => cn(
                   "text-base font-medium transition-colors hover:text-white",
-                  isActive ? "text-white" : "text-white/80"
+                  isActive ? "text-white" : "text-custom-light-gray"
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -105,7 +105,7 @@ export function Header() {
                 to="/sobre" 
                 className={({ isActive }) => cn(
                   "text-base font-medium transition-colors hover:text-white",
-                  isActive ? "text-white" : "text-white/80"
+                  isActive ? "text-white" : "text-custom-light-gray"
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -115,7 +115,7 @@ export function Header() {
                 to="/especialidades" 
                 className={({ isActive }) => cn(
                   "text-base font-medium transition-colors hover:text-white",
-                  isActive ? "text-white" : "text-white/80"
+                  isActive ? "text-white" : "text-custom-light-gray"
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -125,7 +125,7 @@ export function Header() {
                 to="/equipe" 
                 className={({ isActive }) => cn(
                   "text-base font-medium transition-colors hover:text-white",
-                  isActive ? "text-white" : "text-white/80"
+                  isActive ? "text-white" : "text-custom-light-gray"
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -135,14 +135,14 @@ export function Header() {
                 to="/contato" 
                 className={({ isActive }) => cn(
                   "text-base font-medium transition-colors hover:text-white",
-                  isActive ? "text-white" : "text-white/80"
+                  isActive ? "text-white" : "text-custom-light-gray"
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contato
               </NavLink>
             </nav>
-            <Button asChild className="w-full bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-sm">
+            <Button asChild className="w-full bg-custom-gold hover:bg-custom-gold/90 text-black border-0">
               <Link to="/agendamento" onClick={() => setIsMenuOpen(false)}>
                 Agende sua Consulta
               </Link>
