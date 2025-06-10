@@ -1,3 +1,4 @@
+
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -48,10 +49,13 @@ export default function Index() {
               {/* Video Button */}
               <div className="flex items-center gap-4 pt-4">
                 <button className="group flex items-center gap-4 text-lg font-medium text-slate-800 hover:text-slate-900 transition-colors">
-                  <div className="h-16 w-16 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/90 transition-all shadow-lg">
-                    <Play className="h-6 w-6 ml-1 text-slate-800" />
+                  <div className="h-16 w-16 rounded-full border-2 border-slate-800 flex items-center justify-center group-hover:border-slate-900 transition-all">
+                    <Play className="h-6 w-6 ml-1 text-slate-800 group-hover:text-slate-900" />
                   </div>
-                  <span className="underline decoration-2 underline-offset-4">Conheça nossa clínica</span>
+                  <span className="relative">
+                    Conheça nossa clínica
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-800 transition-all duration-300 group-hover:w-full"></span>
+                  </span>
                 </button>
               </div>
             </div>
@@ -135,7 +139,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Appointment CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Agende sua consulta</h2>
@@ -149,7 +152,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Team Preview Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -173,7 +175,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Differentials Section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

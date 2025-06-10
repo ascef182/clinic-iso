@@ -20,14 +20,14 @@ export function AboutSection() {
               </div>
             </div>
             
-            {/* Grid de imagens */}
-            <div className="relative grid grid-cols-2 gap-4">
+            {/* Layout de imagens conforme referência */}
+            <div className="relative">
               {/* Imagem principal - Médico */}
-              <div className="col-span-2 relative">
+              <div className="relative mb-4">
                 <img 
                   src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
                   alt="Equipe médica profissional do ISO"
-                  className="rounded-2xl shadow-xl w-full h-64 object-cover"
+                  className="rounded-2xl shadow-xl w-full h-80 object-cover"
                 />
                 
                 {/* Badge de experiência */}
@@ -37,12 +37,12 @@ export function AboutSection() {
                 </div>
               </div>
               
-              {/* Imagem secundária */}
-              <div className="col-span-2 mt-4">
+              {/* Imagem secundária - Cuidado ao paciente */}
+              <div className="relative -mt-20 ml-12">
                 <img 
                   src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f"
                   alt="Atendimento humanizado aos pacientes"
-                  className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                  className="rounded-2xl shadow-lg w-4/5 h-48 object-cover"
                 />
               </div>
             </div>
