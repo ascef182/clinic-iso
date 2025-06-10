@@ -36,8 +36,11 @@ export function WhyChooseUsSection() {
   ];
 
   return (
-    <section className="py-20 bg-custom-light-gray">
-      <div className="container mx-auto px-4">
+    <section className="py-20 relative">
+      {/* Background with overlay - apenas no fundo */}
+      <div className="absolute inset-0 bg-custom-light-gray"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Lado Esquerdo - Conteúdo */}
           <div className="space-y-8">

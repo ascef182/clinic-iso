@@ -58,9 +58,8 @@ export default function Index() {
                 </p>
               </div>
               
-              {/* Action Button */}
+              {/* Video Button */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                {/* Video Button */}
                 <button className="group flex items-center gap-4 text-lg font-medium text-white hover:text-custom-light-gray transition-colors">
                   <div className="h-16 w-16 rounded-full border-2 border-custom-gold flex items-center justify-center group-hover:border-custom-gold/80 transition-all bg-transparent">
                     <Play className="h-6 w-6 ml-1 text-custom-gold group-hover:text-custom-gold/80" />
@@ -74,12 +73,12 @@ export default function Index() {
             </div>
 
             {/* Right Side - Medical Professional Image */}
-            <div className="relative lg:absolute lg:right-0 lg:bottom-0 lg:h-[85vh] lg:w-1/2">
+            <div className="relative lg:absolute lg:right-0 lg:bottom-0 lg:h-[85vh] lg:w-1/2 lg:max-w-2xl">
               <div className="relative h-full">
                 <img 
                   src="/lovable-uploads/eb348a20-6ccb-48aa-81cf-2a1617f7021f.png" 
                   alt="Profissional médica do ISO - Instituto Seu Olhar" 
-                  className="w-full h-full object-cover object-bottom lg:object-bottom rounded-2xl lg:rounded-none lg:rounded-tl-2xl"
+                  className="w-full h-full object-cover object-bottom lg:object-bottom rounded-3xl lg:rounded-none lg:rounded-tl-3xl"
                   loading="lazy"
                 />
                 
