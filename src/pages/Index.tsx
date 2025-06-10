@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -6,6 +5,7 @@ import { DoctorCard } from "@/components/DoctorCard";
 import { AboutSection } from "@/components/AboutSection";
 import { WhyChooseUsSection } from "@/components/WhyChooseUsSection";
 import { SpecialtiesSection } from "@/components/SpecialtiesSection";
+import { BlogSection } from "@/components/BlogSection";
 import { doctors } from "@/data/doctors";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -120,6 +120,9 @@ export default function Index() {
 
       {/* New Specialties Section */}
       <SpecialtiesSection />
+
+      {/* New Blog Section */}
+      <BlogSection />
 
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
