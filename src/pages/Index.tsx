@@ -2,11 +2,10 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { SpecialtyCard } from "@/components/SpecialtyCard";
 import { DoctorCard } from "@/components/DoctorCard";
 import { AboutSection } from "@/components/AboutSection";
 import { WhyChooseUsSection } from "@/components/WhyChooseUsSection";
-import { specialties } from "@/data/specialties";
+import { SpecialtiesSection } from "@/components/SpecialtiesSection";
 import { doctors } from "@/data/doctors";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -50,7 +49,7 @@ export default function Index() {
               {/* Video Button */}
               <div className="flex items-center gap-4 pt-4">
                 <button className="group flex items-center gap-4 text-lg font-medium text-slate-800 hover:text-slate-900 transition-colors">
-                  <div className="h-16 w-16 rounded-full border-2 border-slate-800 flex items-center justify-center group-hover:border-slate-900 transition-all">
+                  <div className="h-16 w-16 rounded-full border-2 border-slate-800 flex items-center justify-center group-hover:border-slate-900 transition-all bg-transparent">
                     <Play className="h-6 w-6 ml-1 text-slate-800 group-hover:text-slate-900" />
                   </div>
                   <span className="relative">
@@ -119,29 +118,8 @@ export default function Index() {
       {/* Why Choose Us Section */}
       <WhyChooseUsSection />
 
-      {/* Specialties Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossas Especialidades</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Oferecemos atendimento especializado em diversas áreas da saúde para cuidar de você por completo.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {specialties.slice(0, 4).map((specialty) => (
-              <SpecialtyCard key={specialty.id} specialty={specialty} />
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button variant="outline" asChild>
-              <Link to="/especialidades">Ver todas especialidades</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* New Specialties Section */}
+      <SpecialtiesSection />
 
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
