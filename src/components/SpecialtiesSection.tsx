@@ -107,10 +107,10 @@ export function SpecialtiesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-custom-black mb-6">
-            Descubra Nossas Especialidades Médicas
+            Especialidades Médicas
           </h2>
           <p className="text-lg text-custom-dark-gray max-w-4xl mx-auto mb-8">
-            Nossa equipe é composta por profissionais experientes prontos para oferecer o melhor cuidado em diversas áreas da saúde. Escolha uma especialidade abaixo para conhecer mais.
+            Nossa equipe é composta por profissionais experientes. Escolha uma especialidade abaixo para conhecer mais.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
