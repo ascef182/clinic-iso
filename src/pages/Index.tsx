@@ -9,6 +9,7 @@ import { doctors } from "@/data/doctors";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SchemaOrg } from "@/lib/schema";
+import { Play } from "lucide-react";
 
 export default function Index() {
   return (
@@ -28,32 +29,73 @@ export default function Index() {
 
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20 md:py-32">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2 space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary">
-              ISO - Instituto Seu Olhar
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              Cuidado médico especializado para você e sua família. Nossa equipe de profissionais está pronta para oferecer o melhor atendimento.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" asChild>
-                <Link to="/agendamento">Agendar Consulta</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/especialidades">Conhecer Especialidades</Link>
-              </Button>
+      {/* Modern Hero Section */}
+      <section className="relative bg-gradient-to-br from-muted via-background to-muted/50 py-20 md:py-32 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                  Seu Parceiro em{" "}
+                  <span className="text-primary">Saúde e Bem-estar</span>
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
+                  Estamos comprometidos em fornecer os melhores serviços médicos e de saúde para ajudá-lo a viver de forma mais saudável e feliz.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button size="lg" asChild className="h-14 px-8 text-lg">
+                  <Link to="/agendamento">Agendar Consulta</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild className="h-14 px-8 text-lg group">
+                  <Link to="/sobre" className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Play className="h-5 w-5 ml-1" />
+                    </div>
+                    Veja como trabalhamos
+                  </Link>
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className="md:w-1/2">
-            <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-              alt="ISO - Instituto Seu Olhar" 
-              className="rounded-lg shadow-lg w-full h-auto object-cover"
-              loading="lazy"
-            />
+
+            {/* Hero Image with Stats */}
+            <div className="relative">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2" 
+                  alt="Equipe médica profissional do ISO - Instituto Seu Olhar" 
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                  loading="lazy"
+                />
+                
+                {/* Floating Stats Cards */}
+                <div className="absolute -bottom-6 -left-6 bg-background rounded-xl p-4 shadow-lg border">
+                  <div className="flex items-center gap-3">
+                    <div className="flex -space-x-2">
+                      <div className="h-8 w-8 rounded-full bg-primary/20 border-2 border-background"></div>
+                      <div className="h-8 w-8 rounded-full bg-primary/40 border-2 border-background"></div>
+                      <div className="h-8 w-8 rounded-full bg-primary/60 border-2 border-background"></div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-foreground">150K+</div>
+                      <div className="text-sm text-muted-foreground">Pacientes Atendidos</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="absolute -top-6 -right-6 bg-background rounded-xl p-4 shadow-lg border">
+                  <div className="text-center">
+                    <div className="h-10 w-10 rounded-full bg-green-500 mx-auto mb-2 flex items-center justify-center">
+                      <div className="h-2 w-2 rounded-full bg-white"></div>
+                    </div>
+                    <div className="text-2xl font-bold text-foreground">20+</div>
+                    <div className="text-sm text-muted-foreground">Especialistas</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
