@@ -1,9 +1,9 @@
-
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { SpecialtyCard } from "@/components/SpecialtyCard";
 import { DoctorCard } from "@/components/DoctorCard";
+import { AboutSection } from "@/components/AboutSection";
 import { specialties } from "@/data/specialties";
 import { doctors } from "@/data/doctors";
 import { Header } from "@/components/Header";
@@ -107,6 +107,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* About Section */}
+      <AboutSection />
 
       {/* Specialties Section */}
       <section className="py-20 bg-background">

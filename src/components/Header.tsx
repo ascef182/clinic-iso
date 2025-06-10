@@ -22,23 +22,15 @@ export function Header() {
     <header
       className={cn(
         "sticky top-0 z-50 transition-all duration-300",
-        isScrolled 
-          ? "bg-white/10 backdrop-blur-md shadow-lg border-b border-white/20" 
-          : "bg-gradient-to-r from-slate-200 via-slate-400 to-slate-900"
+        "bg-white/10 backdrop-blur-md shadow-lg border-b border-white/20"
       )}
     >
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
-            <span className={cn(
-              "text-2xl font-bold transition-colors",
-              isScrolled ? "text-slate-900" : "text-slate-800"
-            )}>ISO</span>
+            <span className="text-2xl font-bold text-slate-900">ISO</span>
             <span className="hidden sm:inline-block">|</span>
-            <span className={cn(
-              "hidden sm:inline-block text-lg transition-colors",
-              isScrolled ? "text-slate-800" : "text-slate-700"
-            )}>Instituto Seu Olhar</span>
+            <span className="hidden sm:inline-block text-lg text-slate-800">Instituto Seu Olhar</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,9 +39,7 @@ export function Header() {
               to="/" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-slate-900",
-                isActive 
-                  ? (isScrolled ? "text-slate-900" : "text-slate-800") 
-                  : (isScrolled ? "text-slate-700" : "text-slate-600")
+                isActive ? "text-slate-900" : "text-slate-700"
               )}
             >
               Home
@@ -58,9 +48,7 @@ export function Header() {
               to="/sobre" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-slate-900",
-                isActive 
-                  ? (isScrolled ? "text-slate-900" : "text-slate-800") 
-                  : (isScrolled ? "text-slate-700" : "text-slate-600")
+                isActive ? "text-slate-900" : "text-slate-700"
               )}
             >
               Sobre
@@ -69,9 +57,7 @@ export function Header() {
               to="/especialidades" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-slate-900",
-                isActive 
-                  ? (isScrolled ? "text-slate-900" : "text-slate-800") 
-                  : (isScrolled ? "text-slate-700" : "text-slate-600")
+                isActive ? "text-slate-900" : "text-slate-700"
               )}
             >
               Especialidades
@@ -80,9 +66,7 @@ export function Header() {
               to="/equipe" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-slate-900",
-                isActive 
-                  ? (isScrolled ? "text-slate-900" : "text-slate-800") 
-                  : (isScrolled ? "text-slate-700" : "text-slate-600")
+                isActive ? "text-slate-900" : "text-slate-700"
               )}
             >
               Equipe
@@ -91,9 +75,7 @@ export function Header() {
               to="/contato" 
               className={({ isActive }) => cn(
                 "text-sm font-medium transition-colors hover:text-slate-900",
-                isActive 
-                  ? (isScrolled ? "text-slate-900" : "text-slate-800") 
-                  : (isScrolled ? "text-slate-700" : "text-slate-600")
+                isActive ? "text-slate-900" : "text-slate-700"
               )}
             >
               Contato
@@ -112,10 +94,7 @@ export function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
-            <div className={cn(
-              "transition-colors",
-              isScrolled ? "text-slate-900" : "text-slate-800"
-            )}>
+            <div className="text-slate-900">
               {isMenuOpen ? <X /> : <Menu />}
             </div>
           </button>
