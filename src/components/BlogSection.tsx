@@ -86,10 +86,10 @@ const blogPosts = [
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm text-amber-500 font-semibold uppercase tracking-widest mb-2">
-            Our Largest Blog
+             Blog
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
-            Latest Posts & Articles
+             Posts & Artigos
           </h2>
         </div>
 
