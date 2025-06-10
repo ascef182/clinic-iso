@@ -1,52 +1,44 @@
 
-import { useEffect } from "react";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// Fix for default markers
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
 
 export function Map() {
-  useEffect(() => {
-    // Certifique-se de que o mapa só é criado no cliente (não em SSR)
-    if (typeof window !== "undefined") {
-      // Verificar se o mapa já existe e removê-lo para evitar duplicação
-      const container = L.DomUtil.get("map");
-      if (container != null) {
-        // @ts-ignore
-        if (container._leaflet_id) {
-          // @ts-ignore
-          container._leaflet_id = null;
-        }
-      }
+  // Coordenadas para Belo Horizonte (exemplo)
+  const position: [number, number] = [-19.9167, -43.9345];
 
-      // Definir a posição da clínica (use as coordenadas reais na produção)
-      const clinicPosition = [-19.917299, -43.934559]; // Exemplo: Belo Horizonte
-
-      // Inicializar o mapa
-      const map = L.map("map").setView(clinicPosition, 15);
-
-      // Adicionar os tiles do OpenStreetMap
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }).addTo(map);
-
-      // Adicionar marcador personalizado
-      const clinicIcon = L.icon({
-        iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
-        iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
-        shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
-      });
-
-      // Adicionar o marcador ao mapa
-      const marker = L.marker(clinicPosition, { icon: clinicIcon }).addTo(map);
-
-      // Adicionar popup ao marcador
-      marker.bindPopup("<b>ISO - Instituto Seu Olhar</b><br>Rua Exemplo, 123, Centro<br>Belo Horizonte - MG").openPopup();
-    }
-  }, []);
-
-  return <div id="map" className="w-full h-full" />;
+  return (
+    <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
+      <MapContainer 
+        center={position} 
+        zoom={15} 
+        className="w-full h-full"
+        scrollWheelZoom={false}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={position}>
+          <Popup>
+            <div className="text-center">
+              <strong>ISO - Instituto Seu Olhar</strong>
+              <br />
+              Rua Fernandes Tourinho, 235
+              <br />
+              Belo Horizonte, MG
+            </div>
+          </Popup>
+        </Marker>
+      </MapContainer>
+    </div>
+  );
 }
