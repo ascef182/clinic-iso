@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { 
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -20,7 +20,7 @@ export function BlogSection() {
       author: "Admin",
       title: "Medical Of This Working Health Blog",
       excerpt: "Medical standard chunk ofl nibh velit auctor aliquet sollic tudin.",
-      comments: 5
+      comments: 5,
     },
     {
       id: 2,
@@ -74,18 +74,14 @@ export function BlogSection() {
     }
   ];
 
-  return (
+   return (
     <section className="bg-background py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-0.5 w-16 bg-blue-500"></div>
-            <p className="text-sm text-blue-500 font-semibold tracking-wide uppercase">
-              Our Largest Blog
-            </p>
-            <div className="h-0.5 w-16 bg-blue-500"></div>
-          </div>
+          <p className="text-sm text-amber-500 font-semibold uppercase tracking-widest mb-2">
+            Our Largest Blog
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
             Latest Posts & Articles
           </h2>
@@ -94,71 +90,64 @@ export function BlogSection() {
         {/* Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
+            opts={{ align: "start", loop: true }}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {blogPosts.map((post) => (
-                <CarouselItem key={post.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CarouselItem
+                  key={post.id}
+                  className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
+                >
+                  <Card className="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 bg-white">
                     <div className="relative">
-                      <img 
+                      <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-64 object-cover"
+                        className="w-full h-56 object-cover"
                         loading="lazy"
                       />
-                      
-                      {/* Category Tag */}
-                      <span className="absolute top-4 left-4 bg-blue-100 text-blue-600 text-xs font-bold px-3 py-1 rounded-full">
+                      <span className="absolute top-4 left-4 bg-amber-100 text-amber-600 text-xs font-medium px-3 py-1 rounded-full shadow-sm">
                         {post.category}
                       </span>
-                      
-                      {/* Date Badge */}
-                      <div className="absolute bottom-0 right-0 bg-slate-900 text-white text-sm px-3 py-2 font-semibold text-center leading-tight">
+                      <div className="absolute bottom-0 right-0 bg-slate-900 text-white text-xs font-semibold px-3 py-2 text-center leading-tight rounded-tl-lg">
                         <div>{post.date.month}</div>
                         <div>{post.date.day}</div>
                       </div>
                     </div>
-                    
-                    <CardContent className="p-6">
-                      {/* Meta Information */}
-                      <div className="flex items-center gap-4 text-gray-500 text-sm mb-3">
+                    <CardContent className="p-5">
+                      <div className="flex items-center justify-between text-gray-500 text-xs mb-2">
                         <div className="flex items-center gap-1">
                           <User className="h-4 w-4" />
-                          <span>By: {post.author}</span>
+                          <span>{post.author}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <MessageCircle className="h-4 w-4" />
-                          <span>{post.comments} Comments</span>
+                          <span>{post.comments} comments</span>
                         </div>
                       </div>
-                      
-                      {/* Title */}
-                      <h3 className="text-lg font-bold text-slate-900 mb-3 line-clamp-2">
+
+                      <h3 className="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
                         {post.title}
                       </h3>
-                      
-                      {/* Excerpt */}
                       <p className="text-sm text-gray-600 mb-4 line-clamp-2">
                         {post.excerpt}
                       </p>
-                      
-                      {/* Read More Link */}
-                      <button className="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors inline-flex items-center gap-1 group">
-                        Read More 
-                        <span className="group-hover:translate-x-1 transition-transform">→</span>
-                      </button>
+
+                      <Button
+                        variant="ghost"
+                        className="p-0 h-auto text-amber-600 hover:text-amber-700 text-sm font-medium group"
+                      >
+                        Read More{" "}
+                        <span className="ml-1 group-hover:translate-x-1 transition-transform">
+                          →
+                        </span>
+                      </Button>
                     </CardContent>
                   </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            
-            {/* Navigation Buttons */}
             <CarouselPrevious className="left-4" />
             <CarouselNext className="right-4" />
           </Carousel>
