@@ -23,21 +23,18 @@ export function AboutSection() {
 
             {/* Imagens */}
             <div className="relative w-full max-w-sm lg:max-w-md">
-              {/* Imagem principal */}
               <div className="relative z-10">
                 <img
                   src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
                   alt="Equipe médica profissional do ISO"
                   className="rounded-2xl shadow-2xl w-full h-80 object-cover"
                 />
-                {/* Badge de experiência */}
                 <div className="absolute -bottom-6 -right-6 bg-custom-dark-gray text-white rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-xl border-4 border-white">
                   <span className="text-2xl font-bold">26+</span>
                   <span className="text-xs font-medium">Experience</span>
                 </div>
               </div>
 
-              {/* Imagem secundária */}
               <div className="absolute -bottom-16 left-8 w-4/5 z-0">
                 <img
                   src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f"
@@ -60,43 +57,40 @@ export function AboutSection() {
 
             {/* Título principal */}
             <h2 className="text-4xl md:text-5xl font-bold text-custom-dark-gray leading-tight">
-              Cuidar da Sua Saúde
-              <br />
-              É Nossa Especialidade
+              Compromisso com a Excelência<br />
+              e o Cuidado Individualizado
             </h2>
 
             {/* Parágrafo introdutório */}
             <p className="text-lg text-custom-medium-gray leading-relaxed">
-              Somos um time de médicos apaixonados por oferecer um atendimento humano, seguro e eficiente.
-              Unimos experiência clínica com atenção aos detalhes para garantir uma jornada de cuidado
-              acolhedora e personalizada — desde a primeira consulta até o acompanhamento contínuo.
+              Atuamos com foco em proporcionar um atendimento médico de alta qualidade, embasado em experiência clínica,
+              atualização científica constante e atenção integral à saúde de cada paciente. Aqui, a escuta qualificada e a confiança
+              são pilares do cuidado.
             </p>
 
             {/* Benefícios */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-              {/* Atendimento Personalizado */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-custom-dark-gray group">
                     <Headset className="w-6 h-6 text-custom-dark-gray group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="text-lg font-semibold text-custom-dark-gray">Atendimento Personalizado</h3>
+                  <h3 className="text-lg font-semibold text-custom-dark-gray">Atendimento Humanizado</h3>
                 </div>
                 <p className="text-custom-medium-gray text-sm">
-                  Valorizamos cada detalhe da sua experiência, com uma equipe preparada para ouvir, orientar e acolher.
+                  Respeitamos a individualidade de cada pessoa, promovendo acolhimento e escuta ativa em todas as etapas do cuidado.
                 </p>
               </div>
 
-              {/* Excelência Médica */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-custom-dark-gray group">
                     <User className="w-6 h-6 text-custom-dark-gray group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="text-lg font-semibold text-custom-dark-gray">Excelência Médica</h3>
+                  <h3 className="text-lg font-semibold text-custom-dark-gray">Precisão e Confiança</h3>
                 </div>
                 <p className="text-custom-medium-gray text-sm">
-                  Profissionais experientes, atualizados com as melhores práticas e focados em oferecer o cuidado que você merece.
+                  Atuamos com precisão diagnóstica, responsabilidade ética e excelência técnica — garantindo tranquilidade em cada decisão clínica.
                 </p>
               </div>
             </div>
@@ -104,7 +98,7 @@ export function AboutSection() {
             {/* Texto complementar */}
             <div className="pt-4">
               <p className="text-custom-medium-gray">
-                Cada paciente é único. E aqui, você será tratado com o tempo, a atenção e o respeito que sua saúde merece.{" "}
+                Nossa missão é cuidar com profundidade, oferecendo um ambiente onde você se sinta seguro, respeitado e bem orientado em todas as fases da sua saúde.{" "}
                 <span className="text-custom-gold font-medium cursor-pointer hover:underline">
                   Saiba mais →
                 </span>
@@ -114,7 +108,7 @@ export function AboutSection() {
             {/* Botão CTA */}
             <div className="pt-4">
               <Button className="bg-custom-gold hover:bg-custom-gold/90 text-custom-black px-8 py-3 rounded-full font-semibold">
-                Fale Conosco
+                Agende sua Consulta
                 <span className="ml-2">→</span>
               </Button>
             </div>
