@@ -12,6 +12,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SchemaOrg } from "@/lib/schema";
 import { Play, Check } from "lucide-react";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { motion } from "motion/react";
 
 export default function Index() {
   return (
@@ -31,9 +33,18 @@ export default function Index() {
 
       <Header />
       
-      {/* Hero Section with solid blue background */}
-      <section className="relative bg-blue-600 py-20 md:py-32 overflow-hidden min-h-[90vh] flex items-center">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Aurora background */}
+      <AuroraBackground className="py-20 md:py-32 overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="container mx-auto px-4 relative z-10"
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="space-y-8">
@@ -110,8 +121,8 @@ export default function Index() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </AuroraBackground>
 
       {/* About Section */}
       <AboutSection />
