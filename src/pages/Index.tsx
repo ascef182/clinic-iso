@@ -50,7 +50,7 @@ export default function Index() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                  Sua Saúde em{" "}
+                  Sua Saúde em{" "} <br/>
                   <span className="text-white">Boas Mãos</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-custom-light-gray leading-relaxed max-w-lg">
