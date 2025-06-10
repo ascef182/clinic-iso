@@ -11,8 +11,7 @@ import { doctors } from "@/data/doctors";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SchemaOrg } from "@/lib/schema";
-import { Play, Check } from "lucide-react";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+import { ArrowRight, Check } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Index() {
@@ -33,92 +32,80 @@ export default function Index() {
 
       <Header />
       
-      {/* Hero Section with Aurora background */}
-      <AuroraBackground className="py-20 md:py-32 overflow-hidden relative">
-        <motion.div
-          initial={{ opacity: 0.0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="container mx-auto px-4 relative z-10"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
-            {/* Left Side - Content */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                  Sua Saúde em{" "} <br/>
-                  <span className="text-white">Boas Mãos</span>
+      {/* Hero Section com layout similar ao exemplo */}
+      <div className="min-h-screen bg-gray-100 p-4">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-custom-medium-gray to-custom-dark-gray mt-20">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <img 
+                src="/lovable-uploads/eb348a20-6ccb-48aa-81cf-2a1617f7021f.png" 
+                alt="Profissional médica do ISO - Instituto Seu Olhar" 
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-custom-black/40" />
+            </div>
+
+            {/* Main Content */}
+            <motion.div
+              initial={{ opacity: 0.0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.3,
+                duration: 0.8,
+                ease: "easeInOut",
+              }}
+              className="relative z-10 flex min-h-[700px] items-center justify-between p-6 lg:p-8"
+            >
+              {/* Left Content */}
+              <div className="max-w-lg">
+                <p className="mb-4 text-sm text-white/80">Cuidado Especializado e Humanizado</p>
+                <h1 className="mb-8 text-4xl font-bold leading-tight text-white lg:text-6xl font-playfair">
+                  Sua Saúde em{" "}
+                  <br />
+                  Boas Mãos,
+                  <br />
+                  <span className="text-custom-gold">Sempre.</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-custom-light-gray leading-relaxed max-w-lg">
-                  Cuidamos de você com excelência e cuidado.
-                </p>
-              </div>
-              
-              {/* Video Button */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="group flex items-center gap-4 text-lg font-medium text-white hover:text-custom-light-gray transition-colors">
-                  <div className="h-16 w-16 rounded-full border-2 border-custom-gold flex items-center justify-center group-hover:border-custom-gold/80 transition-all bg-transparent">
-                    <Play className="h-6 w-6 ml-1 text-custom-gold group-hover:text-custom-gold/80" />
-                  </div>
-                  <span className="relative text-custom-gold">
-                    Conheça nossa clínica
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-custom-gold transition-all duration-300 group-hover:w-full"></span>
-                  </span>
+                <button className="rounded-full bg-custom-gold/90 px-6 py-3 text-custom-black backdrop-blur-sm hover:bg-custom-gold font-semibold transition-all">
+                  Conheça Nossa Clínica
                 </button>
               </div>
-            </div>
 
-            {/* Right Side - Medical Professional Image */}
-            <div className="relative lg:absolute lg:right-0 lg:bottom-0 lg:h-[85vh] lg:w-1/2 lg:max-w-2xl">
-              <div className="relative h-full">
-                <img 
-                  src="/lovable-uploads/eb348a20-6ccb-48aa-81cf-2a1617f7021f.png" 
-                  alt="Profissional médica do ISO - Instituto Seu Olhar" 
-                  className="w-full h-full object-cover object-bottom lg:object-bottom rounded-3xl lg:rounded-none lg:rounded-tl-3xl"
-                  loading="lazy"
-                />
-                
-                {/* Floating Stats Cards */}
-                <div className="absolute -bottom-8 -left-8 bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/30">
-                  <div className="flex items-center gap-4">
-                    <div className="flex -space-x-3">
-                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-custom-gold/80 to-custom-gold border-3 border-white shadow-lg"></div>
-                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-custom-medium-gray to-custom-light-gray border-3 border-white shadow-lg"></div>
-                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-custom-dark-gray to-custom-medium-gray border-3 border-white shadow-lg"></div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-custom-gold" />
-                      <div>
-                        <div className="text-2xl font-bold text-white">150K+</div>
-                        <div className="text-sm text-custom-light-gray font-medium">Pacientes atendidos</div>
+              {/* Right Product Card - Adaptado para serviços médicos */}
+              <div className="hidden lg:block">
+                <div className="rounded-2xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Oftalmologia</span>
+                    <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#SaúdeMental</span>
+                    <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Nutrologia</span>
+                  </div>
+
+                  <div className="mb-4 h-48 w-48 rounded-2xl bg-white/20 p-4 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="h-20 w-20 rounded-full bg-custom-gold/30 mx-auto mb-4 flex items-center justify-center">
+                        <Check className="h-10 w-10 text-white" />
                       </div>
+                      <div className="text-2xl font-bold text-white">150K+</div>
+                      <div className="text-sm text-white/80">Pacientes</div>
                     </div>
                   </div>
-                </div>
 
-                {/* Top Floating Card - Doctors */}
-                <div className="absolute -top-8 -right-8 bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/30">
-                  <div className="relative flex flex-col items-center">
-                    <div className="h-16 w-16 rounded-full bg-gradient-to-br from-custom-gold/80 to-custom-gold border-3 border-white shadow-lg mb-2"></div>
-                    <div className="flex gap-2 mb-3">
-                      <div className="h-8 w-8 rounded-full bg-gradient-to-br from-custom-medium-gray to-custom-light-gray border-2 border-white shadow-md"></div>
-                      <div className="h-8 w-8 rounded-full bg-gradient-to-br from-custom-dark-gray to-custom-medium-gray border-2 border-white shadow-md"></div>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs text-white/80">Excelência em Cuidados</p>
+                      <p className="font-semibold text-white">Atendimento ISO</p>
                     </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-white">20+</div>
-                      <div className="text-sm text-custom-light-gray font-medium">Especialistas</div>
-                    </div>
+                    <button className="rounded-full bg-custom-gold/20 p-2 text-white hover:bg-custom-gold/30 transition-all">
+                      <ArrowRight className="h-4 w-4" />
+                    </button>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </motion.div>
-      </AuroraBackground>
+        </div>
+      </div>
 
       {/* About Section */}
       <AboutSection />
@@ -169,8 +156,6 @@ export default function Index() {
 
       {/* Blog Section */}
       <BlogSection />
-
-
 
       <Footer />
     </>
