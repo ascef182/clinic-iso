@@ -11,7 +11,7 @@ import { doctors } from "@/data/doctors";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SchemaOrg } from "@/lib/schema";
-import { Play, Check } from "lucide-react";
+import { Play, Check, ArrowRight } from "lucide-react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "motion/react";
 
