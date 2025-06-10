@@ -11,68 +11,74 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, User, MessageCircle } from "lucide-react";
 
 export function BlogSection() {
-  const blogPosts = [
-    {
-      id: 1,
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2",
-      category: "MEDICAL",
-      date: { month: "May", day: "02" },
-      author: "Admin",
-      title: "Medical Of This Working Health Blog",
-      excerpt: "Medical standard chunk ofl nibh velit auctor aliquet sollic tudin.",
-      comments: 5,
-    },
-    {
-      id: 2,
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f",
-      category: "MEDICAL",
-      date: { month: "May", day: "05" },
-      author: "Admin",
-      title: "There Is Only One Thing That Is Hospital.",
-      excerpt: "Medical standard chunk ofl nibh velit auctor aliquet sollic tudin.",
-      comments: 8
-    },
-    {
-      id: 3,
-      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54",
-      category: "MEDICAL",
-      date: { month: "May", day: "08" },
-      author: "Admin",
-      title: "This Working World and Infection Prevention.",
-      excerpt: "Medical standard chunk ofl nibh velit auctor aliquet sollic tudin.",
-      comments: 3
-    },
-    {
-      id: 4,
-      image: "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e",
-      category: "MEDICAL",
-      date: { month: "May", day: "12" },
-      author: "Admin",
-      title: "Advanced Medical Technology Solutions",
-      excerpt: "Medical standard chunk ofl nibh velit auctor aliquet sollic tudin.",
-      comments: 6
-    },
-    {
-      id: 5,
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063",
-      category: "MEDICAL",
-      date: { month: "May", day: "15" },
-      author: "Admin",
-      title: "Healthcare Innovation and Patient Care",
-      excerpt: "Medical standard chunk ofl nibh velit auctor aliquet sollic tudin.",
-      comments: 4
-    },
-    {
-      id: 6,
-      image: "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34",
-      category: "MEDICAL",
-      date: { month: "May", day: "18" },
-      author: "Admin",
-      title: "Future of Medical Research and Development",
-      excerpt: "Medical standard chunk ofl nibh velit auctor aliquet sollic tudin.",
-      comments: 7
-    }
-  ];
+const blogPosts = [
+  {
+    id: 1,
+    image: "https://images.unsplash.com/photo-1606813909355-387c3c2c3c7e",
+    category: "SAÚDE MENTAL",
+    date: { month: "Jun", day: "10" },
+    author: "Dr. Kennedy Pinheiro",
+    title: "Cansaço constante e falta de foco: quando se preocupar?",
+    excerpt:
+      "Você sente que vive cansado(a), com insônia e desânimo? Descubra quando isso pode ser mais que estresse comum.",
+    comments: 12,
+  },
+  {
+    id: 2,
+    image: "https://images.unsplash.com/photo-1620799140404-9669cf79c706",
+    category: "NUTROLOGIA",
+    date: { month: "Jun", day: "08" },
+    author: "Dra. Maria Fernanda",
+    title: "Como emagrecer com saúde sem dietas restritivas?",
+    excerpt:
+      "Esqueça as fórmulas milagrosas: entenda como a nutrologia e o estilo de vida saudável ajudam no emagrecimento real.",
+    comments: 9,
+  },
+  {
+    id: 3,
+    image: "https://images.unsplash.com/photo-1615807710184-06a15f8a7e17",
+    category: "PLÁSTICA OCULAR",
+    date: { month: "Jun", day: "06" },
+    author: "Dra. Rafaela Malagoli",
+    title: "Blefaroplastia: função, estética e autoestima",
+    excerpt:
+      "A cirurgia das pálpebras pode melhorar sua visão e seu bem-estar. Saiba quando ela é indicada e como funciona.",
+    comments: 6,
+  },
+  {
+    id: 4,
+    image: "https://images.unsplash.com/photo-1588776814546-ec7e5c6ca9ba",
+    category: "NUTROLOGIA",
+    date: { month: "Jun", day: "05" },
+    author: "Dra. Maria Fernanda",
+    title: "5 pilares do emagrecimento saudável",
+    excerpt:
+      "Sono, alimentação, exercícios, saúde mental e equilíbrio hormonal: veja como esses fatores trabalham juntos.",
+    comments: 7,
+  },
+  {
+    id: 5,
+    image: "https://images.unsplash.com/photo-1613553507747-27f3dc8d3087",
+    category: "SAÚDE INTEGRATIVA",
+    date: { month: "Jun", day: "04" },
+    author: "Dr. Kennedy Pinheiro",
+    title: "Quando corpo e mente pedem ajuda: sinais de alerta",
+    excerpt:
+      "Ansiedade, falta de energia e alterações no apetite podem ser sinais de desequilíbrio integrativo. Saiba como agir.",
+    comments: 4,
+  },
+  {
+    id: 6,
+    image: "https://images.unsplash.com/photo-1607082349410-b6b6fa3f1f43",
+    category: "ESTÉTICA NATURAL",
+    date: { month: "Jun", day: "02" },
+    author: "Dra. Rafaela Malagoli",
+    title: "Harmonização com botox: como manter a naturalidade",
+    excerpt:
+      "O botox pode suavizar expressões sem tirar sua identidade. Descubra como um olhar técnico faz toda a diferença.",
+    comments: 10,
+  },
+];
 
    return (
     <section className="bg-background py-20">
