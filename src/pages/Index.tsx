@@ -9,7 +9,7 @@ import { doctors } from "@/data/doctors";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SchemaOrg } from "@/lib/schema";
-import { Play } from "lucide-react";
+import { Play, Check } from "lucide-react";
 
 export default function Index() {
   return (
@@ -29,38 +29,34 @@ export default function Index() {
 
       <Header />
       
-      {/* Modern Hero Section */}
-      <section className="relative bg-gradient-to-br from-muted via-background to-muted/50 py-20 md:py-32 overflow-hidden">
+      {/* Modern Hero Section with Elegant Gradient */}
+      <section className="relative bg-gradient-to-br from-slate-200 via-slate-400 to-slate-900 py-20 md:py-32 overflow-hidden min-h-[90vh] flex items-center">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
+            {/* Left Side - Content */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Seu Parceiro em{" "}
-                  <span className="text-primary">Saúde e Bem-estar</span>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight">
+                  Sua Saúde em{" "}
+                  <span className="text-slate-900">Boas Mãos</span>
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
-                  Estamos comprometidos em fornecer os melhores serviços médicos e de saúde para ajudá-lo a viver de forma mais saudável e feliz.
+                <p className="text-xl md:text-2xl text-slate-700 leading-relaxed max-w-lg">
+                  Cuidamos de você com excelência médica e atenção humanizada.
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" asChild className="h-14 px-8 text-lg">
-                  <Link to="/agendamento">Agendar Consulta</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="h-14 px-8 text-lg group">
-                  <Link to="/sobre" className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Play className="h-5 w-5 ml-1" />
-                    </div>
-                    Veja como trabalhamos
-                  </Link>
-                </Button>
+              {/* Video Button */}
+              <div className="flex items-center gap-4 pt-4">
+                <button className="group flex items-center gap-4 text-lg font-medium text-slate-800 hover:text-slate-900 transition-colors">
+                  <div className="h-16 w-16 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/90 transition-all shadow-lg">
+                    <Play className="h-6 w-6 ml-1 text-slate-800" />
+                  </div>
+                  <span className="underline decoration-2 underline-offset-4">Conheça nossa clínica</span>
+                </button>
               </div>
             </div>
 
-            {/* Hero Image with Stats */}
+            {/* Right Side - Image with Floating Stats */}
             <div className="relative">
               <div className="relative">
                 <img 
@@ -70,28 +66,40 @@ export default function Index() {
                   loading="lazy"
                 />
                 
-                {/* Floating Stats Cards */}
-                <div className="absolute -bottom-6 -left-6 bg-background rounded-xl p-4 shadow-lg border">
-                  <div className="flex items-center gap-3">
-                    <div className="flex -space-x-2">
-                      <div className="h-8 w-8 rounded-full bg-primary/20 border-2 border-background"></div>
-                      <div className="h-8 w-8 rounded-full bg-primary/40 border-2 border-background"></div>
-                      <div className="h-8 w-8 rounded-full bg-primary/60 border-2 border-background"></div>
+                {/* Left Floating Card - Patients */}
+                <div className="absolute -bottom-8 -left-8 bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/30">
+                  <div className="flex items-center gap-4">
+                    <div className="flex -space-x-3">
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 border-white shadow-lg"></div>
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-3 border-white shadow-lg"></div>
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-3 border-white shadow-lg"></div>
                     </div>
-                    <div>
-                      <div className="text-2xl font-bold text-foreground">150K+</div>
-                      <div className="text-sm text-muted-foreground">Pacientes Atendidos</div>
+                    <div className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-green-600" />
+                      <div>
+                        <div className="text-2xl font-bold text-slate-800">150K+</div>
+                        <div className="text-sm text-slate-600 font-medium">Pacientes atendidos</div>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="absolute -top-6 -right-6 bg-background rounded-xl p-4 shadow-lg border">
-                  <div className="text-center">
-                    <div className="h-10 w-10 rounded-full bg-green-500 mx-auto mb-2 flex items-center justify-center">
-                      <div className="h-2 w-2 rounded-full bg-white"></div>
+                {/* Right Floating Card - Doctors */}
+                <div className="absolute -top-8 -right-8 bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/30">
+                  <div className="relative flex flex-col items-center">
+                    {/* Center doctor */}
+                    <div className="h-16 w-16 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-3 border-white shadow-lg mb-2"></div>
+                    
+                    {/* Side doctors */}
+                    <div className="flex gap-2 mb-3">
+                      <div className="h-8 w-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 border-2 border-white shadow-md"></div>
+                      <div className="h-8 w-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-2 border-white shadow-md"></div>
                     </div>
-                    <div className="text-2xl font-bold text-foreground">20+</div>
-                    <div className="text-sm text-muted-foreground">Especialistas</div>
+                    
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-slate-800">20+</div>
+                      <div className="text-sm text-slate-600 font-medium">Especialistas</div>
+                    </div>
                   </div>
                 </div>
               </div>
