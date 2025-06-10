@@ -1,92 +1,77 @@
-
-import { Hospital, Ambulance, Stethoscope, Pill, Microscope, FlaskRound } from "lucide-react";
+import { Hospital, Ambulance, Heart, Users, Beaker, CreditCard } from "lucide-react";
 
 export function WhyChooseUsSection() {
-  const benefits = [
+  const features = [
     {
       icon: Hospital,
-      title: "Atendimento Especializado",
-      description: "Equipe com experiência em diversas especialidades médicas."
+      title: "Atenção Especializada",
+      description: "Profissionais com expertise multidisciplinar."  
     },
     {
       icon: Ambulance,
-      title: "Socorro Rápido",
-      description: "Atendimento emergencial com agilidade e preparo técnico."
+      title: "Resposta Imediata",
+      description: "Atendimento de emergência em tempo recorde."  
     },
     {
-      icon: Stethoscope,
-      title: "Médicos Qualificados",
-      description: "Profissionais reconhecidos e constantemente atualizados."
+      icon: Users,
+      title: "Equipe de Excelência",
+      description: "Médicos e enfermeiros em constante aperfeiçoamento."  
     },
     {
-      icon: Pill,
-      title: "Orientações Médicas",
-      description: "Suporte e acompanhamento contínuo ao paciente."
+      icon: Heart,
+      title: "Cuidado Contínuo",
+      description: "Suporte dedicado durante toda a sua jornada."  
     },
     {
-      icon: Microscope,
-      title: "Pesquisas Clínicas",
-      description: "Atualização constante em ciência e tecnologia médica."
+      icon: Beaker,
+      title: "Inovação Científica",
+      description: "Tecnologia de ponta e pesquisa constante."  
     },
     {
-      icon: FlaskRound,
-      title: "Preços Acessíveis",
-      description: "Soluções médicas com excelente custo-benefício."
+      icon: CreditCard,
+      title: "Planos Acessíveis",
+      description: "Qualidade premium com valores justos."  
     }
   ];
 
   return (
-    <section className="relative py-28">
-      {/* Background com filtro apenas no fundo */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent pointer-events-none"></div>
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="text-center mb-12">
+          <span className="text-sm font-semibold text-yellow-600 uppercase">
+            Por que escolher a Clínica ISO
+          </span>
+          <h2 className="mt-2 text-4xl font-bold text-gray-800">
+            Excelência em saúde com cuidado humanizado
+          </h2>
+        </div>
 
-      <div className="container mx-auto px-8 relative z-10 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          {/* Conteúdo */}
-          <div className="max-w-xl mx-auto lg:mx-0 space-y-12">
-            <p className="text-custom-gold font-semibold uppercase tracking-wide text-base mb-2">
-              Por que escolher a Clínica ISO
-            </p>
-            <h2 className="text-5xl font-extrabold leading-tight text-custom-black font-serif">
-              Cuidamos da sua saúde <br /> com excelência e dedicação.
-            </h2>
-
-            {/* Grid dos benefícios */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-              {benefits.map(({ icon: Icon, title, description }, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col gap-5 p-7 rounded-3xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                  tabIndex={0}
-                  aria-label={`${title}: ${description}`}
-                >
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-custom-gold/10 text-custom-gold shadow-md transition-transform duration-300 hover:scale-110">
-                    <Icon className="w-8 h-8" aria-hidden="true" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-custom-black">{title}</h3>
-                  <p className="text-custom-medium-gray leading-relaxed">{description}</p>
-                </div>
-              ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map(({ icon: Icon, title, description }, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-start p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition"
+            >
+              <div className="p-4 bg-yellow-100 rounded-full mb-4">
+                <Icon className="w-6 h-6 text-yellow-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {description}
+              </p>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Imagem e fundo */}
-          <div className="relative flex justify-center items-center min-h-[520px]">
-            {/* Formas geométricas com brilho sutil - apenas no background */}
-            <div className="absolute -left-20 bottom-14 w-60 h-60 bg-custom-gold/10 rounded-full opacity-20 blur-3xl"></div>
-            <div className="absolute top-0 right-0 w-96 h-[500px] bg-custom-gold/5 rounded-bl-[300px] opacity-25 blur-2xl"></div>
-
-            {/* Imagem */}
-            <img
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2"
-              alt="Médico explicando tratamento para casal de pacientes na Clínica ISO, em ambiente clínico moderno"
-              className="relative rounded-3xl shadow-2xl object-cover max-h-[500px] w-full max-w-lg"
-              loading="lazy"
-              decoding="async"
-              fetchPriority="low"
-            />
-          </div>
+        <div className="mt-16 flex justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2"
+            alt="Profissionais de saúde atendendo pacientes"
+            className="w-full max-w-2xl rounded-2xl shadow-xl object-cover"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
