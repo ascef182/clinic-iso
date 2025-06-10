@@ -66,7 +66,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom color palette
+				'custom-black': 'hsl(var(--black))',
+				'custom-dark-gray': 'hsl(var(--dark-gray))',
+				'custom-medium-gray': 'hsl(var(--medium-gray))',
+				'custom-light-gray': 'hsl(var(--light-gray))',
+				'custom-gold': 'hsl(var(--gold))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
