@@ -1,5 +1,7 @@
 
 import { Helmet } from "react-helmet-async";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import { doctors } from "@/data/doctors";
 import { DoctorCard } from "@/components/DoctorCard";
 import { Header } from "@/components/Header";
@@ -19,9 +21,14 @@ export default function Equipe() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary/5 py-16">
+      <section className="bg-primary/5 py-16 pt-32">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Nossa Equipe Médica</h1>
+          <div className="flex items-center gap-4 mb-6">
+            <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
+              <ArrowLeft className="w-6 h-6" />
+            </Link>
+            <h1 className="text-4xl md:text-5xl font-bold">Nossa Equipe Médica</h1>
+          </div>
           <p className="text-lg text-muted-foreground max-w-3xl">
             Profissionais altamente qualificados e dedicados ao seu bem-estar e saúde.
           </p>

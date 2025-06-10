@@ -1,5 +1,7 @@
 
 import { Helmet } from "react-helmet-async";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -17,9 +19,14 @@ export default function Sobre() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary/5 py-16">
+      <section className="bg-primary/5 py-16 pt-32">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre o ISO - Instituto Seu Olhar</h1>
+          <div className="flex items-center gap-4 mb-6">
+            <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
+              <ArrowLeft className="w-6 h-6" />
+            </Link>
+            <h1 className="text-4xl md:text-5xl font-bold">Sobre o ISO - Instituto Seu Olhar</h1>
+          </div>
           <p className="text-lg text-muted-foreground max-w-3xl">
             Conheça nossa história e compromisso com a saúde e bem-estar dos nossos pacientes.
           </p>
