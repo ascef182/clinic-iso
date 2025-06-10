@@ -76,7 +76,7 @@ export default function Index() {
             <div className="relative">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2" 
+                  src="https://www.lummi.ai/api/render/image/28a4fa48-6ed4-4030-8937-1f899a7220cc?token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjI4YTRmYTQ4LTZlZDQtNDAzMC04OTM3LTFmODk5YTcyMjBjYyIsImRvd25sb2FkU2l6ZSI6Im1lZGl1bSIsInJlbmRlclNwZWNzIjp7ImVmZmVjdHMiOnsicmVmcmFtZSI6e319fSwic2hvdWxkQXV0b0Rvd25sb2FkIjpmYWxzZSwianRpIjoiSklDaWgxQXZkNm1PMXhoSGdpZkh2IiwiaWF0IjoxNzQ5NTc3MzM4LCJleHAiOjE3NDk1NzczOTh9.oynUJS41PsaOaufZVHRp2fR2NZdsi7IFmlvJKmqGUyg" 
                   alt="Equipe médica profissional do ISO - Instituto Seu Olhar" 
                   className="rounded-2xl shadow-2xl w-full h-auto object-cover"
                   loading="lazy"
