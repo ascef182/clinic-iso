@@ -142,14 +142,13 @@ export function Header() {
                 Contato
               </NavLink>
             </nav>
-            <Button
+           <Button
   asChild
-  className="w-full bg-black hover:bg-amber-500 text-white border border-transparent transition-colors duration-300"
+  className="bg-black hover:bg-amber-500 text-white border border-transparent transition-colors duration-300"
 >
-  <Link to="/agendamento" onClick={() => setIsMenuOpen(false)}>
-    Agende sua Consulta
-  </Link>
+  <Link to="/agendamento">Agende sua Consulta</Link>
 </Button>
+
           </div>
         </div>
       )}
