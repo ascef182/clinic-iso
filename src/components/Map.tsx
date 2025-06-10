@@ -1,44 +1,34 @@
 
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
-
-// Fix for default markers
-delete (L.Icon.Default.prototype as any)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-});
+import { useEffect, useRef } from 'react';
 
 export function Map() {
-  // Coordenadas para Belo Horizonte (exemplo)
-  const position: [number, number] = [-19.9167, -43.9345];
+  const mapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!mapRef.current) return;
+
+    // Create a simple embedded map using OpenStreetMap
+    const mapContainer = mapRef.current;
+    
+    // Clear any existing content
+    mapContainer.innerHTML = '';
+    
+    // Create iframe with OpenStreetMap embed
+    const iframe = document.createElement('iframe');
+    iframe.width = '100%';
+    iframe.height = '100%';
+    iframe.style.border = '0';
+    iframe.style.borderRadius = '8px';
+    iframe.loading = 'lazy';
+    iframe.allowFullscreen = true;
+    iframe.src = 'https://www.openstreetmap.org/export/embed.html?bbox=-43.9445%2C-19.9267%2C-43.9245%2C-19.9067&layer=mapnik&marker=-19.9167%2C-43.9345';
+    
+    mapContainer.appendChild(iframe);
+  }, []);
 
   return (
     <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
-      <MapContainer 
-        center={position} 
-        zoom={15} 
-        className="w-full h-full"
-        scrollWheelZoom={false}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={position}>
-          <Popup>
-            <div className="text-center">
-              <strong>ISO - Instituto Seu Olhar</strong>
-              <br />
-              Rua Fernandes Tourinho, 235
-              <br />
-              Belo Horizonte, MG
-            </div>
-          </Popup>
-        </Marker>
-      </MapContainer>
+      <div ref={mapRef} className="w-full h-full" />
     </div>
   );
 }
