@@ -13,6 +13,7 @@ import { Footer } from "@/components/Footer";
 import { SchemaOrg } from "@/lib/schema";
 import { ArrowRight, Check } from "lucide-react";
 import { motion } from "motion/react";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export default function Index() {
   return (
@@ -32,80 +33,82 @@ export default function Index() {
 
       <Header />
       
-      {/* Hero Section com layout similar ao exemplo */}
-      <div className="min-h-screen bg-gray-100 p-4">
-        <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-custom-medium-gray to-custom-dark-gray mt-20">
-            {/* Background Image */}
-            <div className="absolute inset-0">
-              <img 
-                src="/lovable-uploads/eb348a20-6ccb-48aa-81cf-2a1617f7021f.png" 
-                alt="Profissional médica do ISO - Instituto Seu Olhar" 
-                className="w-full h-full object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-custom-black/40" />
-            </div>
-
-            {/* Main Content */}
-            <motion.div
-              initial={{ opacity: 0.0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="relative z-10 flex min-h-[700px] items-center justify-between p-6 lg:p-8"
-            >
-              {/* Left Content */}
-              <div className="max-w-lg">
-                <p className="mb-4 text-sm text-white/80">Cuidado Especializado e Humanizado</p>
-                <h1 className="mb-8 text-4xl font-bold leading-tight text-white lg:text-6xl font-playfair">
-                  Sua Saúde em{" "}
-                  <br />
-                  Boas Mãos,
-                  <br />
-                  <span className="text-custom-gold">Sempre.</span>
-                </h1>
-                <button className="rounded-full bg-custom-gold/90 px-6 py-3 text-custom-black backdrop-blur-sm hover:bg-custom-gold font-semibold transition-all">
-                  Conheça Nossa Clínica
-                </button>
+      {/* Hero Section com AuroraBackground */}
+      <AuroraBackground className="min-h-screen">
+        <div className="min-h-screen bg-gray-100 p-4">
+          <div className="mx-auto max-w-7xl">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-custom-medium-gray to-custom-dark-gray mt-20">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src="/lovable-uploads/eb348a20-6ccb-48aa-81cf-2a1617f7021f.png" 
+                  alt="Profissional médica do ISO - Instituto Seu Olhar" 
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-custom-black/40" />
               </div>
 
-              {/* Right Product Card - Adaptado para serviços médicos */}
-              <div className="hidden lg:block">
-                <div className="rounded-2xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
-                  <div className="mb-4 flex flex-wrap gap-2">
-                    <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Oftalmologia</span>
-                    <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#SaúdeMental</span>
-                    <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Nutrologia</span>
-                  </div>
+              {/* Main Content */}
+              <motion.div
+                initial={{ opacity: 0.0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.3,
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}
+                className="relative z-10 flex min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] items-center justify-between p-6 lg:p-8"
+              >
+                {/* Left Content */}
+                <div className="max-w-lg">
+                  <p className="mb-4 text-sm text-white/80">Cuidado Especializado e Humanizado</p>
+                  <h1 className="mb-8 text-4xl font-bold leading-tight text-white lg:text-6xl xl:text-7xl font-playfair">
+                    Sua Saúde em{" "}
+                    <br />
+                    Boas Mãos,
+                    <br />
+                    <span className="text-custom-gold">Sempre.</span>
+                  </h1>
+                  <button className="rounded-full bg-custom-gold/90 px-6 py-3 text-custom-black backdrop-blur-sm hover:bg-custom-gold font-semibold transition-all">
+                    Conheça Nossa Clínica
+                  </button>
+                </div>
 
-                  <div className="mb-4 h-48 w-48 rounded-2xl bg-white/20 p-4 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="h-20 w-20 rounded-full bg-custom-gold/30 mx-auto mb-4 flex items-center justify-center">
-                        <Check className="h-10 w-10 text-white" />
+                {/* Right Product Card - Responsivo */}
+                <div className="hidden lg:block">
+                  <div className="rounded-2xl bg-white/10 p-6 lg:p-8 xl:p-10 backdrop-blur-sm border border-white/20 lg:w-72 xl:w-80 2xl:w-96">
+                    <div className="mb-4 flex flex-wrap gap-2">
+                      <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Oftalmologia</span>
+                      <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#SaúdeMental</span>
+                      <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Nutrologia</span>
+                    </div>
+
+                    <div className="mb-4 h-48 lg:h-56 xl:h-64 rounded-2xl bg-white/20 p-4 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="h-20 w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 rounded-full bg-custom-gold/30 mx-auto mb-4 flex items-center justify-center">
+                          <Check className="h-10 w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 text-white" />
+                        </div>
+                        <div className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white">150K+</div>
+                        <div className="text-sm lg:text-base text-white/80">Pacientes</div>
                       </div>
-                      <div className="text-2xl font-bold text-white">150K+</div>
-                      <div className="text-sm text-white/80">Pacientes</div>
                     </div>
-                  </div>
 
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-xs text-white/80">Excelência em Cuidados</p>
-                      <p className="font-semibold text-white">Atendimento ISO</p>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-xs lg:text-sm text-white/80">Excelência em Cuidados</p>
+                        <p className="font-semibold lg:text-lg text-white">Atendimento ISO</p>
+                      </div>
+                      <button className="rounded-full bg-custom-gold/20 p-2 lg:p-3 text-white hover:bg-custom-gold/30 transition-all">
+                        <ArrowRight className="h-4 w-4 lg:h-5 lg:w-5" />
+                      </button>
                     </div>
-                    <button className="rounded-full bg-custom-gold/20 p-2 text-white hover:bg-custom-gold/30 transition-all">
-                      <ArrowRight className="h-4 w-4" />
-                    </button>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
-      </div>
+      </AuroraBackground>
 
       {/* About Section */}
       <AboutSection />
