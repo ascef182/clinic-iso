@@ -54,7 +54,7 @@ export default function Index() {
                   <span className="text-white">Boas Mãos</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-custom-light-gray leading-relaxed max-w-lg">
-                  Cuidamos de você com excelência médica e atenção humanizada.
+                  Cuidamos de você com excelência e cuidado.
                 </p>
               </div>
               
