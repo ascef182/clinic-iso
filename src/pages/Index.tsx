@@ -56,37 +56,43 @@ export default function Index() {
                 <br />
                 <span className="text-custom-gold">Sempre.</span>
               </h1>
-              <button className="rounded-full bg-custom-gold/90 px-6 py-3 text-custom-black backdrop-blur-sm hover:bg-custom-gold font-semibold transition-all">
-                Conheça Nossa Clínica
-              </button>
+              
+              {/* Sophisticated Button */}
+              <div className="group relative inline-flex">
+                <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-custom-gold via-yellow-400 to-custom-gold opacity-75 blur-sm group-hover:opacity-100 transition duration-300"></div>
+                <button className="relative flex items-center gap-3 rounded-full bg-black/80 px-8 py-4 text-white border border-custom-gold hover:bg-black/90 transition-all duration-300 backdrop-blur-sm">
+                  <Play className="h-5 w-5 text-custom-gold" />
+                  <span className="font-semibold text-lg">Conheça nossa clínica</span>
+                </button>
+              </div>
             </div>
 
-            {/* Right Product Card - Responsivo */}
-            <div className="hidden lg:block">
-              <div className="rounded-2xl bg-white/10 p-6 lg:p-8 xl:p-10 backdrop-blur-sm border border-white/20 lg:w-72 xl:w-80 2xl:w-96">
+            {/* Right Product Card */}
+            <div className="hidden lg:block xl:block 2xl:block">
+              <div className="rounded-2xl bg-white/10 p-6 lg:p-8 xl:p-10 backdrop-blur-sm border border-white/20 lg:w-80 xl:w-96 2xl:w-[28rem]">
                 <div className="mb-4 flex flex-wrap gap-2">
                   <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Oftalmologia</span>
                   <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#SaúdeMental</span>
                   <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Nutrologia</span>
                 </div>
 
-                <div className="mb-4 h-48 lg:h-56 xl:h-64 rounded-2xl bg-white/20 p-4 flex items-center justify-center">
+                <div className="mb-4 h-56 lg:h-64 xl:h-72 2xl:h-80 rounded-2xl bg-white/20 p-4 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="h-20 w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 rounded-full bg-custom-gold/30 mx-auto mb-4 flex items-center justify-center">
-                      <Check className="h-10 w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 text-white" />
+                    <div className="h-24 w-24 lg:h-28 lg:w-28 xl:h-32 xl:w-32 2xl:h-36 2xl:w-36 rounded-full bg-custom-gold/30 mx-auto mb-4 flex items-center justify-center">
+                      <Check className="h-12 w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 2xl:h-18 2xl:w-18 text-white" />
                     </div>
-                    <div className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white">150K+</div>
-                    <div className="text-sm lg:text-base text-white/80">Pacientes</div>
+                    <div className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white">150K+</div>
+                    <div className="text-base lg:text-lg xl:text-xl text-white/80">Pacientes</div>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs lg:text-sm text-white/80">Excelência em Cuidados</p>
-                    <p className="font-semibold lg:text-lg text-white">Atendimento ISO</p>
+                    <p className="text-sm lg:text-base text-white/80">Excelência em Cuidados</p>
+                    <p className="font-semibold text-lg lg:text-xl xl:text-2xl text-white">Atendimento ISO</p>
                   </div>
-                  <button className="rounded-full bg-custom-gold/20 p-2 lg:p-3 text-white hover:bg-custom-gold/30 transition-all">
-                    <ArrowRight className="h-4 w-4 lg:h-5 lg:w-5" />
+                  <button className="rounded-full bg-custom-gold/20 p-3 lg:p-4 text-white hover:bg-custom-gold/30 transition-all">
+                    <ArrowRight className="h-5 w-5 lg:h-6 lg:w-6" />
                   </button>
                 </div>
               </div>
