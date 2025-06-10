@@ -34,7 +34,7 @@ export default function Index() {
       <Header />
       
       {/* Hero Section with Aurora background */}
-      <AuroraBackground className="py-20 md:py-32 overflow-hidden">
+      <AuroraBackground className="py-20 md:py-32 overflow-hidden relative">
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export default function Index() {
           }}
           className="container mx-auto px-4 relative z-10"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
             {/* Left Side - Content */}
             <div className="space-y-8">
               <div className="space-y-6">
@@ -58,40 +58,46 @@ export default function Index() {
                 </p>
               </div>
               
-              {/* Video Button */}
-              <div className="flex items-center gap-4 pt-4">
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                {/* Video Button */}
                 <button className="group flex items-center gap-4 text-lg font-medium text-white hover:text-blue-100 transition-colors">
-                  <div className="h-16 w-16 rounded-full border-2 border-white flex items-center justify-center group-hover:border-blue-100 transition-all bg-transparent">
-                    <Play className="h-6 w-6 ml-1 text-white group-hover:text-blue-100" />
+                  <div className="h-16 w-16 rounded-full border-2 border-custom-gold flex items-center justify-center group-hover:border-custom-gold/80 transition-all bg-transparent">
+                    <Play className="h-6 w-6 ml-1 text-custom-gold group-hover:text-custom-gold/80" />
                   </div>
-                  <span className="relative">
+                  <span className="relative text-custom-gold">
                     Conheça nossa clínica
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-custom-gold transition-all duration-300 group-hover:w-full"></span>
                   </span>
                 </button>
+                
+                {/* CTA Button */}
+                <Button asChild className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold px-8 py-3 h-auto">
+                  <Link to="/agendamento">Agendar agora</Link>
+                </Button>
               </div>
             </div>
 
-            {/* Right Side - Image with Floating Stats */}
-            <div className="relative">
-              <div className="relative">
+            {/* Right Side - Medical Professional Image */}
+            <div className="relative lg:absolute lg:right-0 lg:bottom-0 lg:h-[80vh] lg:w-1/2">
+              <div className="relative h-full">
                 <img 
-                  src="https://www.lummi.ai/api/render/image/28a4fa48-6ed4-4030-8937-1f899a7220cc?token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjI4YTRmYTQ4LTZlZDQtNDAzMC04OTM3LTFmODk5YTcyMjBjYyIsImRvd25sb2FkU2l6ZSI6Im1lZGl1bSIsInJlbmRlclNwZWNzIjp7ImVmZmVjdHMiOnsicmVmcmFtZSI6e319fSwic2hvdWxkQXV0b0Rvd25sb2FkIjpmYWxzZSwianRpIjoiSklDaWgxQXZkNm1PMXhoSGdpZkh2IiwiaWF0IjoxNzQ5NTc3MzM4LCJleHAiOjE3NDk1NzczOTh9.oynUJS41PsaOaufZVHRp2fR2NZdsi7IFmlvJKmqGUyg" 
-                  alt="Equipe médica profissional do ISO - Instituto Seu Olhar" 
-                  className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                  src="/lovable-uploads/eb348a20-6ccb-48aa-81cf-2a1617f7021f.png" 
+                  alt="Profissional médica do ISO - Instituto Seu Olhar" 
+                  className="w-full h-full object-cover object-bottom lg:object-bottom rounded-2xl lg:rounded-none lg:rounded-tl-2xl"
                   loading="lazy"
                 />
                 
-                {/* Left Floating Card - Patients */}
+                {/* Floating Stats Cards */}
                 <div className="absolute -bottom-8 -left-8 bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/30">
                   <div className="flex items-center gap-4">
                     <div className="flex -space-x-3">
-                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-3 border-white shadow-lg"></div>
-                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-3 border-white shadow-lg"></div>
-                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-3 border-white shadow-lg"></div>
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-custom-gold/80 to-custom-gold border-3 border-white shadow-lg"></div>
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-custom-medium-gray to-custom-light-gray border-3 border-white shadow-lg"></div>
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-custom-dark-gray to-custom-medium-gray border-3 border-white shadow-lg"></div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-600" />
+                      <Check className="h-5 w-5 text-custom-gold" />
                       <div>
                         <div className="text-2xl font-bold text-white">150K+</div>
                         <div className="text-sm text-blue-100 font-medium">Pacientes atendidos</div>
@@ -100,18 +106,14 @@ export default function Index() {
                   </div>
                 </div>
 
-                {/* Right Floating Card - Doctors */}
+                {/* Top Floating Card - Doctors */}
                 <div className="absolute -top-8 -right-8 bg-white/20 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/30">
                   <div className="relative flex flex-col items-center">
-                    {/* Center doctor */}
-                    <div className="h-16 w-16 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-3 border-white shadow-lg mb-2"></div>
-                    
-                    {/* Side doctors */}
+                    <div className="h-16 w-16 rounded-full bg-gradient-to-br from-custom-gold/80 to-custom-gold border-3 border-white shadow-lg mb-2"></div>
                     <div className="flex gap-2 mb-3">
-                      <div className="h-8 w-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 border-2 border-white shadow-md"></div>
-                      <div className="h-8 w-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-2 border-white shadow-md"></div>
+                      <div className="h-8 w-8 rounded-full bg-gradient-to-br from-custom-medium-gray to-custom-light-gray border-2 border-white shadow-md"></div>
+                      <div className="h-8 w-8 rounded-full bg-gradient-to-br from-custom-dark-gray to-custom-medium-gray border-2 border-white shadow-md"></div>
                     </div>
-                    
                     <div className="text-center">
                       <div className="text-2xl font-bold text-white">20+</div>
                       <div className="text-sm text-blue-100 font-medium">Especialistas</div>
@@ -147,7 +149,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Team section */}
+      {/* Team section with modernized cards */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
