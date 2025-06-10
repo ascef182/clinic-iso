@@ -36,21 +36,21 @@ export function WhyChooseUsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-custom-light-gray">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Lado Esquerdo - Conteúdo */}
           <div className="space-y-8">
             {/* Mini título */}
             <div className="flex items-center gap-2">
-              <div className="w-8 h-0.5 bg-slate-900"></div>
-              <span className="text-slate-900 font-medium text-sm uppercase tracking-wider">
+              <div className="w-8 h-0.5 bg-custom-black"></div>
+              <span className="text-custom-black font-medium text-sm uppercase tracking-wider">
                 Por que escolher a Clínica ISO
               </span>
             </div>
 
             {/* Título principal */}
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-custom-black leading-tight">
               Estamos prontos para 
               <br />
               cuidar da sua saúde 
@@ -65,12 +65,12 @@ export function WhyChooseUsSection() {
                 return (
                   <div key={index} className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 bg-custom-black rounded-lg flex items-center justify-center">
+                        <IconComponent className="w-6 h-6 text-custom-gold" />
                       </div>
-                      <h3 className="text-lg font-semibold text-slate-900">{benefit.title}</h3>
+                      <h3 className="text-lg font-semibold text-custom-black">{benefit.title}</h3>
                     </div>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-custom-dark-gray text-sm">
                       {benefit.description}
                     </p>
                   </div>
@@ -82,8 +82,8 @@ export function WhyChooseUsSection() {
           {/* Lado Direito - Imagem com efeito de fundo */}
           <div className="relative flex justify-center items-center min-h-[600px]">
             {/* Formas geométricas de fundo */}
-            <div className="absolute -left-10 bottom-10 w-48 h-48 bg-slate-800 rounded-full z-0 opacity-80"></div>
-            <div className="absolute top-0 right-0 w-80 h-[500px] bg-slate-400 rounded-bl-[200px] z-0 opacity-60"></div>
+            <div className="absolute -left-10 bottom-10 w-48 h-48 bg-custom-dark-gray rounded-full z-0 opacity-80"></div>
+            <div className="absolute top-0 right-0 w-80 h-[500px] bg-custom-medium-gray rounded-bl-[200px] z-0 opacity-60"></div>
             
             {/* Imagem principal sobreposta */}
             <div className="relative z-10">
