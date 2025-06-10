@@ -10,11 +10,11 @@ export function AboutSection() {
           {/* Lado Esquerdo - Imagens */}
           <div className="relative">
             {/* Elementos decorativos */}
-            <div className="absolute -top-8 -left-8 w-32 h-32 bg-blue-500/20 rounded-full"></div>
+            <div className="absolute -top-8 -left-8 w-32 h-32 bg-custom-gold/20 rounded-full"></div>
             <div className="absolute top-1/2 -left-16 transform -translate-y-1/2">
               <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border">
-                <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-slate-700 transform -rotate-90 whitespace-nowrap">
+                <div className="w-3 h-3 bg-custom-gold rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium text-custom-dark-gray transform -rotate-90 whitespace-nowrap">
                   How We Work
                 </span>
               </div>
@@ -31,7 +31,7 @@ export function AboutSection() {
                 />
                 
                 {/* Badge de experiência */}
-                <div className="absolute -bottom-6 -right-6 bg-slate-900 text-white rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-2xl">
+                <div className="absolute -bottom-6 -right-6 bg-custom-dark-gray text-white rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-2xl">
                   <span className="text-2xl font-bold">26+</span>
                   <span className="text-xs font-medium">Experience</span>
                 </div>
@@ -52,21 +52,21 @@ export function AboutSection() {
           <div className="space-y-6">
             {/* Mini título */}
             <div className="flex items-center gap-2">
-              <div className="w-8 h-0.5 bg-blue-500"></div>
-              <span className="text-blue-500 font-medium text-sm uppercase tracking-wider">
+              <div className="w-8 h-0.5 bg-custom-gold"></div>
+              <span className="text-custom-gold font-medium text-sm uppercase tracking-wider">
                 Sobre Nós
               </span>
             </div>
 
             {/* Título principal */}
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-custom-dark-gray leading-tight">
               Mais de 26+ Anos 
               <br />
               Cuidando da Sua Saúde
             </h2>
 
             {/* Parágrafo introdutório */}
-            <p className="text-lg text-slate-600 leading-relaxed">
+            <p className="text-lg text-custom-medium-gray leading-relaxed">
               Temos o privilégio de trabalhar com centenas de profissionais da saúde visionários, 
               incluindo muitos dos melhores especialistas, tecnologias e marcas do mundo, 
               proporcionando segurança e conforto no estabelecimento do cuidado médico.
@@ -77,12 +77,12 @@ export function AboutSection() {
               {/* Suporte ao Cliente */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center">
-                    <Headset className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-custom-dark-gray group">
+                    <Headset className="w-6 h-6 text-custom-dark-gray group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">Suporte ao Cliente</h3>
+                  <h3 className="text-lg font-semibold text-custom-dark-gray">Suporte ao Cliente</h3>
                 </div>
-                <p className="text-slate-600 text-sm">
+                <p className="text-custom-medium-gray text-sm">
                   Mas deve explicar para você o atendimento médico e como cuidamos da sua dor.
                 </p>
               </div>
@@ -90,12 +90,12 @@ export function AboutSection() {
               {/* Suporte Médico */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center">
-                    <User className="w-6 h-6 text-slate-700" />
+                  <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-custom-dark-gray group">
+                    <User className="w-6 h-6 text-custom-dark-gray group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">Suporte Médico</h3>
+                  <h3 className="text-lg font-semibold text-custom-dark-gray">Suporte Médico</h3>
                 </div>
-                <p className="text-slate-600 text-sm">
+                <p className="text-custom-medium-gray text-sm">
                   Mas deve explicar para você o atendimento médico e como cuidamos da sua dor.
                 </p>
               </div>
@@ -103,9 +103,9 @@ export function AboutSection() {
 
             {/* Texto complementar */}
             <div className="pt-4">
-              <p className="text-slate-600">
+              <p className="text-custom-medium-gray">
                 Existem muitas variações de atendimento disponíveis neste serviço médico pela nossa equipe{" "}
-                <span className="text-blue-500 font-medium cursor-pointer hover:underline">
+                <span className="text-custom-gold font-medium cursor-pointer hover:underline">
                   SAIBA MAIS +
                 </span>
               </p>
@@ -113,7 +113,7 @@ export function AboutSection() {
 
             {/* Botão CTA */}
             <div className="pt-4">
-              <Button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full">
+              <Button className="bg-custom-gold hover:bg-custom-gold/90 text-custom-black px-8 py-3 rounded-full font-semibold">
                 Saiba Mais
                 <span className="ml-2">→</span>
               </Button>
