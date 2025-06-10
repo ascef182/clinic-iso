@@ -1,3 +1,4 @@
+
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -30,31 +31,31 @@ export default function Index() {
 
       <Header />
       
-      {/* Modern Hero Section with Elegant Gradient */}
-      <section className="relative bg-gradient-to-br from-slate-200 via-slate-400 to-slate-900 py-20 md:py-32 overflow-hidden min-h-[90vh] flex items-center">
+      {/* Hero Section with solid blue background */}
+      <section className="relative bg-blue-600 py-20 md:py-32 overflow-hidden min-h-[90vh] flex items-center">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                   Sua Saúde em{" "}
-                  <span className="text-slate-900">Boas Mãos</span>
+                  <span className="text-white">Boas Mãos</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-slate-700 leading-relaxed max-w-lg">
+                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-lg">
                   Cuidamos de você com excelência médica e atenção humanizada.
                 </p>
               </div>
               
               {/* Video Button */}
               <div className="flex items-center gap-4 pt-4">
-                <button className="group flex items-center gap-4 text-lg font-medium text-slate-800 hover:text-slate-900 transition-colors">
-                  <div className="h-16 w-16 rounded-full border-2 border-slate-800 flex items-center justify-center group-hover:border-slate-900 transition-all bg-transparent">
-                    <Play className="h-6 w-6 ml-1 text-slate-800 group-hover:text-slate-900" />
+                <button className="group flex items-center gap-4 text-lg font-medium text-white hover:text-blue-100 transition-colors">
+                  <div className="h-16 w-16 rounded-full border-2 border-white flex items-center justify-center group-hover:border-blue-100 transition-all bg-transparent">
+                    <Play className="h-6 w-6 ml-1 text-white group-hover:text-blue-100" />
                   </div>
                   <span className="relative">
                     Conheça nossa clínica
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-800 transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                   </span>
                 </button>
               </div>
@@ -81,8 +82,8 @@ export default function Index() {
                     <div className="flex items-center gap-2">
                       <Check className="h-5 w-5 text-green-600" />
                       <div>
-                        <div className="text-2xl font-bold text-slate-800">150K+</div>
-                        <div className="text-sm text-slate-600 font-medium">Pacientes atendidos</div>
+                        <div className="text-2xl font-bold text-white">150K+</div>
+                        <div className="text-sm text-blue-100 font-medium">Pacientes atendidos</div>
                       </div>
                     </div>
                   </div>
@@ -101,8 +102,8 @@ export default function Index() {
                     </div>
                     
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-slate-800">20+</div>
-                      <div className="text-sm text-slate-600 font-medium">Especialistas</div>
+                      <div className="text-2xl font-bold text-white">20+</div>
+                      <div className="text-sm text-blue-100 font-medium">Especialistas</div>
                     </div>
                   </div>
                 </div>
@@ -118,12 +119,10 @@ export default function Index() {
       {/* Why Choose Us Section */}
       <WhyChooseUsSection />
 
-      {/* New Specialties Section */}
+      {/* Specialties Section */}
       <SpecialtiesSection />
 
-      {/* New Blog Section */}
-      <BlogSection />
-
+      {/* Call-to-action section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Agende sua consulta</h2>
@@ -137,6 +136,7 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Team section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -160,6 +160,10 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <BlogSection />
+
+      {/* Nossos Diferenciais section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
