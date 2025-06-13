@@ -56,7 +56,7 @@ export default function Index() {
                 <br />
                 Boas Mãos,
                 <br />
-                <span className="text-custom-gold">Sempre.</span>
+                <span className="text-black">Sempre.</span>
               </h1>
               <HeroButton />
             </div>
@@ -65,14 +65,14 @@ export default function Index() {
             <div className="hidden lg:block">
               <div className="rounded-2xl bg-white/10 p-6 lg:p-8 xl:p-10 backdrop-blur-sm border border-white/20 lg:w-72 xl:w-80 2xl:w-96">
                 <div className="mb-4 flex flex-wrap gap-2">
-                  <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Oftalmologia</span>
-                  <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#SaúdeMental</span>
-                  <span className="rounded-full bg-custom-gold/20 px-3 py-1 text-xs text-white">#Nutrologia</span>
+                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white">#Oftalmologia</span>
+                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white">#SaúdeMental</span>
+                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white">#Nutrologia</span>
                 </div>
 
                 <div className="mb-4 h-48 lg:h-56 xl:h-64 rounded-2xl bg-white/20 p-4 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="h-20 w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 rounded-full bg-custom-gold/30 mx-auto mb-4 flex items-center justify-center">
+                    <div className="h-20 w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 rounded-full bg-black/30 mx-auto mb-4 flex items-center justify-center">
                       <Check className="h-10 w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 text-white" />
                     </div>
                     <div className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white">150K+</div>
@@ -85,7 +85,7 @@ export default function Index() {
                     <p className="text-xs lg:text-sm text-white/80">Excelência em Cuidados</p>
                     <p className="font-semibold lg:text-lg text-white">Atendimento ISO</p>
                   </div>
-                  <button className="rounded-full bg-custom-gold/20 p-2 lg:p-3 text-white hover:bg-custom-gold/30 transition-all">
+                  <button className="rounded-full bg-black/20 p-2 lg:p-3 text-white hover:bg-black/30 transition-all">
                     <ArrowRight className="h-4 w-4 lg:h-5 lg:w-5" />
                   </button>
                 </div>
@@ -115,7 +115,7 @@ export default function Index() {
           <Link to="/agendamento">
             <HoverBorderGradient
               containerClassName="rounded-full"
-              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              className="bg-black text-white"
             >
               <span>Agende sua Consulta</span>
             </HoverBorderGradient>
@@ -143,7 +143,7 @@ export default function Index() {
             <Link to="/equipe">
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                className="bg-black text-white"
               >
                 <span>Conheça toda nossa equipe</span>
               </HoverBorderGradient>

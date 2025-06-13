@@ -31,9 +31,9 @@ export function WhyChooseUsSection() {
   ];
 
   return (
-    <div className="w-full py-20 lg:py-40">
+    <div className="w-full py-12 lg:py-20">
       <div className="container mx-auto">
-        <div className="flex gap-4 py-20 lg:py-40 flex-col items-start">
+        <div className="flex gap-4 py-12 lg:py-20 flex-col items-start">
           <div>
             <Badge>Por que escolher a Clínica ISO</Badge>
           </div>
@@ -45,8 +45,8 @@ export function WhyChooseUsSection() {
               Oferecemos atendimento de qualidade superior com tecnologia avançada e uma equipe altamente qualificada.
             </p>
           </div>
-          <div className="flex gap-10 pt-12 flex-col w-full">
-            <div className="grid grid-cols-1 items-start lg:grid-cols-3 gap-10">
+          <div className="flex gap-8 pt-8 flex-col w-full">
+            <div className="grid grid-cols-1 items-start lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex flex-row gap-6 w-full items-start">
                   <Check className="w-4 h-4 mt-2 text-primary" />

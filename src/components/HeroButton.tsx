@@ -13,22 +13,22 @@ export function HeroButton() {
     <>
       <button 
         onClick={() => setIsModalOpen(true)}
-        className="group inline-flex items-center gap-4 text-custom-gold font-semibold transition-all hover:scale-105 duration-300"
+        className="group inline-flex items-center gap-4 text-black font-semibold transition-all hover:scale-105 duration-300"
       >
         {/* Círculo com ícone de play */}
-        <div className="relative h-12 w-12 rounded-full border-2 border-custom-gold flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:border-custom-gold/80">
+        <div className="relative h-12 w-12 rounded-full border-2 border-black flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:border-black/80">
           {/* Efeito de pulse */}
-          <div className="absolute inset-0 rounded-full border-2 border-custom-gold animate-ping opacity-20"></div>
-          <Play className="h-5 w-5 text-custom-gold ml-0.5" fill="currentColor" />
+          <div className="absolute inset-0 rounded-full border-2 border-black animate-ping opacity-20"></div>
+          <Play className="h-5 w-5 text-black ml-0.5" fill="currentColor" />
         </div>
 
         {/* Texto com underline animado */}
         <span className="relative text-lg lg:text-xl">
           <span className="relative z-10">Conheça nossa clínica</span>
           {/* Linha de progresso animada */}
-          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-custom-gold transition-all duration-500 ease-out group-hover:w-full"></span>
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-black transition-all duration-500 ease-out group-hover:w-full"></span>
           {/* Efeito de brilho sutil */}
-          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-custom-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -skew-x-12"></span>
+          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -skew-x-12"></span>
         </span>
       </button>
 
