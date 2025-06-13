@@ -148,12 +148,12 @@ export function Header() {
                 Contato
               </NavLink>
             </nav>
-            <Link to="/agendamento" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/contato" onClick={() => setIsMenuOpen(false)}>
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 className="bg-black text-white font-inter"
               >
-                <span>Agende sua Consulta</span>
+                <span>Agendendamento</span>
               </HoverBorderGradient>
             </Link>
           </div>
