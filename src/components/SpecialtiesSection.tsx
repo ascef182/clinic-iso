@@ -1,5 +1,7 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { Link } from "react-router-dom";
 
 const specialties = [
@@ -151,14 +153,14 @@ export function SpecialtiesSection() {
         </div>
 
         <div className="text-center mt-16">
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-custom-dark-gray text-custom-dark-gray hover:bg-custom-dark-gray hover:text-white"
-            asChild
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as={Link}
+            to="/especialidades"
+            className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
           >
-            <Link to="/especialidades">Ver todas especialidades</Link>
-          </Button>
+            Ver todas especialidades
+          </HoverBorderGradient>
         </div>
       </div>
     </section>

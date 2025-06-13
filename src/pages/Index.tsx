@@ -1,5 +1,7 @@
+
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { Link } from "react-router-dom";
 import { DoctorCard } from "@/components/DoctorCard";
 import { AboutSection } from "@/components/AboutSection";
@@ -110,9 +112,14 @@ export default function Index() {
             É rápido e fácil agendar sua consulta no ISO - Instituto Seu Olhar. 
             Atendimento humanizado e personalizado para suas necessidades.
           </p>
-          <Button size="lg" className="bg-custom-gold hover:bg-custom-gold/90 text-custom-black font-semibold" asChild>
-            <Link to="/agendamento">Agendar agora</Link>
-          </Button>
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as={Link}
+            to="/agendamento"
+            className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
+          >
+            Agendar agora
+          </HoverBorderGradient>
         </div>
       </section>
 
@@ -133,9 +140,14 @@ export default function Index() {
           </div>
           
           <div className="text-center mt-12">
-            <Button variant="outline" className="border-custom-dark-gray text-custom-dark-gray hover:bg-custom-dark-gray hover:text-white" asChild>
-              <Link to="/equipe">Conheça toda nossa equipe</Link>
-            </Button>
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as={Link}
+              to="/equipe"
+              className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
+            >
+              Conheça toda nossa equipe
+            </HoverBorderGradient>
           </div>
         </div>
       </section>

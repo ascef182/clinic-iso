@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -68,9 +69,14 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button asChild className="bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-sm">
-              <Link to="/agendamento">Agende sua Consulta</Link>
-            </Button>
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as={Link}
+              to="/agendamento"
+              className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
+            >
+              Agende sua Consulta
+            </HoverBorderGradient>
           </div>
 
           {/* Mobile Menu Button */}
@@ -142,13 +148,14 @@ export function Header() {
                 Contato
               </NavLink>
             </nav>
-           <Button
-  asChild
-  className="bg-black hover:bg-amber-500 text-white border border-transparent transition-colors duration-300"
->
-  <Link to="/agendamento">Agende sua Consulta</Link>
-</Button>
-
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as={Link}
+              to="/agendamento"
+              className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
+            >
+              Agende sua Consulta
+            </HoverBorderGradient>
           </div>
         </div>
       )}
