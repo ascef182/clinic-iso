@@ -153,7 +153,7 @@ export function Header() {
                 containerClassName="rounded-full"
                 className="bg-black text-white font-inter"
               >
-                <span>Agendendamento</span>
+                <span>Agendamento</span>
               </HoverBorderGradient>
             </Link>
           </div>
