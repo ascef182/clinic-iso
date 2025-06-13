@@ -69,14 +69,14 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              as={Link}
-              to="/agendamento"
-              className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
-            >
-              Agende sua Consulta
-            </HoverBorderGradient>
+            <Link to="/agendamento">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              >
+                <span>Agende sua Consulta</span>
+              </HoverBorderGradient>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -148,14 +148,14 @@ export function Header() {
                 Contato
               </NavLink>
             </nav>
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              as={Link}
-              to="/agendamento"
-              className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
-            >
-              Agende sua Consulta
-            </HoverBorderGradient>
+            <Link to="/agendamento" onClick={() => setIsMenuOpen(false)}>
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              >
+                <span>Agende sua Consulta</span>
+              </HoverBorderGradient>
+            </Link>
           </div>
         </div>
       )}

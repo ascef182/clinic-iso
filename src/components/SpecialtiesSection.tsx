@@ -153,14 +153,14 @@ export function SpecialtiesSection() {
         </div>
 
         <div className="text-center mt-16">
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            as={Link}
-            to="/especialidades"
-            className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
-          >
-            Ver todas especialidades
-          </HoverBorderGradient>
+          <Link to="/especialidades">
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <span>Ver todas especialidades</span>
+            </HoverBorderGradient>
+          </Link>
         </div>
       </div>
     </section>

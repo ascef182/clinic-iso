@@ -112,14 +112,14 @@ export default function Index() {
             É rápido e fácil agendar sua consulta no ISO - Instituto Seu Olhar. 
             Atendimento humanizado e personalizado para suas necessidades.
           </p>
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            as={Link}
-            to="/agendamento"
-            className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
-          >
-            Agendar agora
-          </HoverBorderGradient>
+          <Link to="/agendamento">
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <span>Agende sua Consulta</span>
+            </HoverBorderGradient>
+          </Link>
         </div>
       </section>
 
@@ -140,14 +140,14 @@ export default function Index() {
           </div>
           
           <div className="text-center mt-12">
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              as={Link}
-              to="/equipe"
-              className="bg-custom-gold hover:bg-custom-gold/90 text-black font-semibold"
-            >
-              Conheça toda nossa equipe
-            </HoverBorderGradient>
+            <Link to="/equipe">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              >
+                <span>Conheça toda nossa equipe</span>
+              </HoverBorderGradient>
+            </Link>
           </div>
         </div>
       </section>
