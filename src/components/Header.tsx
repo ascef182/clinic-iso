@@ -69,12 +69,12 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/agendamento">
+            <Link to="/contato">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 className="bg-black text-white font-inter"
               >
-                <span>Agende sua Consulta</span>
+                <span>Agendamento</span>
               </HoverBorderGradient>
             </Link>
           </div>
