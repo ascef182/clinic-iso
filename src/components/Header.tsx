@@ -14,9 +14,9 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
-            <span className="text-2xl font-bold text-white">ISO</span>
+            <span className="text-2xl font-bold text-white font-inter">ISO</span>
             <span className="hidden sm:inline-block text-white">|</span>
-            <span className="hidden sm:inline-block text-lg text-white/90">Instituto Seu Olhar</span>
+            <span className="hidden sm:inline-block text-lg text-white/90 font-inter">Instituto Seu Olhar</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -24,7 +24,7 @@ export function Header() {
             <NavLink 
               to="/" 
               className={({ isActive }) => cn(
-                "text-sm font-medium transition-colors hover:text-white",
+                "text-sm font-medium transition-colors hover:text-white font-inter",
                 isActive ? "text-white" : "text-white/80"
               )}
             >
@@ -33,7 +33,7 @@ export function Header() {
             <NavLink 
               to="/sobre" 
               className={({ isActive }) => cn(
-                "text-sm font-medium transition-colors hover:text-white",
+                "text-sm font-medium transition-colors hover:text-white font-inter",
                 isActive ? "text-white" : "text-white/80"
               )}
             >
@@ -42,7 +42,7 @@ export function Header() {
             <NavLink 
               to="/especialidades" 
               className={({ isActive }) => cn(
-                "text-sm font-medium transition-colors hover:text-white",
+                "text-sm font-medium transition-colors hover:text-white font-inter",
                 isActive ? "text-white" : "text-white/80"
               )}
             >
@@ -51,7 +51,7 @@ export function Header() {
             <NavLink 
               to="/equipe" 
               className={({ isActive }) => cn(
-                "text-sm font-medium transition-colors hover:text-white",
+                "text-sm font-medium transition-colors hover:text-white font-inter",
                 isActive ? "text-white" : "text-white/80"
               )}
             >
@@ -60,7 +60,7 @@ export function Header() {
             <NavLink 
               to="/contato" 
               className={({ isActive }) => cn(
-                "text-sm font-medium transition-colors hover:text-white",
+                "text-sm font-medium transition-colors hover:text-white font-inter",
                 isActive ? "text-white" : "text-white/80"
               )}
             >
@@ -72,7 +72,7 @@ export function Header() {
             <Link to="/agendamento">
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                className="bg-black text-white font-inter"
               >
                 <span>Agende sua Consulta</span>
               </HoverBorderGradient>
@@ -100,7 +100,7 @@ export function Header() {
               <NavLink 
                 to="/" 
                 className={({ isActive }) => cn(
-                  "text-base font-medium transition-colors hover:text-white",
+                  "text-base font-medium transition-colors hover:text-white font-inter",
                   isActive ? "text-white" : "text-white/80"
                 )}
                 onClick={() => setIsMenuOpen(false)}
@@ -110,7 +110,7 @@ export function Header() {
               <NavLink 
                 to="/sobre" 
                 className={({ isActive }) => cn(
-                  "text-base font-medium transition-colors hover:text-white",
+                  "text-base font-medium transition-colors hover:text-white font-inter",
                   isActive ? "text-white" : "text-white/80"
                 )}
                 onClick={() => setIsMenuOpen(false)}
@@ -120,7 +120,7 @@ export function Header() {
               <NavLink 
                 to="/especialidades" 
                 className={({ isActive }) => cn(
-                  "text-base font-medium transition-colors hover:text-white",
+                  "text-base font-medium transition-colors hover:text-white font-inter",
                   isActive ? "text-white" : "text-white/80"
                 )}
                 onClick={() => setIsMenuOpen(false)}
@@ -130,7 +130,7 @@ export function Header() {
               <NavLink 
                 to="/equipe" 
                 className={({ isActive }) => cn(
-                  "text-base font-medium transition-colors hover:text-white",
+                  "text-base font-medium transition-colors hover:text-white font-inter",
                   isActive ? "text-white" : "text-white/80"
                 )}
                 onClick={() => setIsMenuOpen(false)}
@@ -140,7 +140,7 @@ export function Header() {
               <NavLink 
                 to="/contato" 
                 className={({ isActive }) => cn(
-                  "text-base font-medium transition-colors hover:text-white",
+                  "text-base font-medium transition-colors hover:text-white font-inter",
                   isActive ? "text-white" : "text-white/80"
                 )}
                 onClick={() => setIsMenuOpen(false)}
@@ -151,7 +151,7 @@ export function Header() {
             <Link to="/agendamento" onClick={() => setIsMenuOpen(false)}>
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                className="bg-black text-white font-inter"
               >
                 <span>Agende sua Consulta</span>
               </HoverBorderGradient>

@@ -50,8 +50,8 @@ export default function Index() {
           <div className="relative z-10 flex min-h-screen items-center justify-between p-6 lg:p-8 pt-32">
             {/* Left Content */}
             <div className="max-w-lg">
-              <p className="mb-4 text-sm text-white/80">Cuidado Especializado e Humanizado</p>
-              <h1 className="mb-8 text-4xl font-bold leading-tight text-white lg:text-6xl font-playfair">
+              <p className="mb-4 text-sm text-white/80 font-inter">Cuidado Especializado e Humanizado</p>
+              <h1 className="mb-8 text-4xl font-bold leading-tight text-white lg:text-6xl font-inter">
                 Sua Saúde em{" "}
                 <br />
                 Boas Mãos,
@@ -65,9 +65,9 @@ export default function Index() {
             <div className="hidden lg:block">
               <div className="rounded-2xl bg-white/10 p-6 lg:p-8 xl:p-10 backdrop-blur-sm border border-white/20 lg:w-72 xl:w-80 2xl:w-96">
                 <div className="mb-4 flex flex-wrap gap-2">
-                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white">#Oftalmologia</span>
-                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white">#SaúdeMental</span>
-                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white">#Nutrologia</span>
+                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white font-inter">#Oftalmologia</span>
+                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white font-inter">#SaúdeMental</span>
+                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white font-inter">#Nutrologia</span>
                 </div>
 
                 <div className="mb-4 h-48 lg:h-56 xl:h-64 rounded-2xl bg-white/20 p-4 flex items-center justify-center">
@@ -75,15 +75,15 @@ export default function Index() {
                     <div className="h-20 w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 rounded-full bg-black/30 mx-auto mb-4 flex items-center justify-center">
                       <Check className="h-10 w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 text-white" />
                     </div>
-                    <div className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white">150K+</div>
-                    <div className="text-sm lg:text-base text-white/80">Pacientes</div>
+                    <div className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-inter">150K+</div>
+                    <div className="text-sm lg:text-base text-white/80 font-inter">Pacientes</div>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs lg:text-sm text-white/80">Excelência em Cuidados</p>
-                    <p className="font-semibold lg:text-lg text-white">Atendimento ISO</p>
+                    <p className="text-xs lg:text-sm text-white/80 font-inter">Excelência em Cuidados</p>
+                    <p className="font-semibold lg:text-lg text-white font-inter">Atendimento ISO</p>
                   </div>
                   <button className="rounded-full bg-black/20 p-2 lg:p-3 text-white hover:bg-black/30 transition-all">
                     <ArrowRight className="h-4 w-4 lg:h-5 lg:w-5" />
@@ -107,15 +107,15 @@ export default function Index() {
       {/* Call-to-action section */}
       <section className="py-20 bg-custom-black text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Agende sua consulta</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-custom-light-gray">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-inter">Agende sua consulta</h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-custom-light-gray font-inter">
             É rápido e fácil agendar sua consulta no ISO - Instituto Seu Olhar. 
             Atendimento humanizado e personalizado para suas necessidades.
           </p>
           <Link to="/agendamento">
             <HoverBorderGradient
               containerClassName="rounded-full"
-              className="bg-black text-white"
+              className="bg-black text-white font-inter"
             >
               <span>Agende sua Consulta</span>
             </HoverBorderGradient>
@@ -127,8 +127,8 @@ export default function Index() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-custom-black">Nossa Equipe</h2>
-            <p className="text-lg text-custom-medium-gray max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-custom-black font-inter">Nossa Equipe</h2>
+            <p className="text-lg text-custom-medium-gray max-w-3xl mx-auto font-inter">
               Conheça nossos profissionais altamente qualificados e dedicados ao seu bem-estar.
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function Index() {
             <Link to="/equipe">
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="bg-black text-white"
+                className="bg-black text-white font-inter"
               >
                 <span>Conheça toda nossa equipe</span>
               </HoverBorderGradient>

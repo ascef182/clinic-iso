@@ -67,12 +67,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom color palette
+				// Custom color palette - removed gold, kept black
 				'custom-black': 'hsl(var(--black))',
 				'custom-dark-gray': 'hsl(var(--dark-gray))',
 				'custom-medium-gray': 'hsl(var(--medium-gray))',
-				'custom-light-gray': 'hsl(var(--light-gray))',
-				'custom-gold': 'hsl(var(--gold))'
+				'custom-light-gray': 'hsl(var(--light-gray))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
