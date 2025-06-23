@@ -1,58 +1,110 @@
-
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export function WhyChooseUsSection() {
   const features = [
     {
-      title: "Atenção Especializada",
-      description: "Profissionais com expertise multidisciplinar."  
+      title: "Cuidado Individualizado",
+      description:
+        "Cada paciente é único — e nosso atendimento reflete essa verdade.",
     },
     {
-      title: "Resposta Imediata",
-      description: "Atendimento de emergência em tempo recorde."  
+      title: "Agilidade com Qualidade",
+      description:
+        "Respostas rápidas, sem abrir mão da segurança e da atenção aos detalhes.",
     },
     {
-      title: "Equipe de Excelência",
-      description: "Médicos e enfermeiros em constante aperfeiçoamento."  
+      title: "Time Altamente Capacitado",
+      description:
+        "Profissionais que combinam conhecimento técnico com sensibilidade humana.",
     },
     {
-      title: "Cuidado Contínuo",
-      description: "Suporte dedicado durante toda a sua jornada."  
+      title: "Acompanhamento Próximo",
+      description: "Estamos com você em cada etapa: do diagnóstico ao retorno.",
     },
     {
-      title: "Inovação Científica",
-      description: "Tecnologia de ponta e pesquisa constante."  
+      title: "Tecnologia a Favor da Vida",
+      description:
+        "Equipamentos modernos e práticas atualizadas para diagnósticos mais precisos.",
     },
     {
-      title: "Planos Acessíveis",
-      description: "Qualidade premium com valores justos."  
-    }
+      title: "Acesso e Transparência",
+      description:
+        "Excelência acessível, com clareza em cada passo do tratamento.",
+    },
   ];
+
+  // Refs para animação dos itens
+  const itemsRef = useRef<HTMLDivElement[]>([]);
+  itemsRef.current = [];
+  const addToRefs = (el: HTMLDivElement) => {
+    if (el && !itemsRef.current.includes(el)) {
+      itemsRef.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    itemsRef.current.forEach((el, i) => {
+      gsap.fromTo(
+        el,
+        { y: -40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: i * 0.15,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+          },
+        }
+      );
+    });
+  }, []);
 
   return (
     <div className="w-full py-12 lg:py-20">
       <div className="container mx-auto">
-        <div className="flex gap-4 py-12 lg:py-20 flex-col items-start">
+        <div className="flex flex-col space-y-6  items-start">
           <div>
-            <Badge>Por que escolher a Clínica ISO</Badge>
+            <Badge className="font-neue-haas">
+              Por que escolher a Clínica ISO
+            </Badge>
           </div>
-          <div className="flex gap-2 flex-col">
-            <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular">
-              Excelência em saúde com cuidado humanizado
+
+          <div className="flex flex-col space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-custom-dark-gray leading-tight font-neue-haas">
+              Cuidado e acolhimento
             </h2>
-            <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-muted-foreground">
-              Oferecemos atendimento de qualidade superior com tecnologia avançada e uma equipe altamente qualificada.
+            <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-muted-foreground text-zinc-950 font-neue-haas">
+              Oferecemos mais do que medicina: entregamos escuta, presença e
+              compromisso com a sua saúde. Combinamos tecnologia e empatia para
+              tornar cada consulta uma experiência de cuidado real.
             </p>
           </div>
+
           <div className="flex gap-8 pt-8 flex-col w-full">
             <div className="grid grid-cols-1 items-start lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex flex-row gap-6 w-full items-start">
-                  <Check className="w-4 h-4 mt-2 text-primary" />
+                <div
+                  key={index}
+                  ref={addToRefs}
+                  className="flex flex-row gap-6 w-full items-start group"
+                >
+                  <div className="w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-transparent group-hover:bg-custom-dark-gray/90 group-hover:shadow-md">
+                    <Check className="w-4 h-4 text-custom-dark-gray group-hover:text-white transition-colors duration-300" />
+                  </div>
+
                   <div className="flex flex-col gap-1">
-                    <p>{feature.title}</p>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-lg leading-relaxed tracking-tight text-zinc-950 font-neue-haas">
+                      {feature.title}
+                    </p>
+                    <p className="text-muted-foreground text-sm font-neue-haas">
                       {feature.description}
                     </p>
                   </div>

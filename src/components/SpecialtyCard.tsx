@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -19,11 +18,13 @@ export function SpecialtyCard({ specialty }: SpecialtyCardProps) {
         />
       </div>
       <CardContent className="p-6 flex-grow flex flex-col">
-        <h3 className="text-xl font-bold mb-2">{specialty.name}</h3>
-        <p className="text-muted-foreground mb-4 flex-grow line-clamp-3">
+        <h3 className="text-xl font-bold mb-2 font-neue-haas">
+          {specialty.name}
+        </h3>
+        <p className="text-muted-foreground mb-4 flex-grow line-clamp-3 font-neue-haas">
           {specialty.description}
         </p>
-        <Button asChild variant="outline" className="w-full">
+        <Button asChild variant="outline" className="w-full font-neue-haas">
           <Link to={`/especialidades`} state={{ activeTab: specialty.id }}>
             Saiba mais
           </Link>

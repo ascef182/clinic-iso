@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -29,14 +28,14 @@ const formSchema = z.object({
   message: z.string().min(10, {
     message: "Mensagem deve ter pelo menos 10 caracteres",
   }),
-  lgpdConsent: z.boolean().refine(value => value === true, {
+  lgpdConsent: z.boolean().refine((value) => value === true, {
     message: "Você precisa aceitar os termos de privacidade",
   }),
 });
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -50,7 +49,7 @@ export function ContactForm() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    
+
     // Simulação de envio
     setTimeout(() => {
       console.log(values);
@@ -79,7 +78,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormField
             control={form.control}
@@ -94,7 +93,7 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control={form.control}
             name="phone"
@@ -109,7 +108,7 @@ export function ContactForm() {
             )}
           />
         </div>
-        
+
         <FormField
           control={form.control}
           name="message"
@@ -127,7 +126,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        
+
         <FormField
           control={form.control}
           name="lgpdConsent"
@@ -141,14 +140,15 @@ export function ContactForm() {
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel>
-                  Concordo com a utilização dos meus dados de acordo com a Política de Privacidade
+                  Concordo com a utilização dos meus dados de acordo com a
+                  Política de Privacidade
                 </FormLabel>
                 <FormMessage />
               </div>
             </FormItem>
           )}
         />
-        
+
         <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Enviando..." : "Enviar mensagem"}
         </Button>

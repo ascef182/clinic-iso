@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
@@ -6,101 +5,109 @@ import { Link } from "react-router-dom";
 
 const specialties = [
   {
-    name: "Oftalmologia",
+    name: "Oftalmologia e Plástica Ocular",
     cards: [
       {
         id: 1,
-        title: "Exame de Vista",
-        description: "Diagnóstico preciso com equipamentos de última geração.",
-        image: "https://images.unsplash.com/photo-1588776814546-ec7e1345c492"
+        title: "Avaliação Oftalmológica Completa",
+        description:
+          "Inclui exames como acuidade visual, fundo de olho e tonometria.",
+        image: "./photos/olharprofundo.jpeg",
       },
       {
         id: 2,
-        title: "Cirurgia Refrativa",
-        description: "Correção de miopia, hipermetropia e astigmatismo.",
-        image: "https://images.unsplash.com/photo-1580281658629-2499ab5b4e6c"
+        title: "Cirurgia Plástica Ocular",
+        description:
+          "Procedimentos como blefaroplastia realizados com precisão.",
+        image: "./photos/cirurgia.jpeg",
       },
       {
         id: 3,
-        title: "Tratamento de Catarata",
-        description: "Procedimentos modernos com rápida recuperação.",
-        image: "https://images.unsplash.com/photo-1606761568499-6b03f6fbdcd4"
-      }
-    ]
+        title: "Aplicação de Botox",
+        description: "Toxina botulínica para fins terapêuticos e estéticos.",
+        image: "./photos/botox.jpeg",
+      },
+    ],
   },
   {
-    name: "Saúde Mental",
+    name: "Psiquiatria",
     cards: [
       {
         id: 4,
-        title: "Terapia Cognitivo-Comportamental",
-        description: "Auxílio no controle da ansiedade e depressão.",
-        image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2"
+        title: "Tratamento de Ansiedade",
+        description: "Atenção especializada para ansiedade, fobias e pânico.",
+        image: "./photos/psiquiatria.jpg",
       },
       {
         id: 5,
-        title: "Psicoterapia Infantil",
-        description: "Apoio emocional para crianças e adolescentes.",
-        image: "https://images.unsplash.com/photo-1615397348212-5a1e94b58fcf"
+        title: "TDAH e Transtornos de Atenção",
+        description: "Diagnóstico e acompanhamento focado na funcionalidade.",
+        image: "./photos/terapia.jpg",
       },
       {
         id: 6,
-        title: "Avaliação Psiquiátrica",
-        description: "Diagnóstico preciso e prescrição adequada.",
-        image: "https://images.unsplash.com/photo-1588776814770-1e8ecdcf404a"
-      }
-    ]
+        title: "Transtornos do Sono",
+        description:
+          "Abordagem completa para insônia e distúrbios relacionados.",
+        image: "./photos/sono.jpg",
+      },
+    ],
   },
   {
-    name: "Neurologia",
+    name: "Emagrecimento e Performance",
     cards: [
       {
         id: 7,
-        title: "Diagnóstico de Epilepsia",
-        description: "Monitoramento e análise detalhada do sistema nervoso.",
-        image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54"
+        title: "Protocolos com Ozempic e Wegovy",
+        description:
+          "Medicamentos modernos para apoio no emagrecimento estratégico.",
+        image: "./photos/ozempic.jpeg",
       },
       {
         id: 8,
-        title: "Tratamento de AVC",
-        description: "Reabilitação especializada para recuperação pós-acidente vascular cerebral.",
-        image: "https://images.unsplash.com/photo-1580281658629-2499ab5b4e6c"
+        title: "Hipertrofia e Massa Muscular",
+        description:
+          "Acompanhamento médico para ganho saudável de massa muscular.",
+        image: "./photos/hipertrofia.jpeg",
       },
       {
         id: 9,
-        title: "Consulta Neurológica",
-        description: "Acompanhamento com neurologistas experientes.",
-        image: "https://images.unsplash.com/photo-1606761568499-6b03f6fbdcd4"
-      }
-    ]
+        title: "Bioimpedância e Avaliação Corporal",
+        description:
+          "Análise precisa da composição corporal para planejamento efetivo.",
+        image: "./photos/acompanhamento.jpeg",
+      },
+    ],
   },
   {
-    name: "Medicina Geral",
+    name: "Mudança de Estilo de Vida",
     cards: [
       {
         id: 10,
-        title: "Consulta Clínica",
-        description: "Atendimento para sintomas gerais e encaminhamentos.",
-        image: "https://images.unsplash.com/photo-1579154204601-01588f351e85"
+        title: "Tratamento de Dependências",
+        description:
+          "Apoio médico para dependência de álcool, drogas e tabagismo.",
+        image: "./photos/dependencia.jpg",
       },
       {
         id: 11,
-        title: "Check-up Completo",
-        description: "Exames laboratoriais e clínicos preventivos.",
-        image: "https://images.unsplash.com/photo-1597764692274-0d4090e3b7e7"
+        title: "Transtornos Alimentares",
+        description: "Cuidado humanizado para anorexia, bulimia e compulsão.",
+        image: "./photos/alimentar.jpg",
       },
       {
         id: 12,
-        title: "Atendimento Humanizado",
-        description: "Cuidado empático e personalizado para todas as idades.",
-        image: "https://images.unsplash.com/photo-1580281658629-2499ab5b4e6c"
-      }
-    ]
-  }
+        title: "Promoção de Hábitos Saudáveis",
+        description:
+          "Sono, alimentação e propósito alinhados para uma vida melhor.",
+        image: "./photos/yoga.jpeg",
+      },
+    ],
+  },
 ];
 
 export function SpecialtiesSection() {
-  const [selected, setSelected] = useState("Oftalmologia");
+  const [selected, setSelected] = useState("Emagrecimento e Performance");
 
   const selectedSpecialty = specialties.find((s) => s.name === selected);
 
@@ -108,21 +115,22 @@ export function SpecialtiesSection() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-custom-black mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-custom-dark-gray leading-tight font-neue-haas">
             Especialidades Médicas
           </h2>
-          <p className="text-lg text-custom-dark-gray max-w-4xl mx-auto mb-8">
-          </p>
+          <p className="text-lg text-custom-dark-gray max-w-4xl mx-auto mb-8 font-neue-haas"></p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {specialties.map((s) => (
               <button
                 key={s.name}
                 onClick={() => setSelected(s.name)}
-                className={`px-6 py-3 font-medium border rounded-full transition-colors
-                  ${selected === s.name
-                    ? "bg-amber-400 text-black border-amber-400"
-                    : "text-custom-dark-gray border-custom-medium-gray hover:bg-custom-light-gray"}`}
+                className={`px-4 py-1 font-medium border rounded-full transition-colors font-neue-haas
+                  ${
+                    selected === s.name
+                      ? "bg-zinc-950 text-white border-zinc-950"
+                      : "text-custom-dark-gray border-custom-medium-gray hover:bg-zinc-950 hover:text-white"
+                  }`}
               >
                 {s.name}
               </button>
@@ -134,7 +142,7 @@ export function SpecialtiesSection() {
           {selectedSpecialty?.cards.map((card) => (
             <div
               key={card.id}
-              className="relative bg-white text-custom-black hover:bg-custom-black hover:text-white shadow-xl rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
+              className="relative bg-white text-zinc-950 hover:bg-zinc-950 hover:text-white shadow-xl rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
             >
               <div className="relative z-10 h-64 overflow-hidden">
                 <img
@@ -145,18 +153,22 @@ export function SpecialtiesSection() {
                 />
               </div>
               <div className="relative z-10 p-8">
-                <h3 className="text-xl font-bold mb-4">{card.title}</h3>
-                <p className="text-sm leading-relaxed">{card.description}</p>
+                <h3 className="text-xl font-bold mb-4 font-neue-haas">
+                  {card.title}
+                </h3>
+                <p className="text-sm leading-relaxed font-neue-haas">
+                  {card.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="flex justify-center mt-16">
           <Link to="/especialidades">
             <HoverBorderGradient
               containerClassName="rounded-full"
-              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              className="bg-zinc-950 text-white font-neue-haas px-6 py-3"
             >
               <span>Ver todas especialidades</span>
             </HoverBorderGradient>

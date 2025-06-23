@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
@@ -14,112 +13,279 @@ import { Footer } from "@/components/Footer";
 import { SchemaOrg } from "@/lib/schema";
 import { Check, ArrowRight } from "lucide-react";
 import { HeroButton } from "@/components/HeroButton";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Index() {
+  const heroRef = useRef(null);
+  const heroTextRef = useRef<HTMLDivElement>(null);
+  const heroCardRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef(null);
+  const whyRef = useRef(null);
+  const specialtiesRef = useRef(null);
+  const blogRef = useRef(null);
+
+  useEffect(() => {
+    // Hero text animation
+    if (heroTextRef.current) {
+      gsap.fromTo(
+        heroTextRef.current,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: heroTextRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }
+    // Hero card animation
+    if (heroCardRef.current) {
+      gsap.fromTo(
+        heroCardRef.current,
+        { y: -100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: heroCardRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }
+    // About animation
+    if (aboutRef.current) {
+      gsap.fromTo(
+        aboutRef.current,
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: aboutRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }
+    // Why Choose Us animation
+    if (whyRef.current) {
+      gsap.fromTo(
+        whyRef.current,
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: whyRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }
+    // Specialties animation
+    if (specialtiesRef.current) {
+      gsap.fromTo(
+        specialtiesRef.current,
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: specialtiesRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }
+    // Blog animation
+    if (blogRef.current) {
+      gsap.fromTo(
+        blogRef.current,
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: blogRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
         <title>ISO - Instituto Seu Olhar | Clínica Médica Especializada</title>
-        <meta 
-          name="description" 
+        <meta
+          name="description"
           content="O ISO - Instituto Seu Olhar oferece atendimento especializado em Oftalmologia, Saúde Mental, Obesidade e Estilo de Vida. Agende sua consulta!"
         />
-        <meta property="og:title" content="ISO - Instituto Seu Olhar | Clínica Médica Especializada" />
-        <meta property="og:description" content="Atendimento especializado em Oftalmologia, Saúde Mental, Obesidade e Estilo de Vida." />
+        <meta
+          property="og:title"
+          content="ISO - Instituto Seu Olhar | Clínica Médica Especializada"
+        />
+        <meta
+          property="og:description"
+          content="Atendimento especializado em Oftalmologia, Saúde Mental, Obesidade e Estilo de Vida."
+        />
         <meta property="og:type" content="website" />
       </Helmet>
 
       <SchemaOrg />
 
       <Header />
-      
-      {/* Hero Section */}
-      <div className="min-h-screen">
-        <div className="relative overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <img 
-              src="/lovable-uploads/eb348a20-6ccb-48aa-81cf-2a1617f7021f.png" 
-              alt="Profissional médica do ISO - Instituto Seu Olhar" 
-              className="w-full h-full object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-black/40" />
-          </div>
 
-          {/* Main Content */}
-          <div className="relative z-10 flex min-h-screen items-center justify-between p-6 lg:p-8 pt-32">
-            {/* Left Content */}
-            <div className="max-w-lg">
-              <p className="mb-4 text-sm text-white/80 font-inter">Cuidado Especializado e Humanizado</p>
-              <h1 className="mb-8 text-4xl font-bold leading-tight text-white lg:text-6xl font-inter">
-                Sua Saúde em{" "}
-                <br />
-                Boas Mãos,
-                <br />
-                <span className="text-black">Sempre.</span>
-              </h1>
+      {/* Hero Section */}
+      <section
+        ref={heroRef}
+        className="relative min-h-screen flex items-center justify-center bg-zinc-950 overflow-hidden pb-8"
+      >
+        {/* Background image */}
+        <img
+          src="/photos/eye3.jpeg"
+          alt="Profissional médica do ISO - Instituto Seu Olhar"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        {/* Overlay para mobile e desktop */}
+        <div className="absolute inset-0 md:bg-zinc-950/70 bg-white/20 md:bg-white/0" />
+
+        {/* Conteúdo */}
+        <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between min-h-screen">
+          {/* Texto */}
+          <div
+            ref={heroTextRef}
+            className="w-full lg:w-1/2 flex flex-col justify-center items-start text-left pt-32 pb-12 lg:pt-48 lg:pb-24"
+          >
+            <span className="text-lg font-light mb-2 opacity-80 text-white font-neue-haas">
+              Redescubra sua essência
+            </span>
+            <h1 className="text-3xl md:text-6xl font-bold leading-tight mb-5 text-white font-neue-haas">
+              A TRASFORMAÇÃO,
+              <br />
+              COMEÇA DE
+              <br />
+              DENTRO PARA FORA
+            </h1>
+            <div className="flex flex-row items-center gap-5 mt-4">
+              <button className="px-5 py-2 text-base md:px-8 md:py-2 md:text-lg bg-white text-black/70 rounded-full font-semibold shadow hover:bg-gray-100 transition font-neue-haas">
+                Agende sua Consulta
+              </button>
               <HeroButton />
             </div>
+          </div>
 
-            {/* Right Product Card - Responsivo */}
-            <div className="hidden lg:block">
-              <div className="rounded-2xl bg-white/10 p-6 lg:p-8 xl:p-10 backdrop-blur-sm border border-white/20 lg:w-72 xl:w-80 2xl:w-96">
-                <div className="mb-4 flex flex-wrap gap-2">
-                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white font-inter">#Oftalmologia</span>
-                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white font-inter">#SaúdeMental</span>
-                  <span className="rounded-full bg-black/20 px-3 py-1 text-xs text-white font-inter">#Nutrologia</span>
-                </div>
+          {/* Card lateral */}
+          <div
+            ref={heroCardRef}
+            className="w-full lg:w-1/3 mt-12 lg:mt-0 flex flex-col items-center lg:items-end pb-8"
+          >
+            <div
+              className="w-56 md:w-80 bg-white/10 backdrop-blur-lg rounded-3xl p-2 md:p-6 shadow-lg border border-white/20 mt-8 ml-auto md:mt-0 md:ml-0 transition-transform duration-300 hover:scale-105 hover:-rotate-2 hover:shadow-2xl"
+              style={{ willChange: "transform" }}
+            >
+              {/* Hashtags */}
+              <div className="flex gap-0.5 md:gap-2 mb-2 md:mb-4 justify-center flex-wrap">
+                {["#Sáude", "#Bem Estar"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] md:text-sm font-medium px-1.5 md:px-3 py-0.5 md:py-1 bg-white/20 text-white rounded-full font-neue-haas"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
-                <div className="mb-4 h-48 lg:h-56 xl:h-64 rounded-2xl bg-white/20 p-4 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="h-20 w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 rounded-full bg-black/30 mx-auto mb-4 flex items-center justify-center">
-                      <Check className="h-10 w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 text-white" />
-                    </div>
-                    <div className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-inter">150K+</div>
-                    <div className="text-sm lg:text-base text-white/80 font-inter">Pacientes</div>
+              {/* Imagem do Produto */}
+              <div className="relative bg-white rounded-2xl p-1 md:p-4 mb-2 md:mb-4 aspect-square overflow-hidden">
+                <img
+                  src="/photos/skincare.jpeg"
+                  alt="SL Facial Cream"
+                  className="object-cover w-full h-full rounded-2xl"
+                />
+              </div>
+
+              {/* Informações */}
+              <div>
+                <p className="text-gray-200 text-[11px] md:text-sm mb-1 text-center font-neue-haas"></p>
+                <div className="flex items-center justify-end gap-x-1 md:gap-x-2">
+                  <h2 className="text-white text-sm md:text-lg font-semibold font-neue-haas">
+                    Clínica ISO
+                  </h2>
+                  <div className="w-6 h-6 md:w-8 md:h-8 bg-white/30 rounded-full flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="13"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      className="text-white"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M7 17L17 7M7 7h10v10"
+                      />
+                    </svg>
                   </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-xs lg:text-sm text-white/80 font-inter">Excelência em Cuidados</p>
-                    <p className="font-semibold lg:text-lg text-white font-inter">Atendimento ISO</p>
-                  </div>
-                  <button className="rounded-full bg-black/20 p-2 lg:p-3 text-white hover:bg-black/30 transition-all">
-                    <ArrowRight className="h-4 w-4 lg:h-5 lg:w-5" />
-                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* About Section */}
-      <AboutSection />
+      <AboutSection ref={aboutRef} />
 
       {/* Why Choose Us Section */}
-      <WhyChooseUsSection />
+      <WhyChooseUsSection ref={whyRef} />
 
       {/* Specialties Section */}
-      <SpecialtiesSection />
+      <SpecialtiesSection ref={specialtiesRef} />
 
       {/* Call-to-action section */}
-      <section className="py-20 bg-custom-black text-white">
+      <section className="py-20 bg-zinc-950 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-inter">Agende sua consulta</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-custom-light-gray font-inter">
-            É rápido e fácil agendar sua consulta no ISO - Instituto Seu Olhar. 
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-neue-haas">
+            Agende sua consulta
+          </h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-white-20 font-neue-haas">
+            É rápido e fácil agendar sua consulta no ISO - Instituto Seu Olhar.
             Atendimento humanizado e personalizado para suas necessidades.
           </p>
-          <Link to="/agendamento">
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              className="bg-black text-white font-inter"
-            >
-              <span>Agende sua Consulta</span>
-            </HoverBorderGradient>
-          </Link>
+          <div className="flex justify-center">
+            <Link to="/agendamento">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                className="bg-zinc-950 text-white font-neue-haas"
+              >
+                <span>Agende sua Consulta</span>
+              </HoverBorderGradient>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -127,23 +293,25 @@ export default function Index() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-custom-black font-inter">Nossa Equipe</h2>
-            <p className="text-lg text-custom-medium-gray max-w-3xl mx-auto font-inter">
-              Conheça nossos profissionais altamente qualificados e dedicados ao seu bem-estar.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-custom-black font-neue-haas">
+              Nossa Equipe
+            </h2>
+            <p className="text-lg text-custom-medium-gray max-w-3xl mx-auto font-neue-haas">
+              Conheça nossos profissionais altamente qualificados e dedicados ao
+              seu bem-estar.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {doctors.slice(0, 3).map((doctor) => (
               <DoctorCard key={doctor.id} doctor={doctor} />
             ))}
           </div>
-          
-          <div className="text-center mt-12">
+          <div className="mt-12 flex justify-center">
             <Link to="/equipe">
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="bg-black text-white font-inter"
+                className="bg-black text-white font-neue-haas"
               >
                 <span>Conheça toda nossa equipe</span>
               </HoverBorderGradient>
@@ -153,7 +321,7 @@ export default function Index() {
       </section>
 
       {/* Blog Section */}
-      <BlogSection />
+      <BlogSection ref={blogRef} />
 
       <Footer />
     </>
