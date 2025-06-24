@@ -1,73 +1,196 @@
-# Welcome to your Lovable project
+# ISO - Instituto Seu Olhar | Clínica Médica
 
-## Project info
+![ISO - Instituto Seu Olhar](https://img.shields.io/badge/ISO-Instituto%20Seu%20Olhar-blue)
+![React](https://img.shields.io/badge/React-18.3.1-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.0+-blue)
+![Vite](https://img.shields.io/badge/Vite-5.0+-blue)
 
-**URL**: https://lovable.dev/projects/3d766486-cc56-487f-83b2-bb7eb0b024d0
+## 📋 Descrição
 
-## How can I edit this code?
+Site institucional moderno e responsivo para o **ISO - Instituto Seu Olhar**, uma clínica médica especializada em Oftalmologia, Saúde Mental, Obesidade e Estilo de Vida. O projeto oferece uma experiência de usuário excepcional com animações suaves, design elegante e funcionalidades completas para agendamento e contato.
 
-There are several ways of editing your application.
+## 🚀 Tecnologias Utilizadas
 
-**Use Lovable**
+- **React 18.3.1** - Biblioteca JavaScript para construção de interfaces
+- **TypeScript** - Superset do JavaScript com tipagem estática
+- **Tailwind CSS** - Framework CSS utilitário para design responsivo
+- **Vite** - Build tool rápida e moderna
+- **React Router DOM** - Roteamento para aplicações React
+- **React Hook Form** - Gerenciamento de formulários
+- **Zod** - Validação de esquemas
+- **Lucide React** - Ícones modernos
+- **GSAP** - Animações avançadas com ScrollTrigger
+- **FormSubmit** - Envio de formulários sem backend
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3d766486-cc56-487f-83b2-bb7eb0b024d0) and start prompting.
+## 📦 Instalação
 
-Changes made via Lovable will be committed automatically to this repo.
+### Pré-requisitos
 
-**Use your preferred IDE**
+- Node.js (versão 18 ou superior)
+- npm ou yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Passos para instalação
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clone o repositório**
 
-Follow these steps:
+   ```bash
+   git clone https://github.com/ascef182/clinic-tailwind-react.git
+   cd clinic-tailwind-react
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. **Instale as dependências**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. **Execute o projeto em modo de desenvolvimento**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+4. **Acesse o projeto**
+   ```
+   http://localhost:8080
+   ```
+
+## 🏗️ Estrutura do Projeto
+
+```
+clinic-tailwind-react/
+├── public/
+│   ├── photos/           # Imagens do projeto
+│   └── fonts/           # Fontes personalizadas
+├── src/
+│   ├── components/      # Componentes reutilizáveis
+│   │   ├── ui/         # Componentes de UI base
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ContactForm.tsx
+│   │   ├── AboutSection.tsx
+│   │   ├── WhyChooseUsSection.tsx
+│   │   ├── SpecialtiesSection.tsx
+│   │   └── BlogSection.tsx
+│   ├── pages/          # Páginas da aplicação
+│   │   ├── Index.tsx
+│   │   ├── Sobre.tsx
+│   │   ├── Especialidades.tsx
+│   │   ├── Equipe.tsx
+│   │   ├── Agendamento.tsx
+│   │   └── Contato.tsx
+│   ├── data/           # Dados estáticos
+│   │   ├── doctors.ts
+│   │   └── specialties.ts
+│   ├── hooks/          # Hooks customizados
+│   ├── lib/            # Utilitários e configurações
+│   └── App.tsx         # Componente principal
+├── package.json
+├── tailwind.config.js
+├── vite.config.ts
+└── README.md
 ```
 
-**Edit a file directly in GitHub**
+## 🎯 Funcionalidades
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### ✨ Páginas Principais
 
-**Use GitHub Codespaces**
+- **Home** - Hero section com animações GSAP, especialidades e equipe
+- **Sobre** - História, missão e valores da clínica
+- **Especialidades** - Detalhes sobre cada área médica
+- **Equipe** - Perfil dos profissionais
+- **Agendamento** - Formulário de agendamento de consultas
+- **Contato** - Informações de contato e formulário
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 🎨 Design e UX
 
-## What technologies are used for this project?
+- **Design Responsivo** - Adaptável a todos os dispositivos
+- **Animações GSAP** - ScrollTrigger para entrada suave de elementos
+- **Tipografia Personalizada** - Fonte Neue Haas Grotesk
+- **Glassmorphism** - Efeitos visuais modernos
+- **Hover Effects** - Interações elegantes
 
-This project is built with:
+### 📝 Formulários
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Validação Completa** - React Hook Form + Zod
+- **Envio de Email** - Integração com FormSubmit
+- **LGPD Compliance** - Termos de privacidade
+- **Feedback Visual** - Estados de loading e sucesso
 
-## How can I deploy this project?
+### 🗺️ Integrações
 
-Simply open [Lovable](https://lovable.dev/projects/3d766486-cc56-487f-83b2-bb7eb0b024d0) and click on Share -> Publish.
+- **Google Maps** - Localização da clínica
+- **WhatsApp** - Contato direto via WhatsApp
+- **FormSubmit** - Envio de formulários sem backend
 
-## Can I connect a custom domain to my Lovable project?
+## 🎬 Animações GSAP
 
-Yes, you can!
+O projeto utiliza GSAP com ScrollTrigger para criar animações suaves:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Hero Section** - Texto e card lateral com entrada diferenciada
+- **About Section** - Lados esquerdo e direito deslizam de direções opostas
+- **WhyChooseUs** - Itens aparecem em cascata de cima para baixo
+- **Specialties** - Cards com fade-in ao entrar na viewport
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🎨 Personalização
+
+### Cores
+
+O projeto utiliza uma paleta de cores personalizada definida no `tailwind.config.js`:
+
+- `custom-black` - Preto principal
+- `custom-dark-gray` - Cinza escuro
+- `custom-medium-gray` - Cinza médio
+- `custom-light-gray` - Cinza claro
+
+### Fontes
+
+- **Neue Haas Grotesk** - Fonte principal do projeto
+- Configurada como `font-neue-haas` nas classes Tailwind
+
+## 🚀 Deploy
+
+### Build para produção
+
+```bash
+npm run build
+# ou
+yarn build
+```
+
+### Preview do build
+
+```bash
+npm run preview
+# ou
+yarn preview
+```
+
+## 📱 Responsividade
+
+O projeto é totalmente responsivo e otimizado para:
+
+- **Desktop** - Layout completo com grid de 2 colunas
+- **Tablet** - Layout adaptado com flexbox
+- **Mobile** - Layout em coluna única com navegação otimizada
+
+## 📄 Licença
+
+Este projeto é desenvolvido para o ISO - Instituto Seu Olhar. Todos os direitos reservados.
+
+## 🤝 Contribuição
+
+Para contribuir com o projeto:
+
+1. Faça um fork do repositório
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+---
