@@ -136,20 +136,50 @@ export default function Index() {
   return (
     <>
       <Helmet>
-        <title>ISO - Instituto Seu Olhar | Clínica Médica Especializada</title>
+        <title>
+          ISO - Instituto Seu Olhar | Clínica Médica em Belo Horizonte
+        </title>
         <meta
           name="description"
-          content="O ISO - Instituto Seu Olhar oferece atendimento especializado em Oftalmologia, Saúde Mental, Obesidade e Estilo de Vida. Agende sua consulta!"
+          content="Clínica ISO - Instituto Seu Olhar em Belo Horizonte: Oftalmologia, Saúde Mental, Nutrição, Obesidade, Estilo de Vida e mais. Atendimento humanizado e especializado. Agende sua consulta!"
         />
         <meta
+          name="keywords"
+          content="Clínica médica Belo Horizonte, Oftalmologia BH, Saúde Mental BH, Nutricionista BH, Obesidade, Estilo de Vida, Psiquiatria, Terapia, ISO Instituto Seu Olhar, Especialidades médicas BH"
+        />
+        <meta name="author" content="ISO - Instituto Seu Olhar" />
+        <meta name="robots" content="index, follow" />
+        <meta
           property="og:title"
-          content="ISO - Instituto Seu Olhar | Clínica Médica Especializada"
+          content="ISO - Instituto Seu Olhar | Clínica Médica em Belo Horizonte"
         />
         <meta
           property="og:description"
-          content="Atendimento especializado em Oftalmologia, Saúde Mental, Obesidade e Estilo de Vida."
+          content="Especialidades médicas em Belo Horizonte: Oftalmologia, Saúde Mental, Nutrição, Obesidade, Estilo de Vida e mais. Atendimento humanizado e especializado."
         />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://institutoseuolhar.com.br/" />
+        <meta
+          property="og:image"
+          content="https://institutoseuolhar.com.br/og-banner.jpg"
+        />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:site_name" content="ISO - Instituto Seu Olhar" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="ISO - Instituto Seu Olhar | Clínica Médica em Belo Horizonte"
+        />
+        <meta
+          name="twitter:description"
+          content="Especialidades médicas em Belo Horizonte: Oftalmologia, Saúde Mental, Nutrição, Obesidade, Estilo de Vida e mais. Atendimento humanizado e especializado."
+        />
+        <meta
+          name="twitter:image"
+          content="https://institutoseuolhar.com.br/og-banner.jpg"
+        />
+        <meta name="twitter:site" content="@institutoseuolhar" />
+        <link rel="canonical" href="https://institutoseuolhar.com.br/" />
       </Helmet>
 
       <SchemaOrg />
@@ -258,13 +288,19 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <AboutSection ref={aboutRef} />
+      <div ref={aboutRef}>
+        <AboutSection />
+      </div>
 
       {/* Why Choose Us Section */}
-      <WhyChooseUsSection ref={whyRef} />
+      <div ref={whyRef}>
+        <WhyChooseUsSection />
+      </div>
 
       {/* Specialties Section */}
-      <SpecialtiesSection ref={specialtiesRef} />
+      <div ref={specialtiesRef}>
+        <SpecialtiesSection />
+      </div>
 
       {/* Call-to-action section */}
       <section className="py-20 bg-zinc-950 text-white">
@@ -321,7 +357,9 @@ export default function Index() {
       </section>
 
       {/* Blog Section */}
-      <BlogSection ref={blogRef} />
+      <div ref={blogRef}>
+        <BlogSection />
+      </div>
 
       <Footer />
     </>
