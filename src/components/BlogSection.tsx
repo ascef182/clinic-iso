@@ -8,9 +8,10 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, User, MessageCircle } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { blogPosts } from "../data/blogPosts";
 import { doctors } from "../data/doctors";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export function BlogSection() {
   const navigate = useNavigate();
@@ -95,13 +96,15 @@ export function BlogSection() {
         </div>
 
         {/* Ler todos button */}
-        <div className="text-center mt-12">
-          <Button
-            onClick={() => navigate("/blog")}
-            className="bg-slate-900 text-white hover:bg-slate-800 px-8 py-3 text-lg font-semibold rounded-lg font-neue-haas"
-          >
-            Ler todos os artigos
-          </Button>
+        <div className="flex justify-center mt-12">
+          <Link to="/blog">
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              className="bg-zinc-950 text-white font-neue-haas"
+            >
+              <span>Ler todos os artigos</span>
+            </HoverBorderGradient>
+          </Link>
         </div>
       </div>
     </section>
