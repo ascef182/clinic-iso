@@ -146,6 +146,12 @@
   h6 {
     @apply font-neue-haas font-medium;
   }
+
+  /* Prevent image zoom in blog cards */
+  .blog-card img {
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 @layer utilities {
