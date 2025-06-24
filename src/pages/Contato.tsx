@@ -66,39 +66,46 @@ export default function Contato() {
                 Endereço
               </h3>
               <address className="not-italic text-muted-foreground font-neue-haas">
-                Rua Exemplo, 123
+                Rua Fernandes Tourinho, 235 - Sala 1002
                 <br />
-                Bairro Centro
+                Bairro Funcionários
                 <br />
                 Belo Horizonte - MG
                 <br />
-                CEP: 30000-000
+                CEP: 30112-000
               </address>
             </div>
 
             <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
-              <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-primary"
-                >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </div>
+              <a
+                href="https://wa.me/5531995659538"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-primary/20 transition">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-primary"
+                  >
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+              </a>
+
               <h3 className="text-lg font-semibold mb-2 font-neue-haas">
                 Telefones
               </h3>
               <div className="text-muted-foreground font-neue-haas">
-                <p>+55 (31) 3333-3333</p>
-                <p>+55 (31) 99999-9999 (WhatsApp)</p>
+                <p>+55 (31) 99565-9538 (WhatsApp)</p>
               </div>
             </div>
 
@@ -124,8 +131,7 @@ export default function Contato() {
                 Email
               </h3>
               <div className="text-muted-foreground font-neue-haas">
-                <p>contato@institutoseuolhar.com.br</p>
-                <p>atendimento@institutoseuolhar.com.br</p>
+                <p>institutoseuolhar@gmail.com</p>
               </div>
             </div>
           </div>
@@ -145,79 +151,6 @@ export default function Contato() {
               <div className="h-[400px] rounded-lg overflow-hidden border">
                 <Map />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Business Hours */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 font-neue-haas">
-              Horário de Atendimento
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-neue-haas">
-              Estamos disponíveis nos seguintes horários para melhor atendê-lo.
-            </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-card p-6 rounded-lg shadow-sm border">
-              <ul className="space-y-4">
-                <li className="flex justify-between pb-4 border-b">
-                  <span className="font-medium font-neue-haas">
-                    Segunda-feira
-                  </span>
-                  <span className="text-muted-foreground font-neue-haas">
-                    08:00 - 18:00
-                  </span>
-                </li>
-                <li className="flex justify-between pb-4 border-b">
-                  <span className="font-medium font-neue-haas">
-                    Terça-feira
-                  </span>
-                  <span className="text-muted-foreground font-neue-haas">
-                    08:00 - 18:00
-                  </span>
-                </li>
-                <li className="flex justify-between pb-4 border-b">
-                  <span className="font-medium font-neue-haas">
-                    Quarta-feira
-                  </span>
-                  <span className="text-muted-foreground font-neue-haas">
-                    08:00 - 18:00
-                  </span>
-                </li>
-                <li className="flex justify-between pb-4 border-b">
-                  <span className="font-medium font-neue-haas">
-                    Quinta-feira
-                  </span>
-                  <span className="text-muted-foreground font-neue-haas">
-                    08:00 - 18:00
-                  </span>
-                </li>
-                <li className="flex justify-between pb-4 border-b">
-                  <span className="font-medium font-neue-haas">
-                    Sexta-feira
-                  </span>
-                  <span className="text-muted-foreground font-neue-haas">
-                    08:00 - 18:00
-                  </span>
-                </li>
-                <li className="flex justify-between pb-4 border-b">
-                  <span className="font-medium font-neue-haas">Sábado</span>
-                  <span className="text-muted-foreground font-neue-haas">
-                    08:00 - 12:00
-                  </span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="font-medium font-neue-haas">Domingo</span>
-                  <span className="text-muted-foreground font-neue-haas">
-                    Fechado
-                  </span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

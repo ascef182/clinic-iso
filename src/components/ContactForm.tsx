@@ -47,24 +47,19 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-
-    // Simulação de envio
-    setTimeout(() => {
-      console.log(values);
-      toast({
-        title: "Mensagem enviada!",
-        description: "Obrigado pelo contato. Retornaremos em breve.",
-      });
-      form.reset();
-      setIsSubmitting(false);
-    }, 1000);
-  }
-
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form
+        action="https://formsubmit.co/institutoseuolhar@gmail.com"
+        method="POST"
+        className="space-y-6"
+      >
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://localhost:8080/obrigado"
+        />
         <FormField
           control={form.control}
           name="name"
@@ -150,7 +145,7 @@ export function ContactForm() {
         />
 
         <Button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Enviando..." : "Enviar mensagem"}
+          Enviar mensagem
         </Button>
       </form>
     </Form>

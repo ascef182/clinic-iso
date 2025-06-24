@@ -82,7 +82,7 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/contato">
+            <Link to="https://cal.com/institutoseuolhar">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 className="bg-zinc-950 text-white font-neue-haas"
@@ -169,7 +169,10 @@ export function Header() {
                 Contato
               </NavLink>
             </nav>
-            <Link to="/contato" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              to="https://cal.com/institutoseuolhar"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 className="bg-zinc-950 text-white font-neue-haas"
