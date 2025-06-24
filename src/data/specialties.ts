@@ -1,7 +1,7 @@
 export const specialties: Specialty[] = [
   {
     id: "emagrecimento-performance",
-    name: "Emagrecimento e Performance",
+    name: "Emagrecimento",
     description:
       "Abordagem médica individualizada para emagrecimento saudável, hipertrofia e performance física e mental. Utilizamos protocolos modernos com foco em saúde metabólica, nutrição e suplementação.",
     image: "./photos/emagrecer.jpeg",
@@ -18,7 +18,7 @@ export const specialties: Specialty[] = [
   },
   {
     id: "oftalmologia-plastica-ocular",
-    name: "Oftalmologia e Plástica Ocular",
+    name: "Oftalmologia ",
     description:
       "Consultas com exame oftalmológico completo, emissão de laudos para o DETRAN e procedimentos estéticos como aplicação de Botox e blefaroplastia.",
     image: "./photos/olharprofundo.jpeg",

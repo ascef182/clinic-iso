@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const specialties = [
   {
-    name: "Oftalmologia e Plástica Ocular",
+    name: "Oftalmologia ",
     cards: [
       {
         id: 1,
@@ -54,7 +54,7 @@ const specialties = [
     ],
   },
   {
-    name: "Emagrecimento e Performance",
+    name: "Emagrecimento",
     cards: [
       {
         id: 7,
