@@ -277,7 +277,7 @@ export default function Index() {
             Atendimento humanizado e personalizado para suas necessidades.
           </p>
           <div className="flex justify-center">
-            <Link to="/agendamento">
+            <Link to="/contato">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 className="bg-zinc-950 text-white font-neue-haas"

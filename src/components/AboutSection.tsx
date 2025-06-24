@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { Headset, User } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 export function AboutSection() {
   const leftRef = useRef<HTMLDivElement>(null);
@@ -220,10 +221,11 @@ export function AboutSection() {
 
           {/* Botão CTA */}
           <div className="pt-4">
-            <Button className="bg-custom-gold hover:bg-custom-gold/90 text-custom-black px-8 py-3 rounded-full font-semibold font-neue-haas">
-              Saiba mais
-              <span className="ml-2">→</span>
-            </Button>
+            <Link to="/sobre">
+              <Button className="bg-custom-gold hover:bg-custom-gold/90 text-custom-black px-8 py-3 rounded-full font-semibold font-neue-haas">
+                Saiba mais <span className="ml-2">→</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

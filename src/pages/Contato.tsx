@@ -105,6 +105,7 @@ export default function Contato() {
                 Telefones
               </h3>
               <div className="text-muted-foreground font-neue-haas">
+                <p>Marque com nossa secretária</p>
                 <p>+55 (31) 99565-9538 (WhatsApp)</p>
               </div>
             </div>

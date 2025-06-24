@@ -1,14 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { specialties } from "@/data/specialties";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export default function Especialidades() {
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState(specialties[0].id);
+
+  // Use the activeTab from location state if available
+  useEffect(() => {
+    if (location.state?.activeTab) {
+      setActiveTab(location.state.activeTab);
+    }
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, [location.state?.activeTab]);
 
   return (
     <>
@@ -48,7 +58,7 @@ export default function Especialidades() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <Tabs
-            defaultValue={specialties[0].id}
+            value={activeTab}
             className="w-full"
             onValueChange={setActiveTab}
           >
@@ -155,12 +165,12 @@ export default function Especialidades() {
               </svg>
               WhatsApp
             </a>
-            <a
-              href="/agendamento"
+            <Link
+              to="/agendamento"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-primary-foreground bg-transparent hover:bg-primary-foreground/10 font-neue-haas"
             >
               Formulário de Agendamento
-            </a>
+            </Link>
           </div>
         </div>
       </section>
