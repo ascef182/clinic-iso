@@ -42,7 +42,7 @@ export const doctors: Doctor[] = [
     name: "Dra. Rafaela Malagoli",
     specialty: "Oftalmologia | Plástica Ocular",
     photo: "./photos/Rafaela.JPG",
-    crm: "34567 MG", // Confirme se este CRM está correto
+    crm: "84889 MG", // Confirme se este CRM está correto
     bio: "Dra. Rafaela Malagoli é médica oftalmologista com especialização em Plástica Ocular pela Faculdade de Ciências Médicas de Minas Gerais. Atua com foco na blefaroplastia e em procedimentos estéticos da região periocular, unindo precisão técnica, sensibilidade artística e cuidado individualizado para promover saúde, expressão e autoestima com naturalidade e segurança.",
     education: [
       "Médica formada pela UNIFENAS-BH",
