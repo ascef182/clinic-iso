@@ -107,7 +107,7 @@ const specialties = [
 ];
 
 export function SpecialtiesSection() {
-  const [selected, setSelected] = useState("Emagrecimento e Performance");
+  const [selected, setSelected] = useState("Emagrecimento");
 
   const selectedSpecialty = specialties.find((s) => s.name === selected);
 
