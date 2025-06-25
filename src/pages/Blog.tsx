@@ -43,10 +43,10 @@ export default function Blog() {
                     className="w-full h-56 object-cover"
                     loading="lazy"
                   />
-                  <span className="absolute top-4 left-4 bg-slate-900 text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm font-neue-haas">
+                  <span className="absolute top-4 left-4 bg-zinc-950 text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm font-neue-haas">
                     {post.category}
                   </span>
-                  <div className="absolute bottom-0 right-0 bg-slate-900 text-white text-xs font-semibold px-3 py-2 text-center leading-tight rounded-tl-lg font-neue-haas">
+                  <div className="absolute bottom-0 right-0 bg-zinc-950 text-white text-xs font-semibold px-3 py-2 text-center leading-tight rounded-tl-lg font-neue-haas">
                     <div>{post.date.month}</div>
                     <div>{post.date.day}</div>
                   </div>

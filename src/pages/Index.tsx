@@ -249,7 +249,7 @@ export default function Index() {
               {/* Imagem do Produto */}
               <div className="relative bg-white rounded-2xl p-1 md:p-4 mb-2 md:mb-4 aspect-square overflow-hidden">
                 <img
-                  src="/photos/skincare.jpeg"
+                  src="/photos/ausculta2.jpeg"
                   alt="SL Facial Cream"
                   className="object-cover w-full h-full rounded-2xl"
                 />

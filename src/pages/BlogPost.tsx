@@ -37,7 +37,7 @@ export default function BlogPost() {
           alt={post.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-zinc-950 bg-opacity-40"></div>
         <div className="absolute top-6 left-6">
           <button
             onClick={() => navigate("/blog")}
@@ -54,7 +54,7 @@ export default function BlogPost() {
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-2 text-sm text-gray-600 mb-4 font-neue-haas">
-            <span className="bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-medium">
+            <span className="bg-zinc-950 text-white px-3 py-1 rounded-full text-xs font-medium">
               {post.category}
             </span>
             <span>•</span>
