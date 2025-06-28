@@ -52,7 +52,7 @@ export function ContactForm() {
       <form
         action="https://formsubmit.co/institutoseuolhar@gmail.com"
         method="POST"
-        className="space-y-6"
+        className="space-y-6 bg-black p-8 rounded-lg border border-amber-500/20"
       >
         <input type="hidden" name="_captcha" value="false" />
         <input
@@ -65,9 +65,13 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nome completo</FormLabel>
+              <FormLabel className="text-white">Nome completo</FormLabel>
               <FormControl>
-                <Input placeholder="Seu nome" {...field} />
+                <Input
+                  placeholder="Seu nome"
+                  {...field}
+                  className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-400 focus:border-amber-500"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -80,9 +84,13 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="text-white">Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="seu@email.com" {...field} />
+                  <Input
+                    placeholder="seu@email.com"
+                    {...field}
+                    className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-400 focus:border-amber-500"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -94,9 +102,13 @@ export function ContactForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Telefone</FormLabel>
+                <FormLabel className="text-white">Telefone</FormLabel>
                 <FormControl>
-                  <Input placeholder="(XX) XXXXX-XXXX" {...field} />
+                  <Input
+                    placeholder="(XX) XXXXX-XXXX"
+                    {...field}
+                    className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-400 focus:border-amber-500"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -109,10 +121,10 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Mensagem</FormLabel>
+              <FormLabel className="text-white">Mensagem</FormLabel>
               <FormControl>
                 <textarea
-                  className="flex min-h-24 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  className="flex min-h-24 w-full rounded-md border border-zinc-700 bg-zinc-900 px-3 py-2 text-base text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                   placeholder="Digite sua mensagem aqui"
                   {...field}
                 />
@@ -131,10 +143,11 @@ export function ContactForm() {
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
+                  className="border-zinc-700 data-[state=checked]:bg-amber-500 data-[state=checked]:border-amber-500"
                 />
               </FormControl>
               <div className="space-y-1 leading-none">
-                <FormLabel>
+                <FormLabel className="text-white">
                   Concordo com a utilização dos meus dados de acordo com a
                   Política de Privacidade
                 </FormLabel>
@@ -144,7 +157,11 @@ export function ContactForm() {
           )}
         />
 
-        <Button type="submit" disabled={isSubmitting}>
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          className="bg-amber-500 text-black hover:bg-amber-400 font-neue-haas"
+        >
           Enviar mensagem
         </Button>
       </form>

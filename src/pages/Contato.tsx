@@ -20,32 +20,34 @@ export default function Contato() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-primary/5 py-16 pt-32">
+      <section className="bg-black py-16 pt-32">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-4 mb-6">
             <Link
               to="/"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-white/60 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-6 h-6" />
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold font-neue-haas">
-              Entre em Contato
-            </h1>
+            <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-lg p-6 w-full">
+              <h1 className="text-4xl md:text-5xl font-bold font-neue-haas text-white">
+                Entre em Contato
+              </h1>
+              <p className="text-lg text-white/80 max-w-3xl font-neue-haas mt-4">
+                Estamos à disposição para esclarecer suas dúvidas e oferecer as
+                informações necessárias.
+              </p>
+            </div>
           </div>
-          <p className="text-lg text-muted-foreground max-w-3xl font-neue-haas">
-            Estamos à disposição para esclarecer suas dúvidas e oferecer as
-            informações necessárias.
-          </p>
         </div>
       </section>
 
       {/* Contact Info */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
-              <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-zinc-900 p-6 rounded-lg shadow-sm border border-zinc-700 text-center">
+              <div className="h-12 w-12 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -56,16 +58,16 @@ export default function Contato() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-primary"
+                  className="text-amber-500"
                 >
                   <path d="m16 16 L22 22"></path>
                   <circle cx="11" cy="11" r="8"></circle>
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2 font-neue-haas">
+              <h3 className="text-lg font-semibold mb-2 font-neue-haas text-white">
                 Endereço
               </h3>
-              <address className="not-italic text-muted-foreground font-neue-haas">
+              <address className="not-italic text-white/80 font-neue-haas">
                 Rua Fernandes Tourinho, 235 - Sala 1002
                 <br />
                 Bairro Funcionários
@@ -76,14 +78,14 @@ export default function Contato() {
               </address>
             </div>
 
-            <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
+            <div className="bg-zinc-900 p-6 rounded-lg shadow-sm border border-zinc-700 text-center">
               <a
                 href="https://wa.me/5531995659538"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"
               >
-                <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-primary/20 transition">
+                <div className="h-12 w-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-green-500/30 transition">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -94,7 +96,7 @@ export default function Contato() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-primary"
+                    className="text-green-500"
                   >
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>

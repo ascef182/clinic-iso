@@ -17,14 +17,14 @@ export function BlogSection() {
   const navigate = useNavigate();
 
   return (
-    <section className="bg-background py-20">
+    <section className="bg-black py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm text-slate-900 font-semibold uppercase tracking-widest mb-2 font-neue-haas">
+          <p className="text-sm text-amber-500 font-semibold uppercase tracking-widest mb-2 font-neue-haas">
             Blog
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 font-neue-haas">
+          <h2 className="text-4xl md:text-5xl font-bold text-white font-neue-haas">
             Posts & Artigos
           </h2>
         </div>
@@ -40,7 +40,7 @@ export function BlogSection() {
                     key={post.id}
                     className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
                   >
-                    <Card className="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 bg-white">
+                    <Card className="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 bg-zinc-900 border-zinc-700">
                       <div className="relative">
                         <img
                           src={post.image}
@@ -48,16 +48,16 @@ export function BlogSection() {
                           className="w-full h-56 object-cover"
                           loading="lazy"
                         />
-                        <span className="absolute top-4 left-4 bg-slate-900 text-white text-xs font-medium px-3 py-1 rounded-full shadow-sm font-neue-haas">
+                        <span className="absolute top-4 left-4 bg-amber-500 text-black text-xs font-medium px-3 py-1 rounded-full shadow-sm font-neue-haas">
                           {post.category}
                         </span>
-                        <div className="absolute bottom-0 right-0 bg-slate-900 text-white text-xs font-semibold px-3 py-2 text-center leading-tight rounded-tl-lg font-neue-haas">
+                        <div className="absolute bottom-0 right-0 bg-amber-500 text-black text-xs font-semibold px-3 py-2 text-center leading-tight rounded-tl-lg font-neue-haas">
                           <div>{post.date.month}</div>
                           <div>{post.date.day}</div>
                         </div>
                       </div>
                       <CardContent className="p-5">
-                        <div className="flex items-center justify-between text-gray-500 text-xs mb-2 font-neue-haas">
+                        <div className="flex items-center justify-between text-white/60 text-xs mb-2 font-neue-haas">
                           <div className="flex items-center gap-1">
                             <User className="h-4 w-4" />
                             <span>{author?.name}</span>
@@ -67,16 +67,16 @@ export function BlogSection() {
                           </div>
                         </div>
 
-                        <h3 className="text-lg font-semibold text-slate-900 mb-2 line-clamp-2 font-neue-haas">
+                        <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2 font-neue-haas">
                           {post.title}
                         </h3>
-                        <p className="text-sm text-gray-600 mb-4 line-clamp-2 font-neue-haas">
+                        <p className="text-sm text-white/80 mb-4 line-clamp-2 font-neue-haas">
                           {post.subtitle}
                         </p>
 
                         <Button
                           variant="ghost"
-                          className="p-0 h-auto text-slate-900-700 text-sm font-medium group font-neue-haas"
+                          className="p-0 h-auto text-amber-500 text-sm font-medium group font-neue-haas hover:text-amber-400"
                           onClick={() => navigate(`/blog/${post.id}`)}
                         >
                           Leia Mais{" "}
@@ -90,17 +90,17 @@ export function BlogSection() {
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious className="left-4" />
-            <CarouselNext className="right-4" />
+            <CarouselPrevious className="left-4 bg-amber-500 text-black hover:bg-amber-400" />
+            <CarouselNext className="right-4 bg-amber-500 text-black hover:bg-amber-400" />
           </Carousel>
         </div>
 
-        {/* Ler todos button */}
-        <div className="flex justify-center mt-12">
+        {/* Botões */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-12">
           <Link to="/blog">
             <HoverBorderGradient
               containerClassName="rounded-full"
-              className="bg-zinc-950 text-white font-neue-haas"
+              className="bg-black text-white font-neue-haas"
             >
               <span>Ler todos os artigos</span>
             </HoverBorderGradient>

@@ -4,32 +4,34 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-3">
-              <span className="text-2xl font-bold font-neue-haas">ISO</span>
-              <span className="font-neue-haas">|</span>
-              <span className="text-lg font-neue-haas">
+              <span className="text-2xl font-bold font-neue-haas text-white">
+                ISO
+              </span>
+              <span className="font-neue-haas text-white">|</span>
+              <span className="text-lg font-neue-haas text-white">
                 Instituto Seu Olhar
               </span>
             </Link>
-            <p className="text-primary-foreground/80 max-w-xs font-neue-haas">
+            <p className="text-white/80 max-w-xs font-neue-haas">
               Cuidado médico especializado para você e sua família. Nossa equipe
               está pronta para oferecer o melhor atendimento.
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 font-neue-haas">
+            <h3 className="text-lg font-semibold mb-4 font-neue-haas text-white">
               Links Rápidos
             </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/"
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
                 >
                   Home
                 </Link>
@@ -37,7 +39,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/sobre"
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
                 >
                   Sobre nós
                 </Link>
@@ -45,7 +47,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/especialidades"
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
                 >
                   Especialidades
                 </Link>
@@ -53,7 +55,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/equipe"
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
                 >
                   Equipe Médica
                 </Link>
@@ -61,7 +63,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/agendamento"
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
                 >
                   Agendamento
                 </Link>
@@ -69,7 +71,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/contato"
-                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
                 >
                   Contato
                 </Link>
@@ -78,10 +80,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 font-neue-haas">
+            <h3 className="text-lg font-semibold mb-4 font-neue-haas text-white">
               Contato
             </h3>
-            <ul className="space-y-2 text-primary-foreground/80">
+            <ul className="space-y-2 text-white/80">
               <li className="flex items-start gap-2 font-neue-haas">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -142,10 +144,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 font-neue-haas">
+            <h3 className="text-lg font-semibold mb-4 font-neue-haas text-white">
               Horário de Atendimento
             </h3>
-            <ul className="space-y-2 text-primary-foreground/80">
+            <ul className="space-y-2 text-white/80">
               <li className="flex justify-between font-neue-haas">
                 <span>Segunda à Sexta</span>
                 <span>08:00 - 18:00</span>
@@ -162,21 +164,21 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between gap-4">
-          <p className="text-primary-foreground/80 text-sm font-neue-haas">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4">
+          <p className="text-white/80 text-sm font-neue-haas">
             © {currentYear} ISO - Instituto Seu Olhar. Todos os direitos
             reservados.
           </p>
           <div className="flex items-center gap-4">
             <a
               href="#"
-              className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-neue-haas"
+              className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
             >
               Política de Privacidade
             </a>
             <a
               href="#"
-              className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-neue-haas"
+              className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
             >
               Termos de Uso
             </a>

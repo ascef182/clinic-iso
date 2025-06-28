@@ -68,20 +68,20 @@ export function WhyChooseUsSection() {
   }, []);
 
   return (
-    <div className="w-full py-12 lg:py-20">
+    <div className="w-full py-12 lg:py-20 bg-black">
       <div className="container mx-auto">
         <div className="flex flex-col space-y-6  items-start">
           <div>
-            <Badge className="font-neue-haas">
+            <Badge className="font-neue-haas bg-amber-500 text-black hover:bg-amber-400">
               Por que escolher a Clínica ISO
             </Badge>
           </div>
 
           <div className="flex flex-col space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-custom-dark-gray leading-tight font-neue-haas">
+            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight font-neue-haas">
               Cuidado e acolhimento
             </h2>
-            <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-muted-foreground text-zinc-950 font-neue-haas">
+            <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-white/80 font-neue-haas">
               Oferecemos mais do que medicina: entregamos escuta, presença e
               compromisso com a sua saúde. Combinamos tecnologia e empatia para
               tornar cada consulta uma experiência de cuidado real.
@@ -96,15 +96,15 @@ export function WhyChooseUsSection() {
                   ref={addToRefs}
                   className="flex flex-row gap-6 w-full items-start group"
                 >
-                  <div className="w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-transparent group-hover:bg-custom-dark-gray/90 group-hover:shadow-md">
-                    <Check className="w-4 h-4 text-custom-dark-gray group-hover:text-white transition-colors duration-300" />
+                  <div className="w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-transparent group-hover:bg-amber-500 group-hover:shadow-md">
+                    <Check className="w-4 h-4 text-white group-hover:text-black transition-colors duration-300" />
                   </div>
 
                   <div className="flex flex-col gap-1">
-                    <p className="text-lg leading-relaxed tracking-tight text-zinc-950 font-neue-haas">
+                    <p className="text-lg leading-relaxed tracking-tight text-white font-neue-haas">
                       {feature.title}
                     </p>
-                    <p className="text-muted-foreground text-sm font-neue-haas">
+                    <p className="text-white/80 text-sm font-neue-haas">
                       {feature.description}
                     </p>
                   </div>

@@ -112,13 +112,13 @@ export function SpecialtiesSection() {
   const selectedSpecialty = specialties.find((s) => s.name === selected);
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-custom-dark-gray leading-tight font-neue-haas">
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight font-neue-haas">
             Especialidades Médicas
           </h2>
-          <p className="text-lg text-custom-dark-gray max-w-4xl mx-auto mb-8 font-neue-haas"></p>
+          <p className="text-lg text-white max-w-4xl mx-auto mb-8 font-neue-haas"></p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {specialties.map((s) => (
@@ -128,8 +128,8 @@ export function SpecialtiesSection() {
                 className={`px-4 py-1 font-medium border rounded-full transition-colors font-neue-haas
                   ${
                     selected === s.name
-                      ? "bg-zinc-950 text-white border-zinc-950"
-                      : "text-custom-dark-gray border-custom-medium-gray hover:bg-zinc-950 hover:text-white"
+                      ? "bg-amber-500 text-black border-amber-500"
+                      : "text-white border-amber-500 hover:bg-amber-500 hover:text-black"
                   }`}
               >
                 {s.name}
@@ -142,7 +142,7 @@ export function SpecialtiesSection() {
           {selectedSpecialty?.cards.map((card) => (
             <div
               key={card.id}
-              className="relative bg-white text-zinc-950 hover:bg-zinc-950 hover:text-white shadow-xl rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
+              className="relative bg-zinc-900 text-white hover:bg-amber-500 hover:text-black shadow-xl rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-zinc-700"
             >
               <div className="relative z-10 h-64 overflow-hidden">
                 <img
@@ -164,11 +164,11 @@ export function SpecialtiesSection() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-16">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-16">
           <Link to="/especialidades">
             <HoverBorderGradient
               containerClassName="rounded-full"
-              className="bg-zinc-950 text-white font-neue-haas px-6 py-3"
+              className="bg-black text-white font-neue-haas"
             >
               <span>Ver todas especialidades</span>
             </HoverBorderGradient>

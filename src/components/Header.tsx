@@ -9,7 +9,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-zinc-950/20 backdrop-blur-md shadow-lg border-b border-white/10">
+    <header className="fixed top-0 z-50 w-full bg-black/90 backdrop-blur-md shadow-lg border-b border-amber-500/20">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
@@ -28,8 +28,8 @@ export function Header() {
               to="/"
               className={({ isActive }) =>
                 cn(
-                  "text-sm font-medium transition-colors hover:text-white font-neue-haas",
-                  isActive ? "text-white" : "text-white/80"
+                  "text-sm font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                  isActive ? "text-amber-500" : "text-white/80"
                 )
               }
             >
@@ -39,8 +39,8 @@ export function Header() {
               to="/sobre"
               className={({ isActive }) =>
                 cn(
-                  "text-sm font-medium transition-colors hover:text-white font-neue-haas",
-                  isActive ? "text-white" : "text-white/80"
+                  "text-sm font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                  isActive ? "text-amber-500" : "text-white/80"
                 )
               }
             >
@@ -50,8 +50,8 @@ export function Header() {
               to="/especialidades"
               className={({ isActive }) =>
                 cn(
-                  "text-sm font-medium transition-colors hover:text-white font-neue-haas",
-                  isActive ? "text-white" : "text-white/80"
+                  "text-sm font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                  isActive ? "text-amber-500" : "text-white/80"
                 )
               }
             >
@@ -61,8 +61,8 @@ export function Header() {
               to="/equipe"
               className={({ isActive }) =>
                 cn(
-                  "text-sm font-medium transition-colors hover:text-white font-neue-haas",
-                  isActive ? "text-white" : "text-white/80"
+                  "text-sm font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                  isActive ? "text-amber-500" : "text-white/80"
                 )
               }
             >
@@ -72,8 +72,8 @@ export function Header() {
               to="/contato"
               className={({ isActive }) =>
                 cn(
-                  "text-sm font-medium transition-colors hover:text-white font-neue-haas",
-                  isActive ? "text-white" : "text-white/80"
+                  "text-sm font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                  isActive ? "text-amber-500" : "text-white/80"
                 )
               }
             >
@@ -85,7 +85,7 @@ export function Header() {
             <Link to="https://cal.com/institutoseuolhar">
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="bg-zinc-950 text-white font-neue-haas"
+                className="bg-amber-500 text-black font-neue-haas"
               >
                 <span>Agendamento</span>
               </HoverBorderGradient>
@@ -105,15 +105,15 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-zinc-950/30 backdrop-blur-md border-b border-white/10">
+        <div className="md:hidden bg-black/95 backdrop-blur-md border-b border-amber-500/20">
           <div className="container mx-auto px-4 py-4 space-y-4">
             <nav className="flex flex-col space-y-4">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
                   cn(
-                    "text-base font-medium transition-colors hover:text-white font-neue-haas",
-                    isActive ? "text-white" : "text-white/80"
+                    "text-base font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                    isActive ? "text-amber-500" : "text-white/80"
                   )
                 }
                 onClick={() => setIsMenuOpen(false)}
@@ -124,8 +124,8 @@ export function Header() {
                 to="/sobre"
                 className={({ isActive }) =>
                   cn(
-                    "text-base font-medium transition-colors hover:text-white font-neue-haas",
-                    isActive ? "text-white" : "text-white/80"
+                    "text-base font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                    isActive ? "text-amber-500" : "text-white/80"
                   )
                 }
                 onClick={() => setIsMenuOpen(false)}
@@ -136,8 +136,8 @@ export function Header() {
                 to="/especialidades"
                 className={({ isActive }) =>
                   cn(
-                    "text-base font-medium transition-colors hover:text-white font-neue-haas",
-                    isActive ? "text-white" : "text-white/80"
+                    "text-base font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                    isActive ? "text-amber-500" : "text-white/80"
                   )
                 }
                 onClick={() => setIsMenuOpen(false)}
@@ -148,8 +148,8 @@ export function Header() {
                 to="/equipe"
                 className={({ isActive }) =>
                   cn(
-                    "text-base font-medium transition-colors hover:text-white font-neue-haas",
-                    isActive ? "text-white" : "text-white/80"
+                    "text-base font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                    isActive ? "text-amber-500" : "text-white/80"
                   )
                 }
                 onClick={() => setIsMenuOpen(false)}
@@ -160,8 +160,8 @@ export function Header() {
                 to="/contato"
                 className={({ isActive }) =>
                   cn(
-                    "text-base font-medium transition-colors hover:text-white font-neue-haas",
-                    isActive ? "text-white" : "text-white/80"
+                    "text-base font-medium transition-colors hover:text-amber-500 font-neue-haas",
+                    isActive ? "text-amber-500" : "text-white/80"
                   )
                 }
                 onClick={() => setIsMenuOpen(false)}
@@ -175,7 +175,7 @@ export function Header() {
             >
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="bg-zinc-950 text-white font-neue-haas"
+                className="bg-amber-500 text-black font-neue-haas"
               >
                 <span>Agendamento</span>
               </HoverBorderGradient>

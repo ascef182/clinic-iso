@@ -49,9 +49,9 @@ export function FloatingWhatsApp() {
         <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
 
         {/* Tooltip - oculto em mobile */}
-        <div className="hidden md:block absolute right-20 top-1/2 transform -translate-y-1/2 bg-zinc-900 text-white text-sm px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none shadow-lg">
+        <div className="hidden md:block absolute right-20 top-1/2 transform -translate-y-1/2 bg-black text-white text-sm px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none shadow-lg border border-green-500/20">
           <span className="font-medium">Agende via WhatsApp</span>
-          <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-zinc-900 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+          <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-black border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
         </div>
       </button>
     </div>

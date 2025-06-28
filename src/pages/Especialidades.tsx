@@ -33,41 +33,43 @@ export default function Especialidades() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-primary/5 py-16 pt-32">
+      <section className="bg-black py-16 pt-32">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-4 mb-6">
             <Link
               to="/"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-white/60 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-6 h-6" />
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold font-neue-haas">
-              Nossas Especialidades
-            </h1>
+            <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-lg p-6 w-full">
+              <h1 className="text-4xl md:text-5xl font-bold font-neue-haas text-white">
+                Nossas Especialidades
+              </h1>
+              <p className="text-lg text-white/80 max-w-3xl font-neue-haas mt-4">
+                O ISO - Instituto Seu Olhar oferece atendimento especializado em
+                diversas áreas da medicina, garantindo um cuidado completo para
+                você e sua família.
+              </p>
+            </div>
           </div>
-          <p className="text-lg text-muted-foreground max-w-3xl font-neue-haas">
-            O ISO - Instituto Seu Olhar oferece atendimento especializado em
-            diversas áreas da medicina, garantindo um cuidado completo para você
-            e sua família.
-          </p>
         </div>
       </section>
 
       {/* Specialties Tabs */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <Tabs
             value={activeTab}
             className="w-full"
             onValueChange={setActiveTab}
           >
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8 font-neue-haas">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8 font-neue-haas bg-zinc-900 border border-zinc-700">
               {specialties.map((specialty) => (
                 <TabsTrigger
                   key={specialty.id}
                   value={specialty.id}
-                  className="font-neue-haas"
+                  className="font-neue-haas data-[state=active]:bg-amber-500 data-[state=active]:text-black"
                 >
                   {specialty.name}
                 </TabsTrigger>
@@ -82,12 +84,12 @@ export default function Especialidades() {
               >
                 <div className="flex flex-col lg:flex-row gap-12 items-start">
                   <div className="lg:w-1/2">
-                    <h2 className="text-3xl font-bold mb-6 font-neue-haas">
+                    <h2 className="text-3xl font-bold mb-6 font-neue-haas text-white">
                       {specialty.name}
                     </h2>
-                    <div className="prose max-w-none text-muted-foreground font-neue-haas">
+                    <div className="prose max-w-none text-white/80 font-neue-haas">
                       <p className="mb-4">{specialty.description}</p>
-                      <h3 className="text-xl font-semibold mt-8 mb-4 font-neue-haas">
+                      <h3 className="text-xl font-semibold mt-8 mb-4 font-neue-haas text-white">
                         Serviços
                       </h3>
                       <ul className="space-y-2 font-neue-haas">
@@ -109,16 +111,19 @@ export default function Especialidades() {
 
                 {specialty.treatments && specialty.treatments.length > 0 && (
                   <div className="mt-12">
-                    <h3 className="text-2xl font-bold mb-6 font-neue-haas">
+                    <h3 className="text-2xl font-bold mb-6 font-neue-haas text-white">
                       Nossos Tratamentos
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {specialty.treatments.map((treatment, index) => (
-                        <div key={index} className="bg-muted p-6 rounded-lg">
-                          <h4 className="text-lg font-semibold mb-2 font-neue-haas">
+                        <div
+                          key={index}
+                          className="bg-zinc-900 p-6 rounded-lg border border-zinc-700"
+                        >
+                          <h4 className="text-lg font-semibold mb-2 font-neue-haas text-white">
                             {treatment.name}
                           </h4>
-                          <p className="text-muted-foreground font-neue-haas">
+                          <p className="text-white/80 font-neue-haas">
                             {treatment.description}
                           </p>
                         </div>
@@ -133,12 +138,12 @@ export default function Especialidades() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 font-neue-haas">
+          <h2 className="text-3xl font-bold mb-6 font-neue-haas text-black">
             Agende sua consulta especializada
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto font-neue-haas">
+          <p className="text-lg mb-8 max-w-2xl mx-auto font-neue-haas text-black/80">
             Entre em contato conosco para marcar uma consulta com nossos
             especialistas na área de{" "}
             {specialties.find((s) => s.id === activeTab)?.name}.
@@ -148,7 +153,7 @@ export default function Especialidades() {
               href="https://wa.me/5531999999999"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-secondary text-secondary-foreground hover:bg-secondary/80 font-neue-haas"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-green-500 text-white hover:bg-green-600 font-neue-haas"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +172,7 @@ export default function Especialidades() {
             </a>
             <Link
               to="/agendamento"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-primary-foreground bg-transparent hover:bg-primary-foreground/10 font-neue-haas"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-black bg-transparent text-black hover:bg-black hover:text-white font-neue-haas"
             >
               Formulário de Agendamento
             </Link>

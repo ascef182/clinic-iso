@@ -218,7 +218,7 @@ export default function Index() {
               DENTRO PARA FORA
             </h1>
             <div className="flex flex-row items-center gap-5 mt-4">
-              <button className="px-5 py-2 text-base md:px-8 md:py-2 md:text-lg bg-white text-black/70 rounded-full font-semibold shadow hover:bg-gray-100 transition font-neue-haas">
+              <button className="px-5 py-2 text-base md:px-8 md:py-2 md:text-lg bg-amber-500 text-black rounded-full font-semibold shadow hover:bg-amber-400 transition font-neue-haas">
                 Agende sua Consulta
               </button>
               <HeroButton />
@@ -303,12 +303,16 @@ export default function Index() {
       </div>
 
       {/* Call-to-action section */}
-      <section className="py-20 bg-zinc-950 text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section
+        className="py-20 bg-cover bg-center bg-no-repeat text-white relative"
+        style={{ backgroundImage: "url('/photos/background.jpeg')" }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="container mx-auto px-4 text-center relative z-10 py-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-neue-haas">
             Agende sua consulta
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-white-20 font-neue-haas">
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90 font-neue-haas">
             É rápido e fácil agendar sua consulta no ISO - Instituto Seu Olhar.
             Atendimento humanizado e personalizado para suas necessidades.
           </p>
@@ -316,7 +320,7 @@ export default function Index() {
             <Link to="/contato">
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="bg-zinc-950 text-white font-neue-haas"
+                className="bg-amber-500 text-black font-neue-haas px-6 py-2"
               >
                 <span>Agende sua Consulta</span>
               </HoverBorderGradient>
@@ -329,15 +333,14 @@ export default function Index() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-custom-black font-neue-haas">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white font-neue-haas">
               Nossa Equipe
             </h2>
-            <p className="text-lg text-custom-medium-gray max-w-3xl mx-auto font-neue-haas">
+            <p className="text-lg text-white max-w-3xl mx-auto font-neue-haas">
               Conheça nossos profissionais altamente qualificados e dedicados ao
               seu bem-estar.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {doctors.slice(0, 3).map((doctor) => (
               <DoctorCard key={doctor.id} doctor={doctor} />
