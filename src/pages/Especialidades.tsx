@@ -138,12 +138,15 @@ export default function Especialidades() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 font-neue-haas text-black">
+      <section
+        className="py-16 bg-cover bg-center bg-no-repeat text-white"
+        style={{ backgroundImage: "url('/photos/background.jpeg')" }}
+      >
+        <div className="container mx-auto px-4 text-center bg-black/50 backdrop-blur-sm rounded-xl py-12">
+          <h2 className="text-3xl font-bold mb-6 font-neue-haas text-white">
             Agende sua consulta especializada
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto font-neue-haas text-black/80">
+          <p className="text-lg mb-8 max-w-2xl mx-auto font-neue-haas text-white/80">
             Entre em contato conosco para marcar uma consulta com nossos
             especialistas na área de{" "}
             {specialties.find((s) => s.id === activeTab)?.name}.
@@ -172,7 +175,7 @@ export default function Especialidades() {
             </a>
             <Link
               to="/agendamento"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-black bg-transparent text-black hover:bg-black hover:text-white font-neue-haas"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-white bg-transparent text-white hover:bg-white hover:text-black font-neue-haas"
             >
               Formulário de Agendamento
             </Link>
