@@ -85,10 +85,10 @@ export function Header() {
             <Link to="https://cal.com/institutoseuolhar">
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="font-neue-haas px-6 py-2"
+                className="font-neue-haas px-6 py-1.5"
                 bgGradient="bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] shadow-[0_0_10px_rgba(255,215,0,0.5)]"
               >
-                <span className="text-black">Agendamento</span>
+                <span className="text-black">Agendar Consulta</span>
               </HoverBorderGradient>
             </Link>
           </div>
@@ -170,17 +170,20 @@ export function Header() {
                 Contato
               </NavLink>
             </nav>
-            <Link
-              to="https://cal.com/institutoseuolhar"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                className="bg-[#FFD700] text-black font-neue-haas"
+            <div className="pt-4">
+              <Link
+                to="https://cal.com/institutoseuolhar"
+                onClick={() => setIsMenuOpen(false)}
+                className="inline-block"
               >
-                <span>Agendamento</span>
-              </HoverBorderGradient>
-            </Link>
+                <HoverBorderGradient
+                  containerClassName="rounded-full"
+                  className="px-4 py-1.5 text-sm bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] shadow-[0_0_8px_rgba(255,215,0,0.4)] text-black font-neue-haas"
+                >
+                  <span>Agendar Consulta</span>
+                </HoverBorderGradient>
+              </Link>
+            </div>
           </div>
         </div>
       )}
