@@ -20,7 +20,7 @@ export function DoctorCard({ doctor, detailed = false }: DoctorCardProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
           {/* Floating specialty badge */}
-          <div className="absolute top-4 left-4 bg-amber-500 text-black px-3 py-1 rounded-full text-sm font-semibold shadow-md transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 font-neue-haas">
+          <div className="absolute top-4 left-4 bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] text-black px-3 py-1 rounded-full text-sm font-semibold shadow-md transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 font-neue-haas">
             {doctor.specialty}
           </div>
         </div>
@@ -28,15 +28,15 @@ export function DoctorCard({ doctor, detailed = false }: DoctorCardProps) {
 
       <CardContent className="p-6 relative">
         {/* Accent line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 via-amber-400/40 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FFD700] via-[#FFC300]/40 to-transparent" />
 
         <div className="space-y-3">
           <div>
-            <h3 className="text-xl font-bold mb-1 text-white group-hover:text-amber-400 transition-colors duration-300 font-neue-haas">
+            <h3 className="text-xl font-bold mb-1 text-white group-hover:text-[#FFD700] transition-colors duration-300 font-neue-haas">
               {doctor.name}
             </h3>
             <div className="flex items-center gap-2 text-sm text-white/60 font-neue-haas">
-              <div className="w-2 h-2 rounded-full bg-amber-500" />
+              <div className="w-2 h-2 rounded-full bg-[#FFD700]" />
               <span>CRM: {doctor.crm}</span>
             </div>
           </div>
@@ -50,7 +50,7 @@ export function DoctorCard({ doctor, detailed = false }: DoctorCardProps) {
                 <ul className="text-sm text-white/80 space-y-1 font-neue-haas">
                   {doctor.education.map((item, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#FFD700] mt-2 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -72,7 +72,7 @@ export function DoctorCard({ doctor, detailed = false }: DoctorCardProps) {
         </div>
 
         {/* Hover corner indicator */}
-        <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-amber-500/20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+        <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-[#FFD700]/20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
       </CardContent>
     </Card>
   );

@@ -52,7 +52,7 @@ export function ContactForm() {
       <form
         action="https://formsubmit.co/institutoseuolhar@gmail.com"
         method="POST"
-        className="space-y-6 bg-black p-8 rounded-lg border border-amber-500/20"
+        className="space-y-6 bg-black p-8 rounded-lg border border-[#FFD700]/20"
       >
         <input type="hidden" name="_captcha" value="false" />
         <input
@@ -70,7 +70,7 @@ export function ContactForm() {
                 <Input
                   placeholder="Seu nome"
                   {...field}
-                  className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-400 focus:border-amber-500"
+                  className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-400 focus:border-[#FFD700]"
                 />
               </FormControl>
               <FormMessage />
@@ -89,7 +89,7 @@ export function ContactForm() {
                   <Input
                     placeholder="seu@email.com"
                     {...field}
-                    className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-400 focus:border-amber-500"
+                    className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-400 focus:border-[#FFD700]"
                   />
                 </FormControl>
                 <FormMessage />
@@ -107,7 +107,7 @@ export function ContactForm() {
                   <Input
                     placeholder="(XX) XXXXX-XXXX"
                     {...field}
-                    className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-400 focus:border-amber-500"
+                    className="bg-zinc-900 border-zinc-700 text-white placeholder:text-zinc-400 focus:border-[#FFD700]"
                   />
                 </FormControl>
                 <FormMessage />
@@ -124,7 +124,7 @@ export function ContactForm() {
               <FormLabel className="text-white">Mensagem</FormLabel>
               <FormControl>
                 <textarea
-                  className="flex min-h-24 w-full rounded-md border border-zinc-700 bg-zinc-900 px-3 py-2 text-base text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  className="flex min-h-24 w-full rounded-md border border-zinc-700 bg-zinc-900 px-3 py-2 text-base text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD700] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                   placeholder="Digite sua mensagem aqui"
                   {...field}
                 />
@@ -143,7 +143,7 @@ export function ContactForm() {
                 <Checkbox
                   checked={field.value}
                   onCheckedChange={field.onChange}
-                  className="border-zinc-700 data-[state=checked]:bg-amber-500 data-[state=checked]:border-amber-500"
+                  className="border-zinc-700 data-[state=checked]:bg-[#FFD700] data-[state=checked]:border-[#FFD700]"
                 />
               </FormControl>
               <div className="space-y-1 leading-none">
@@ -160,7 +160,7 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="bg-amber-500 text-black hover:bg-amber-400 font-neue-haas"
+          className="bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] text-black hover:brightness-110 font-neue-haas"
         >
           Enviar mensagem
         </Button>

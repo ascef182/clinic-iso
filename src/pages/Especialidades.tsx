@@ -46,11 +46,6 @@ export default function Especialidades() {
               <h1 className="text-4xl md:text-5xl font-bold font-neue-haas text-white">
                 Nossas Especialidades
               </h1>
-              <p className="text-lg text-white/80 max-w-3xl font-neue-haas mt-4">
-                O ISO - Instituto Seu Olhar oferece atendimento especializado em
-                diversas áreas da medicina, garantindo um cuidado completo para
-                você e sua família.
-              </p>
             </div>
           </div>
         </div>
@@ -69,7 +64,7 @@ export default function Especialidades() {
                 <TabsTrigger
                   key={specialty.id}
                   value={specialty.id}
-                  className="font-neue-haas data-[state=active]:bg-amber-500 data-[state=active]:text-black"
+                  className="font-neue-haas data-[state=active]:bg-gradient-to-br data-[state=active]:from-[#FFD700] data-[state=active]:via-[#FFC300] data-[state=active]:to-[#B8860B] data-[state=active]:text-black"
                 >
                   {specialty.name}
                 </TabsTrigger>
@@ -153,7 +148,7 @@ export default function Especialidades() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="https://wa.me/5531999999999"
+              href="https://wa.me/5531995659538"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-green-500 text-white hover:bg-green-600 font-neue-haas"
@@ -174,10 +169,10 @@ export default function Especialidades() {
               WhatsApp
             </a>
             <Link
-              to="/agendamento"
+              to="https://cal.com/institutoseuolhar"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-white bg-transparent text-white hover:bg-white hover:text-black font-neue-haas"
             >
-              Formulário de Agendamento
+              Agendamento
             </Link>
           </div>
         </div>

@@ -8,7 +8,7 @@
 
 ## 📋 Descrição
 
-Site institucional moderno e responsivo para o **ISO - Instituto Seu Olhar**, uma clínica médica especializada em Oftalmologia, Saúde Mental, Obesidade e Estilo de Vida. O projeto oferece uma experiência de usuário excepcional com animações suaves, design elegante e funcionalidades completas para agendamento e contato.
+Site institucional moderno e responsivo para o **ISO - Instituto Seu Olhar**, uma clínica médica especializada em Oftalmologia, Saúde Mental, Obesidade e Estilo de Vida. O projeto oferece uma experiência de usuário excepcional com animações suaves, design elegante e funcionalidades completas para contato.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -82,7 +82,6 @@ clinic-tailwind-react/
 │   │   ├── Sobre.tsx
 │   │   ├── Especialidades.tsx
 │   │   ├── Equipe.tsx
-│   │   ├── Agendamento.tsx
 │   │   └── Contato.tsx
 │   ├── data/           # Dados estáticos
 │   │   ├── doctors.ts
@@ -104,7 +103,6 @@ clinic-tailwind-react/
 - **Sobre** - História, missão e valores da clínica
 - **Especialidades** - Detalhes sobre cada área médica
 - **Equipe** - Perfil dos profissionais
-- **Agendamento** - Formulário de agendamento de consultas
 - **Contato** - Informações de contato e formulário
 
 ### 🎨 Design e UX

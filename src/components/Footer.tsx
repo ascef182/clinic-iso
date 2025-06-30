@@ -31,7 +31,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-[#FFD700] transition-colors font-neue-haas"
                 >
                   Home
                 </Link>
@@ -39,7 +39,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/sobre"
-                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-[#FFD700] transition-colors font-neue-haas"
                 >
                   Sobre nós
                 </Link>
@@ -47,7 +47,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/especialidades"
-                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-[#FFD700] transition-colors font-neue-haas"
                 >
                   Especialidades
                 </Link>
@@ -55,23 +55,15 @@ export function Footer() {
               <li>
                 <Link
                   to="/equipe"
-                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-[#FFD700] transition-colors font-neue-haas"
                 >
                   Equipe Médica
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/agendamento"
-                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
-                >
-                  Agendamento
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/contato"
-                  className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
+                  className="text-white/80 hover:text-[#FFD700] transition-colors font-neue-haas"
                 >
                   Contato
                 </Link>
@@ -150,11 +142,11 @@ export function Footer() {
             <ul className="space-y-2 text-white/80">
               <li className="flex justify-between font-neue-haas">
                 <span>Segunda à Sexta</span>
-                <span>08:00 - 18:00</span>
+                <span>08:00 - 20:00</span>
               </li>
               <li className="flex justify-between font-neue-haas">
                 <span>Sábado</span>
-                <span>08:00 - 12:00</span>
+                <span>08:00 - 17:00</span>
               </li>
               <li className="flex justify-between font-neue-haas">
                 <span>Domingo</span>
@@ -170,18 +162,18 @@ export function Footer() {
             reservados.
           </p>
           <div className="flex items-center gap-4">
-            <a
-              href="#"
-              className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
+            <Link
+              to="/politica-de-privacidade"
+              className="text-white/80 hover:text-[#FFD700] transition-colors font-neue-haas"
             >
               Política de Privacidade
-            </a>
-            <a
-              href="#"
-              className="text-white/80 hover:text-amber-500 transition-colors font-neue-haas"
+            </Link>
+            <Link
+              to="/termos-de-uso"
+              className="text-white/80 hover:text-[#FFD700] transition-colors font-neue-haas"
             >
               Termos de Uso
-            </a>
+            </Link>
           </div>
         </div>
       </div>

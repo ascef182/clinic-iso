@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-
+import { Target, Eye, HeartHandshake } from "lucide-react";
 export default function Sobre() {
   return (
     <>
@@ -98,21 +98,8 @@ export default function Sobre() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Missão */}
             <div className="bg-black/50 backdrop-blur-sm p-8 rounded-lg shadow-sm border border-white/10">
-              <div className="h-16 w-16 bg-amber-500/20 rounded-full flex items-center justify-center mb-6">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-amber-500"
-                >
-                  <path d="..." />
-                </svg>
+              <div className="h-16 w-16 bg-[#FFD700]/20 rounded-full flex items-center justify-center mb-6">
+                <Target className="text-[#FFD700] w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold mb-4 font-neue-haas text-white">
                 Missão
@@ -126,21 +113,8 @@ export default function Sobre() {
 
             {/* Visão */}
             <div className="bg-black/50 backdrop-blur-sm p-8 rounded-lg shadow-sm border border-white/10">
-              <div className="h-16 w-16 bg-amber-500/20 rounded-full flex items-center justify-center mb-6">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-amber-500"
-                >
-                  <path d="..." />
-                </svg>
+              <div className="h-16 w-16 bg-[#FFD700]/20 rounded-full flex items-center justify-center mb-6">
+                <Eye className="text-[#FFD700] w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold mb-4 font-neue-haas text-white">
                 Visão
@@ -154,21 +128,8 @@ export default function Sobre() {
 
             {/* Valores */}
             <div className="bg-black/50 backdrop-blur-sm p-8 rounded-lg shadow-sm border border-white/10">
-              <div className="h-16 w-16 bg-amber-500/20 rounded-full flex items-center justify-center mb-6">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-amber-500"
-                >
-                  <path d="..." />
-                </svg>
+              <div className="h-16 w-16 bg-[#FFD700]/20 rounded-full flex items-center justify-center mb-6">
+                <HeartHandshake className="text-[#FFD700] w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold mb-4 font-neue-haas text-white">
                 Valores

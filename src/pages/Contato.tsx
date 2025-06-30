@@ -47,7 +47,7 @@ export default function Contato() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-zinc-900 p-6 rounded-lg shadow-sm border border-zinc-700 text-center">
-              <div className="h-12 w-12 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="h-12 w-12 bg-[#FFD700]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -58,7 +58,7 @@ export default function Contato() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-amber-500"
+                  className="text-[#FFD700]"
                 >
                   <path d="m16 16 L22 22"></path>
                   <circle cx="11" cy="11" r="8"></circle>
@@ -85,7 +85,7 @@ export default function Contato() {
                 rel="noopener noreferrer"
                 className="inline-block"
               >
-                <div className="h-12 w-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-green-500/30 transition">
+                <div className="h-12 w-12 bg-[#FFD700]/20 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-[#FFD700]/30 transition">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -96,7 +96,7 @@ export default function Contato() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-green-500"
+                    className="text-[#FFD700]"
                   >
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
@@ -113,7 +113,7 @@ export default function Contato() {
             </div>
 
             <div className="bg-card p-6 rounded-lg shadow-sm border text-center">
-              <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="h-12 w-12 bg-[#FFD700]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -124,7 +124,7 @@ export default function Contato() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-primary"
+                  className="text-[#FFD700]"
                 >
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>

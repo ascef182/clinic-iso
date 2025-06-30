@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
@@ -13,6 +12,7 @@ export function HoverBorderGradient({
   as: Tag = "button",
   duration = 1,
   clockwise = true,
+  bgGradient = "bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] shadow-[0_0_10px_rgba(255,215,0,0.5)]",
   ...props
 }: React.PropsWithChildren<
   {
@@ -21,6 +21,7 @@ export function HoverBorderGradient({
     className?: string;
     duration?: number;
     clockwise?: boolean;
+    bgGradient?: string;
   } & React.HTMLAttributes<HTMLElement>
 >) {
   const [direction, setDirection] = useState<Direction>("TOP");
@@ -53,14 +54,14 @@ export function HoverBorderGradient({
   return (
     <Tag
       className={cn(
-        "relative flex rounded-full border content-center bg-black/20 transition duration-500 dark:bg-white/20 items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
+        "relative flex rounded-full border content-center transition duration-500 items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
         containerClassName
       )}
       {...props}
     >
       <div
         className={cn(
-          "w-auto text-white z-10 bg-black px-4 py-2 rounded-[inherit]",
+          `w-auto z-10 px-4 py-2 rounded-[inherit] text-white font-neue-haas ${bgGradient}`,
           className
         )}
       >
@@ -81,7 +82,7 @@ export function HoverBorderGradient({
         }}
         transition={{ ease: "linear", duration: duration ?? 1 }}
       />
-      <div className="bg-black absolute z-1 flex-none inset-[2px] rounded-[100px]" />
+      <div className="absolute z-1 flex-none inset-[2px] rounded-[100px]" />
     </Tag>
   );
 }

@@ -128,8 +128,8 @@ export function SpecialtiesSection() {
                 className={`px-4 py-1 font-medium border rounded-full transition-colors font-neue-haas
                   ${
                     selected === s.name
-                      ? "bg-amber-500 text-black border-amber-500"
-                      : "text-white border-amber-500 hover:bg-amber-500 hover:text-black"
+                      ? "bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] text-black border-[#FFD700]"
+                      : "text-white border-[#FFD700] hover:bg-gradient-to-br hover:from-[#FFD700] hover:via-[#FFC300] hover:to-[#B8860B] hover:text-black"
                   }`}
               >
                 {s.name}
@@ -142,7 +142,7 @@ export function SpecialtiesSection() {
           {selectedSpecialty?.cards.map((card) => (
             <div
               key={card.id}
-              className="relative bg-zinc-900 text-white hover:bg-amber-500 hover:text-black shadow-xl rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-zinc-700"
+              className="relative bg-zinc-900 text-white hover:bg-gradient-to-br hover:from-[#FFD700] hover:via-[#FFC300] hover:to-[#B8860B] hover:text-black shadow-xl rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-zinc-700"
             >
               <div className="relative z-10 h-64 overflow-hidden">
                 <img

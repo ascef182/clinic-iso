@@ -198,7 +198,7 @@ export default function Index() {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         {/* Overlay para mobile e desktop */}
-        <div className="absolute inset-0 md:bg-zinc-950/70 bg-white/20 md:bg-white/0" />
+        <div className="absolute inset-0 bg-zinc-950/70" />
 
         {/* Conteúdo */}
         <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between min-h-screen">
@@ -207,21 +207,32 @@ export default function Index() {
             ref={heroTextRef}
             className="w-full lg:w-1/2 flex flex-col justify-center items-start text-left pt-32 pb-12 lg:pt-48 lg:pb-24"
           >
-            <span className="text-lg font-light mb-2 opacity-80 text-white font-neue-haas">
+            <span className="text-lg font-light mb-2 text-white/90 font-neue-haas">
               Redescubra sua essência
             </span>
             <h1 className="text-3xl md:text-6xl font-bold leading-tight mb-5 text-white font-neue-haas">
-              A TRASFORMAÇÃO,
+              A TRANSFORMAÇÃO,
               <br />
               COMEÇA DE
               <br />
               DENTRO PARA FORA
             </h1>
+
             <div className="flex flex-row items-center gap-5 mt-4">
-              <button className="px-5 py-2 text-base md:px-8 md:py-2 md:text-lg bg-amber-500 text-black rounded-full font-semibold shadow hover:bg-amber-400 transition font-neue-haas">
-                Agende sua Consulta
-              </button>
-              <HeroButton />
+              <Link
+                to="https://cal.com/institutoseuolhar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-max"
+              >
+                <HoverBorderGradient
+                  containerClassName="rounded-full"
+                  className="px-6 py-2 font-neue-haas"
+                  bgGradient="bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] shadow-[0_0_10px_rgba(255,215,0,0.5)]"
+                >
+                  <span className="text-black">Agende sua Consulta</span>
+                </HoverBorderGradient>
+              </Link>
             </div>
           </div>
 
@@ -320,9 +331,10 @@ export default function Index() {
             <Link to="/contato">
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="bg-amber-500 text-black font-neue-haas px-6 py-2"
+                className="px-6 py-2 font-neue-haas"
+                bgGradient="bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] shadow-[0_0_10px_rgba(255,215,0,0.5)]"
               >
-                <span>Agende sua Consulta</span>
+                <span className="text-black">Agende sua Consulta</span>
               </HoverBorderGradient>
             </Link>
           </div>
@@ -330,13 +342,13 @@ export default function Index() {
       </section>
 
       {/* Team section with modernized cards */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white font-neue-haas">
               Nossa Equipe
             </h2>
-            <p className="text-lg text-white max-w-3xl mx-auto font-neue-haas">
+            <p className="text-lg text-white/90 max-w-3xl mx-auto font-neue-haas">
               Conheça nossos profissionais altamente qualificados e dedicados ao
               seu bem-estar.
             </p>

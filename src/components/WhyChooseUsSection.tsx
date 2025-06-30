@@ -72,7 +72,7 @@ export function WhyChooseUsSection() {
       <div className="container mx-auto">
         <div className="flex flex-col space-y-6  items-start">
           <div>
-            <Badge className="font-neue-haas bg-amber-500 text-black hover:bg-amber-400">
+            <Badge className="font-neue-haas bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] text-black hover:brightness-110">
               Por que escolher a Clínica ISO
             </Badge>
           </div>
@@ -96,7 +96,7 @@ export function WhyChooseUsSection() {
                   ref={addToRefs}
                   className="flex flex-row gap-6 w-full items-start group"
                 >
-                  <div className="w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-transparent group-hover:bg-amber-500 group-hover:shadow-md">
+                  <div className="w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 bg-transparent group-hover:bg-gradient-to-br group-hover:from-[#FFD700] group-hover:via-[#FFC300] group-hover:to-[#B8860B] group-hover:shadow-[0_0_10px_rgba(255,215,0,0.5)]">
                     <Check className="w-4 h-4 text-white group-hover:text-black transition-colors duration-300" />
                   </div>
 

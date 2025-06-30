@@ -5,6 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 import { Headset, User } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { BadgeCheck } from "lucide-react";
 
 export function AboutSection() {
   const leftRef = useRef<HTMLDivElement>(null);
@@ -57,15 +58,15 @@ export function AboutSection() {
           className="relative flex justify-center items-center w-full lg:w-1/2 mb-12 lg:mb-0"
         >
           {/* Elementos decorativos de fundo */}
-          <div className="absolute -top-16 -left-16 w-40 h-40 bg-amber-500/8 rounded-full z-0"></div>
-          <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-amber-500/5 rounded-full z-0"></div>
+          <div className="absolute -top-16 -left-16 w-40 h-40 bg-[#FFD700]/8 rounded-full z-0"></div>
+          <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-[#FFD700]/5 rounded-full z-0"></div>
 
           {/* Padrão geométrico decorativo */}
           <div className="absolute top-1/3 -right-20 z-0">
             <div className="flex flex-col gap-3 opacity-15">
-              <div className="w-16 h-0.5 bg-amber-500"></div>
-              <div className="w-12 h-0.5 bg-amber-500"></div>
-              <div className="w-8 h-0.5 bg-amber-500"></div>
+              <div className="w-16 h-0.5 bg-[#FFD700]"></div>
+              <div className="w-12 h-0.5 bg-[#FFD700]"></div>
+              <div className="w-8 h-0.5 bg-[#FFD700]"></div>
             </div>
           </div>
 
@@ -74,7 +75,7 @@ export function AboutSection() {
             <div className="flex items-center">
               <div className="flex flex-col items-center gap-3">
                 {/* Linha superior */}
-                <div className="w-0.5 h-16 bg-gradient-to-t from-amber-500 to-amber-500/20"></div>
+                <div className="w-0.5 h-16 bg-gradient-to-t from-[#FFD700] to-[#FFD700]/20"></div>
 
                 {/* Texto vertical legível de baixo para cima */}
                 <div
@@ -85,10 +86,10 @@ export function AboutSection() {
                 </div>
 
                 {/* Ponto animado */}
-                <div className="w-3 h-3 bg-amber-500 rounded-full animate-pulse shadow-lg"></div>
+                <div className="w-3 h-3 bg-[#FFD700] rounded-full animate-pulse shadow-lg"></div>
 
                 {/* Linha inferior */}
-                <div className="w-0.5 h-8 bg-gradient-to-b from-amber-500 to-transparent"></div>
+                <div className="w-0.5 h-8 bg-gradient-to-b from-[#FFD700] to-transparent"></div>
               </div>
             </div>
           </div>
@@ -107,21 +108,12 @@ export function AboutSection() {
               </div>
 
               {/* Badge ISO Quality */}
-              <div className="absolute -bottom-6 -right-6 bg-black text-white rounded-2xl px-5 py-4 shadow-xl border-4 border-amber-500 z-20">
+              <div className="absolute -bottom-6 -right-6 bg-black text-white rounded-2xl px-5 py-4 shadow-xl border-4 border-[#FFD700] z-20">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-5 h-5 text-black"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] shadow-[0_0_10px_rgba(255,215,0,0.5)]">
+                    <BadgeCheck className="w-5 h-5 text-black" />
                   </div>
+
                   <div>
                     <span className="text-sm font-semibold font-neue-haas block">
                       Certificado
@@ -138,15 +130,15 @@ export function AboutSection() {
           {/* Elementos decorativos minimalistas */}
           <div className="absolute top-8 right-4 z-0">
             <div className="flex items-center gap-2 opacity-20">
-              <div className="w-1 h-1 bg-amber-500 rounded-full"></div>
-              <div className="w-1 h-1 bg-amber-500 rounded-full"></div>
-              <div className="w-1 h-1 bg-amber-500 rounded-full"></div>
+              <div className="w-1 h-1 bg-[#FFD700] rounded-full"></div>
+              <div className="w-1 h-1 bg-[#FFD700] rounded-full"></div>
+              <div className="w-1 h-1 bg-[#FFD700] rounded-full"></div>
             </div>
           </div>
 
           <div className="absolute bottom-16 -left-8 z-0">
-            <div className="w-6 h-6 border border-amber-500/20 rounded-full flex items-center justify-center">
-              <div className="w-2 h-2 bg-amber-500/40 rounded-full"></div>
+            <div className="w-6 h-6 border border-[#FFD700]/20 rounded-full flex items-center justify-center">
+              <div className="w-2 h-2 bg-[#FFD700]/40 rounded-full"></div>
             </div>
           </div>
         </div>
@@ -155,8 +147,8 @@ export function AboutSection() {
         <div ref={rightRef} className="space-y-6 w-full lg:w-1/2">
           {/* Mini título */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-0.5 bg-amber-500"></div>
-            <span className="text-amber-500 font-medium text-sm uppercase tracking-wider font-neue-haas">
+            <div className="w-8 h-0.5 bg-[#FFD700]"></div>
+            <span className="text-[#FFD700] font-medium text-sm uppercase tracking-wider font-neue-haas">
               Sobre Nós
             </span>
           </div>
@@ -179,7 +171,7 @@ export function AboutSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-amber-500 group">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-[#FFD700] group">
                   <Headset className="w-6 h-6 text-white group-hover:text-black transition-colors duration-300" />
                 </div>
                 <h3 className="text-lg font-semibold text-white font-neue-haas">
@@ -195,7 +187,7 @@ export function AboutSection() {
 
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-amber-500 group">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-[#FFD700] group">
                   <User className="w-6 h-6 text-white group-hover:text-black transition-colors duration-300" />
                 </div>
                 <h3 className="text-lg font-semibold text-white font-neue-haas">
@@ -213,7 +205,7 @@ export function AboutSection() {
           {/* CTA Button */}
           <div className="pt-6">
             <Link to="/sobre">
-              <Button className="bg-amber-500 text-black hover:bg-amber-400 font-neue-haas">
+              <Button className="bg-[#FFD700] text-black hover:bg-[#FFC300] font-neue-haas">
                 Conheça Nossa História
               </Button>
             </Link>
