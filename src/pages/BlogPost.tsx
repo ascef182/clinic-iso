@@ -33,7 +33,7 @@ export default function BlogPost() {
       {/* Banner Image */}
       <div className="relative h-96 md:h-[500px] overflow-hidden">
         <img
-          src={post.image}
+          src={post.image.replace(/^\.\/?/, "/")}
           alt={post.title}
           className="w-full h-full object-cover"
         />
@@ -78,7 +78,7 @@ export default function BlogPost() {
           {author && (
             <div className="flex items-center gap-4 p-6 bg-gray-50 rounded-2xl">
               <img
-                src={author.photo}
+                src={author.photo.replace(/^\.\/?/, "/")}
                 alt={author.name}
                 className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg"
               />

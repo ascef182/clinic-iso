@@ -53,7 +53,7 @@ export function BlogSection() {
           <Link to="/blog">
             <HoverBorderGradient
               containerClassName="rounded-full"
-              className="bg-black text-white font-neue-haas"
+              className="bg-black text-black font-neue-haas"
             >
               <span>Ler todos os artigos</span>
             </HoverBorderGradient>

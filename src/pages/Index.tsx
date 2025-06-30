@@ -328,15 +328,19 @@ export default function Index() {
             Atendimento humanizado e personalizado para suas necessidades.
           </p>
           <div className="flex justify-center">
-            <Link to="/contato">
+            <a
+              href="https://cal.com/institutoseuolhar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 className="px-6 py-2 font-neue-haas"
                 bgGradient="bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] shadow-[0_0_10px_rgba(255,215,0,0.5)]"
               >
-                <span className="text-black">Agende sua Consulta</span>
+                <span className="text-gray-600">Agende sua Consulta</span>
               </HoverBorderGradient>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -362,7 +366,7 @@ export default function Index() {
             <Link to="/equipe">
               <HoverBorderGradient
                 containerClassName="rounded-full"
-                className="bg-black text-white font-neue-haas"
+                className="bg-black text-black font-neue-haas"
               >
                 <span>Conheça toda nossa equipe</span>
               </HoverBorderGradient>
