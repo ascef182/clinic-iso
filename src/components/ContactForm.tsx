@@ -50,7 +50,7 @@ export function ContactForm() {
   return (
     <Form {...form}>
       <form
-        action="https://formsubmit.co/institutoseuolhar@gmail.com"
+        action="https://formsubmit.co/b04cf3c9939784807ee7465a7c119585"
         method="POST"
         className="space-y-6 bg-black p-8 rounded-lg border border-[#FFD700]/20"
       >
@@ -58,7 +58,7 @@ export function ContactForm() {
         <input
           type="hidden"
           name="_next"
-          value="https://localhost:8080/obrigado"
+          value="https://www.institutoseuolhar.com.br/obrigado"
         />
         <FormField
           control={form.control}
