@@ -148,7 +148,7 @@ export default function Sobre() {
 
       <section
         className="py-16 bg-cover bg-center bg-no-repeat text-white"
-        style={{ backgroundImage: "url('/photos/background2.webp')" }}
+        style={{ backgroundImage: "url('/photos/background2.jpeg')" }}
       >
         <div className="container mx-auto px-4 bg-black/50 backdrop-blur-sm rounded-xl py-12">
           <div className="text-center mb-12">
@@ -186,7 +186,7 @@ export default function Sobre() {
 
       <section
         className="py-16 bg-cover bg-center bg-no-repeat text-white"
-        style={{ backgroundImage: "url('/photos/background2.webp')" }}
+        style={{ backgroundImage: "url('/photos/background2.jpeg')" }}
       >
         <div className="container mx-auto px-4 bg-black/50 backdrop-blur-sm rounded-xl py-12">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
