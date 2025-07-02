@@ -82,7 +82,7 @@ export default function Contato() {
 
             <div className="bg-zinc-900 p-6 rounded-lg shadow-sm border border-zinc-700 text-center">
               <a
-                href="https://wa.me/5531994659538"
+                href="https://wa.me/5531995649538?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20no%20ISO%20-%20Instituto%20Seu%20Olhar."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"

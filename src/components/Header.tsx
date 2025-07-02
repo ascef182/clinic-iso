@@ -82,7 +82,7 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="https://cal.com/institutoseuolhar">
+            <Link to="https://wa.me/5531995649538?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20no%20ISO%20-%20Instituto%20Seu%20Olhar.">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 className="font-neue-haas px-6 py-1.5"
@@ -172,7 +172,7 @@ export function Header() {
             </nav>
             <div className="pt-4">
               <Link
-                to="https://cal.com/institutoseuolhar"
+                to="https://wa.me/5531995649538?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20no%20ISO%20-%20Instituto%20Seu%20Olhar."
                 onClick={() => setIsMenuOpen(false)}
                 className="inline-block"
               >

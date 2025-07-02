@@ -222,7 +222,8 @@ export default function Index() {
 
             <div className="flex flex-row items-center gap-5 mt-4">
               <Link
-                to="https://cal.com/institutoseuolhar"
+                to="https://wa.me/5531995649538?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20no%20ISO%20-%20Instituto%20Seu%20Olhar..
+"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-max"
@@ -331,7 +332,8 @@ export default function Index() {
           </p>
           <div className="flex justify-center">
             <a
-              href="https://cal.com/institutoseuolhar"
+              href="https://wa.me/5531995649538?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20no%20ISO%20-%20Instituto%20Seu%20Olhar.
+"
               target="_blank"
               rel="noopener noreferrer"
             >
