@@ -99,7 +99,7 @@ export function AboutSection() {
             <div className="relative z-10">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
-                  src="./photos/luva.jpeg"
+                  src="./photos/luva.webp"
                   alt="Equipe médica profissional do ISO"
                   className="w-full h-96 object-cover transition-transform duration-700 hover:scale-105"
                 />

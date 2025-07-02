@@ -135,7 +135,7 @@ export default function Especialidades() {
       {/* CTA Section */}
       <section
         className="py-16 bg-cover bg-center bg-no-repeat text-white"
-        style={{ backgroundImage: "url('/photos/background.jpeg')" }}
+        style={{ backgroundImage: "url('/photos/background.webp')" }}
       >
         <div className="container mx-auto px-4 text-center bg-black/50 backdrop-blur-sm rounded-xl py-12">
           <h2 className="text-3xl font-bold mb-6 font-neue-haas text-white">

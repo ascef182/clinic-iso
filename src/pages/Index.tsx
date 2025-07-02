@@ -193,7 +193,7 @@ export default function Index() {
       >
         {/* Background image */}
         <img
-          src="/photos/eye3.jpeg"
+          src="/photos/eye3.webp"
           alt="Profissional médica do ISO - Instituto Seu Olhar"
           className="absolute inset-0 w-full h-full object-cover object-center"
           fetchpriority="high"
@@ -262,7 +262,7 @@ export default function Index() {
               {/* Imagem do Produto */}
               <div className="relative bg-white rounded-2xl p-1 md:p-4 mb-2 md:mb-4 aspect-square overflow-hidden">
                 <img
-                  src="/photos/ausculta.jpeg"
+                  src="/photos/ausculta.webp"
                   alt="SL Facial Cream"
                   className="object-cover w-full h-full rounded-2xl"
                 />
@@ -318,7 +318,7 @@ export default function Index() {
       {/* Call-to-action section */}
       <section
         className="py-20 bg-cover bg-center bg-no-repeat text-white relative"
-        style={{ backgroundImage: "url('/photos/background.jpeg')" }}
+        style={{ backgroundImage: "url('/photos/background.webp')" }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="container mx-auto px-4 text-center relative z-10 py-12">

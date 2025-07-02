@@ -21,7 +21,7 @@ export const specialties: Specialty[] = [
     name: "Oftalmologia ",
     description:
       "Consultas com exame oftalmológico completo, emissão de laudos para o DETRAN e procedimentos estéticos como aplicação de Botox e blefaroplastia.",
-    image: "./photos/olharprofundo.jpeg",
+    image: "./photos/olharprofundo.webp",
     services: [
       "Avaliação de catarata",
       "Avaliação de glaucoma",

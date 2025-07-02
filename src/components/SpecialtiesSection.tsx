@@ -12,7 +12,7 @@ const specialties = [
         title: "Avaliação Oftalmológica Completa",
         description:
           "Inclui exames como acuidade visual, fundo de olho e tonometria.",
-        image: "./photos/olharprofundo.jpeg",
+        image: "./photos/olharprofundo.webp",
       },
       {
         id: 2,
@@ -36,13 +36,13 @@ const specialties = [
         id: 4,
         title: "Tratamento de Ansiedade",
         description: "Atenção especializada para ansiedade, fobias e pânico.",
-        image: "./photos/psiquiatria.jpg",
+        image: "./photos/psiquiatria.webp",
       },
       {
         id: 5,
         title: "TDAH e Transtornos de Atenção",
         description: "Diagnóstico e acompanhamento focado na funcionalidade.",
-        image: "./photos/terapia.jpg",
+        image: "./photos/terapia.webp",
       },
       {
         id: 6,
@@ -61,21 +61,21 @@ const specialties = [
         title: "Protocolos com Ozempic e Wegovy",
         description:
           "Medicamentos modernos para apoio no emagrecimento estratégico.",
-        image: "./photos/ozempic.jpeg",
+        image: "./photos/ozempic.webp",
       },
       {
         id: 8,
         title: "Hipertrofia e Massa Muscular",
         description:
           "Acompanhamento médico para ganho saudável de massa muscular.",
-        image: "./photos/hipertrofia.jpeg",
+        image: "./photos/hipertrofia.webp",
       },
       {
         id: 9,
         title: "Bioimpedância e Avaliação Corporal",
         description:
           "Análise precisa da composição corporal para planejamento efetivo.",
-        image: "./photos/acompanhamento.jpeg",
+        image: "./photos/acompanhamento.webp",
       },
     ],
   },
@@ -93,14 +93,14 @@ const specialties = [
         id: 11,
         title: "Transtornos Alimentares",
         description: "Cuidado humanizado para anorexia, bulimia e compulsão.",
-        image: "./photos/alimentar.jpg",
+        image: "./photos/alimentar.webp",
       },
       {
         id: 12,
         title: "Promoção de Hábitos Saudáveis",
         description:
           "Sono, alimentação e propósito alinhados para uma vida melhor.",
-        image: "./photos/yoga.jpeg",
+        image: "./photos/yoga.webp",
       },
     ],
   },

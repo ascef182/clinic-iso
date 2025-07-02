@@ -43,7 +43,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    image: "./photos/nutrição.jpeg",
+    image: "./photos/nutrição.webp",
     category: "NUTROLOGIA",
     date: { month: "Jun", day: "05" },
     authorId: "maria",
@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 5,
-    image: "./photos/terapia.jpg",
+    image: "./photos/terapia.webp",
     category: "SAÚDE INTEGRATIVA",
     date: { month: "Jun", day: "04" },
     authorId: "kennedy",
