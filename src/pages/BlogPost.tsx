@@ -36,6 +36,7 @@ export default function BlogPost() {
           src={post.image.replace(/^\.\/?/, "/")}
           alt={post.title}
           className="w-full h-full object-cover"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-zinc-950 bg-opacity-40"></div>
         <div className="absolute top-6 left-6">
@@ -81,6 +82,8 @@ export default function BlogPost() {
                 src={author.photo.replace(/^\.\/?/, "/")}
                 alt={author.name}
                 className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <h3 className="text-lg font-semibold text-slate-900 font-neue-haas">

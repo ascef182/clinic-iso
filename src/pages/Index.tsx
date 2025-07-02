@@ -196,6 +196,8 @@ export default function Index() {
           src="/photos/eye3.jpeg"
           alt="Profissional médica do ISO - Instituto Seu Olhar"
           className="absolute inset-0 w-full h-full object-cover object-center"
+          fetchpriority="high"
+          decoding="async"
         />
         {/* Overlay para mobile e desktop */}
         <div className="absolute inset-0 bg-zinc-950/70" />

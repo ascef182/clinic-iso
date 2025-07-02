@@ -12,9 +12,11 @@ export function DoctorCard({ doctor, detailed = false }: DoctorCardProps) {
       <div className="relative overflow-hidden">
         <div className="aspect-[4/5] relative">
           <img
-            src={doctor.photo}
+            src={doctor.photo.replace(/^\.\/?/, "/")}
             alt={doctor.name}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
           />
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

@@ -2,9 +2,11 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ContactForm } from "@/components/ContactForm";
-import { Map } from "@/components/Map";
+import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+
+const Map = lazy(() => import("../components/Map"));
 
 export default function Contato() {
   return (
@@ -80,7 +82,7 @@ export default function Contato() {
 
             <div className="bg-zinc-900 p-6 rounded-lg shadow-sm border border-zinc-700 text-center">
               <a
-                href="https://wa.me/5531995659538"
+                href="https://wa.me/5531994659538"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"
@@ -108,7 +110,7 @@ export default function Contato() {
               </h3>
               <div className="text-muted-foreground font-neue-haas">
                 <p>Marque com nossa secretária</p>
-                <p>+55 (31) 99565-9538 (WhatsApp)</p>
+                <p>+55 (31) 99564-9538 (WhatsApp)</p>
               </div>
             </div>
 
@@ -152,7 +154,15 @@ export default function Contato() {
                 Nossa Localização
               </h2>
               <div className="h-[400px] rounded-lg overflow-hidden border">
-                <Map />
+                <Suspense
+                  fallback={
+                    <div className="text-white text-center">
+                      Carregando mapa...
+                    </div>
+                  }
+                >
+                  <Map />
+                </Suspense>
               </div>
             </div>
           </div>

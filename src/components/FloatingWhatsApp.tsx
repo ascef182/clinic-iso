@@ -13,7 +13,7 @@ export function FloatingWhatsApp() {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5531995659538"; // Substitua pelo número real da clínica
+    const phoneNumber = "5531995649538"; // Substitua pelo número real da clínica
     const message =
       "Olá! Gostaria de agendar uma consulta no ISO - Instituto Seu Olhar.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(

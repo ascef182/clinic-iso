@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export function Map() {
+export default function Map() {
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

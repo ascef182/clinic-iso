@@ -26,6 +26,7 @@ export function BlogCard({
           alt={post.title}
           className="w-full h-56 object-cover"
           loading="lazy"
+          decoding="async"
         />
         <span className="absolute top-4 left-4 bg-gradient-to-br from-[#FFD700] via-[#FFC300] to-[#B8860B] shadow-[0_0_10px_rgba(255,215,0,0.5)] text-black text-xs font-medium px-3 py-1 rounded-full font-neue-haas">
           {post.category}
