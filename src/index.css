@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "Neue Haas Grotesk";
-  src: url("/fonts/Neue_Haas_Grotesk_Collection/NeueHaasDisplay-Roman.woff2")
-    format("woff2");
+  src: url("/fonts/Neue_Haas_Grotesk_Collection/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-55Roman-Trial.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
   font-family: "Neue Haas Grotesk";
-  src: url("/fonts/Neue_Haas_Grotesk_Collection/NeueHaasDisplay-Medium.woff2")
-    format("woff2");
+  src: url("/fonts/Neue_Haas_Grotesk_Collection/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-65Medium-Trial.otf")
+    format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -20,8 +20,8 @@
 
 @font-face {
   font-family: "Neue Haas Grotesk";
-  src: url("/fonts/Neue_Haas_Grotesk_Collection/NeueHaasDisplay-Bold.woff2")
-    format("woff2");
+  src: url("/fonts/Neue_Haas_Grotesk_Collection/Neue Haas Grotesk Display Family/NeueHaasGrotDisp-75Bold-Trial.otf")
+    format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
