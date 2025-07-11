@@ -9,6 +9,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 // Pages
 import Index from "./pages/Index";
+import Iso from "./pages/Iso";
 import Sobre from "./pages/Sobre";
 import Especialidades from "./pages/Especialidades";
 import Equipe from "./pages/Equipe";
@@ -33,6 +34,7 @@ const App = () => (
           <FloatingWhatsApp />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/iso" element={<Iso />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/especialidades" element={<Especialidades />} />
             <Route path="/equipe" element={<Equipe />} />

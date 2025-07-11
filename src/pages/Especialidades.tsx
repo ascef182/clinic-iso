@@ -169,7 +169,7 @@ export default function Especialidades() {
               WhatsApp
             </a>
             <Link
-              to="https://cal.com/institutoseuolhar"
+              to="/contato"
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-white bg-transparent text-white hover:bg-white hover:text-black font-neue-haas"
             >
               Agendamento
